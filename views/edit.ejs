@@ -1,0 +1,8 @@
+<% include partials/header %>
+<h1>Edit <%= tower.val().title %></h1>
+<p><a href="/towers/">cancel</a></p>
+<form action="/towers/<%= tower.key %>?_method=PUT" method="POST">
+	<input type="text" name="bellTower[title]" placeholder="<%= tower.val().title %>">
+	<input type="submit">
+</form>
+<% include partials/footer %>

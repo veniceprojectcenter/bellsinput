@@ -1,0 +1,11 @@
+<% include partials/header %>
+<h1>tower</h1>
+<p><a href="/towers/new">make new</a></p>
+
+<%= bellTowers %>
+<ul>
+<% bellTowers.forEach(function(tower){ %>
+	<li><a href="/towers/<%= tower.key %>"><%= tower.val().title %></a></li>
+<% }); %>
+</ul>
+<% include partials/footer %>

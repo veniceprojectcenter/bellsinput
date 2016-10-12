@@ -1,0 +1,10 @@
+<% include partials/header %>
+<h1>Show</h1>
+<p><a href="/">home</a></p>
+<p><a href="/towers/<%= tower.key %>/edit">edit</a></p>
+<p><%= tower.val().title %></p>
+
+<form method="POST" action="/towers/<%= tower.key %>?_method=DELETE">
+	<button class="ui red button" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+</form>
+<% include partials/footer %>
