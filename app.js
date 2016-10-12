@@ -26,6 +26,7 @@ var bellTowersRef = ref.child('bellTowers');
 app = express();
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // RESTFUL ROUTES * * * * * * * * * * * * * * * * * * * * * 
@@ -65,7 +66,6 @@ app.get("/towers/:id", function(req, res){
 	bellTowersRef.child(req.params.id).once('value', function(towersSnapshot) {
 		// The callback succeeded.
 		res.render("show", {tower: towersSnapshot});
-
 	}, function(error) {
   		// The callback failed.
   		console.error(error);
@@ -90,7 +90,6 @@ app.put("/towers/:id", function(req, res){
 	var updateTowerRef = firebase.database().ref('/bellTowers/' + req.params.id);
 	// The callback succeeded.
 	updateTowerRef.update(bellTower)
-
 	res.redirect("/towers/" + req.params.id);
 });
 

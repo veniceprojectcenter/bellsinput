@@ -1,9 +1,215 @@
 <% include partials/header %>
-<h1>Edit <%= tower.val().title %></h1>
-<p><a href="/towers/">cancel</a></p>
-<form action="/towers/<%= tower.key %>?_method=PUT" method="POST">
-	<input type="text" name="bellTower[title]" placeholder="<%= tower.val().title %>" value="<%= tower.val().title %>">
-	<input type="text" name="bellTower[description]" placeholder="<%= tower.val().description %>" value="<%= tower.val().description %>">
-	<input type="submit">
-</form>
+
+	<script language='javascript'>
+		$(document).ready(function () {
+		    $('.ui.accordion').accordion();
+		});
+	</script>
+
+<div id="main" class="ui container text noselect">
+	<form class="ui form noselect" action="/towers/<%= tower.key %>?_method=PUT" method="POST">
+		<div class="ui fluid accordion">
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="active title">
+				<i class="dropdown icon"></i>
+				Basic Information
+			</div>
+
+			<div class="active content">
+				<div class="field">
+					<label>name</label>
+					<input type="text" name="bellTower[name]" placeholder="name" value="<%= tower.val().name %>">
+				</div>
+
+				<div class="field">
+					<label>tower ID</label>
+					<input type="text" name="bellTower[towerID]" placeholder="towerID" value="<%= tower.val().towerID %>">
+				</div>
+
+				<div class="field">
+					<label>sestiere</label>
+					<input type="text" name="bellTower[Sestiere]" placeholder="Sestiere" value="<%= tower.val().Sestiere %>">
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Church Info
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>church name</label>
+					<input type="text" name="bellTower[churchName]" placeholder="churchName" value="<%= tower.val().churchName %>">
+				</div>
+
+				<div class="field">
+					<label>proprietor</label>
+					<input type="text" name="bellTower[proprietor]" placeholder="proprietor" value="<%= tower.val().proprietor %>">
+				</div>
+
+				<div class="field">
+					<label>description</label>
+					<textarea rows="3" name="bellTower[description]" placeholder="description" ><%= tower.val().description %></textarea>
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Architecture
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>architect</label>
+					<input type="text" name="bellTower[architect]" placeholder="architect" value="<%= tower.val().architect %>">
+				</div>
+
+				<div class="field">
+					<label>architecture</label>
+					<input type="text" name="bellTower[architecture]" placeholder="architecture" value="<%= tower.val().architecture %>">
+				</div>
+
+				<div class="field">
+					<label>construction year</label>
+					<input type="Number" name="bellTower[constructionYear]" placeholder="constructionYear" value="<%= tower.val().constructionYear %>">
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Technical Information
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>tower height</label>
+					<input type="Number" name="bellTower[towerHeight]" placeholder="towerHeight" value="<%= tower.val().towerHeight %>">
+				</div>
+
+				<div class="field">
+					<label>lattitude</label>
+					<input type="text" name="bellTower[lattitude]" placeholder="lattitude" value="<%= tower.val().lattitude %>">
+				</div>			
+
+				<div class="field">
+					<label>longitude</label>
+					<input type="text" name="bellTower[longitude]" placeholder="longitude" value="<%= tower.val().longitude %>">
+				</div>			
+
+				<div class="field">
+					<label>building material</label>
+					<input type="text" name="bellTower[buildingMaterial]" placeholder="buildingMaterial" value="<%= tower.val().buildingMaterial %>">
+				</div>
+			</div>		
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Artistic Inscriptions
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>Number Inscriptions</label>
+					<input type="Number" name="bellTower[inscriptCount]" placeholder="0" value="<%= tower.val().inscriptCount %>">
+				</div>
+
+				<div class="field">
+					<label>Legibility Inscription</label>
+
+					<div class="inline fields">
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="poor">
+								<label>poor</label>
+							</div>
+						</div>
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="fair">
+								<label>fair</label>
+							</div>
+						</div>						
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="good">
+								<label>good</label>
+							</div>
+						</div>
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="excellent">
+								<label>excellent</label>
+							</div>
+						</div>						
+					</div>
+				</div>			
+
+				<div class="field">
+					<label>Inscription Description</label>
+					<textarea rows="3" name="bellTower[inscriptDescription]" placeholder="description" value="<%= tower.val().inscriptDescription %>"></textarea>
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Media
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>image</label>
+					<input type="Text" name="bellTower[image]" placeholder="image" value="<%= tower.val().image %>">
+				</div>
+
+				<div class="field">
+					<label>panorama</label>
+					<input type="text" name="bellTower[panorama]" placeholder="panorama" value="<%= tower.val().panorama %>">
+				</div>			
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Media v2
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>image</label>
+					<input type="file" name="bellTower[imageFile]" accept="image/*">
+				</div>
+
+				<div class="field">
+					<label>panorama</label>
+					<input type="file" name="bellTower[panoramaFile]" accept="image/*">
+				</div>			
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Submit
+			</div>
+
+			<div class="content">
+				<p>Please check over all of your inputs</p>
+				<p style="color: #ffffff;">- Oba</p>
+			</div>
+		</div>
+
+		<div class="field">
+			<input class="ui fluid green button" type="submit"> 
+		</div>
+	</form>
+</div>
+
 <% include partials/footer %>

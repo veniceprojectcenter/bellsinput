@@ -1,8 +1,198 @@
 <% include partials/header %>
-<h1>New Tower</h1>
-<form action="/towers" method="POST">
-	<input type="text" name="bellTower[title]" placeholder="title">
-	<input type="text" name="bellTower[description]" placeholder="description">
-	<input type="submit">
-</form>
+
+	<script language='javascript'>
+		$(document).ready(function () {
+		    $('.ui.accordion').accordion();
+		});
+	</script>
+
+<div id="main" class="ui container text noselect">
+	<form class="ui form noselect" action="/towers" method="POST">
+		<div class="ui fluid accordion">
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="active title">
+				<i class="dropdown icon"></i>
+				Basic Information
+			</div>
+
+			<div class="active content">
+				<div class="field">
+					<label>name</label>
+					<input type="text" name="bellTower[name]" placeholder="name">
+				</div>
+
+				<div class="field">
+					<label>towerID</label>
+					<input type="text" name="bellTower[towerID]" placeholder="towerID">
+				</div>
+
+				<div class="field">
+					<label>Sestiere</label>
+					<input type="text" name="bellTower[Sestiere]" placeholder="Sestiere">
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Church Info
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>churchName</label>
+					<input type="text" name="bellTower[churchName]" placeholder="churchName">
+				</div>
+
+				<div class="field">
+					<label>proprietor</label>
+					<input type="text" name="bellTower[proprietor]" placeholder="proprietor">
+				</div>
+
+				<div class="field">
+					<label>description</label>
+					<textarea rows="3" name="bellTower[description]" placeholder="description" ></textarea>
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Architecture
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>architect</label>
+					<input type="text" name="bellTower[architect]" placeholder="architect">
+				</div>
+
+				<div class="field">
+					<label>architecture</label>
+					<input type="text" name="bellTower[architecture]" placeholder="architecture">
+				</div>
+
+				<div class="field">
+					<label>constructionYear</label>
+					<input type="Number" name="bellTower[constructionYear]" placeholder="constructionYear">
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Technical Information
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>towerHeight</label>
+					<input type="Number" name="bellTower[towerHeight]" placeholder="towerHeight">
+				</div>
+
+				<div class="field">
+					<label>lattitude</label>
+					<input type="text" name="bellTower[lattitude]" placeholder="lattitude">
+				</div>			
+
+				<div class="field">
+					<label>longitude</label>
+					<input type="text" name="bellTower[longitude]" placeholder="longitude">
+				</div>			
+
+				<div class="field">
+					<label>buildingMaterial</label>
+					<input type="text" name="bellTower[buildingMaterial]" placeholder="buildingMaterial">
+				</div>
+			</div>
+<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Artistic Inscriptions
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>Number Inscriptions</label>
+					<input type="Number" name="bellTower[inscriptCount]" placeholder="0">
+				</div>
+
+				<div class="field">
+					<label>Legibility Inscription</label>
+
+					<div class="inline fields">
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="poor">
+								<label>poor</label>
+							</div>
+						</div>
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="fair">
+								<label>fair</label>
+							</div>
+						</div>						
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="good">
+								<label>good</label>
+							</div>
+						</div>
+
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input type="radio" name="bellTower[inscriptLegibility]" value="excellent">
+								<label>excellent</label>
+							</div>
+						</div>						
+					</div>
+				</div>			
+
+				<div class="field">
+					<label>Inscription Description</label>
+					<textarea rows="3" name="bellTower[inscriptDescription]" placeholder="description"></textarea>
+				</div>
+			</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Media
+			</div>
+
+			<div class="content">
+				<div class="field">
+					<label>image</label>
+					<input type="Text" name="bellTower[image]" placeholder="image">
+				</div>
+
+				<div class="field">
+					<label>panorama</label>
+					<input type="text" name="bellTower[panorama]" placeholder="panorama">
+				</div>			
+			</div>
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Submit
+			</div>
+
+			<div class="content">
+				<p>Please check over all of your inputs</p>
+				<p style="color: #ffffff;">- Oba</p>
+			</div>
+		</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+		<div class="field">
+			<input class="ui fluid green button" type="submit"> 
+		</div>
+	</form>
+</div>
+
+<% include partials/footer %>
 <% include partials/footer %>
