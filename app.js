@@ -20,12 +20,6 @@ firebase.initializeApp({
 // The app only has access to public data as defined in the Security Rules
 var db = firebase.database();
 var ref = db.ref("/");
-
-var totalVisitors = ref.child('totalVisitors');
-totalVisitors.transaction(function (currentData) {
-	return currentData + 1;
-});
-
 var bellTowersRef = ref.child('bellTowers');
 
 // CONFIGURE APP * * * * * * * * * * * * * * * * * * * * * 
