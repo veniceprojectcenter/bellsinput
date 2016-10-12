@@ -74,9 +74,9 @@ app.get("/towers/:id", function(req, res){
 
 // EDIT ROUTE
 app.get("/towers/:id/edit", function(req, res){
-	bellTowersRef.child(req.params.id).once('value', function(towersSnapshot) {
+	bellTowersRef.child(req.params.id).once('value', function(towerSnapshot) {
 		// The callback succeeded.
-		res.render("edit", {tower: towersSnapshot});
+		res.render("edit", {tower: towerSnapshot});
 	}, function(error) {
   		// The callback failed.
   		console.error(error);
@@ -86,15 +86,10 @@ app.get("/towers/:id/edit", function(req, res){
 // UPDATE ROUTE
 app.put("/towers/:id", function(req, res){ 
 	var bellTower = req.body.bellTower;
-	bellTowersRef.push(bellTower);
-
-	bellTowersRef.child(req.params.id).once('value', function(towersSnapshot) {
-		// The callback succeeded.
-		towersSnapshot = bellTower
-	}, function(error) {
-  		// The callback failed.
-  		console.error(error);
-	});
+	// bellTowersRef.push(bellTower);
+	var updateTowerRef = firebase.database().ref('/bellTowers/' + req.params.id);
+	// The callback succeeded.
+	updateTowerRef.update(bellTower)
 
 	res.redirect("/towers/" + req.params.id);
 });
