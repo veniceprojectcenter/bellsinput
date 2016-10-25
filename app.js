@@ -20,7 +20,7 @@ firebase.initializeApp({
 // The app only has access to public data as defined in the Security Rules
 var db = firebase.database();
 var ref = db.ref("/");
-var bellTowersRef = ref.child('bellTowers');
+var bellTowersRef = ref.child('sampleBellTowers');
 
 // CONFIGURE APP * * * * * * * * * * * * * * * * * * * * * 
 app = express();
