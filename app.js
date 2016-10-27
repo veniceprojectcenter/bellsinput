@@ -55,10 +55,31 @@ app.get("/towers/new", function(req, res){
 	res.render("new");
 });
 
+// EDIT INTERIOR ROUTE
+app.get("/towers/:id/interior/edit", function(req, res){
+	res.render("editInterior");
+});
+
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
-	var bellTower = req.body.bellTower;
-	bellTowersRef.push(bellTower);
+	var numLandings = parseInt(req.body.bellTower.numLandings),
+		bellTower = req.body.bellTower,
+		newTowerKey = bellTowersRef.push(bellTower).key,
+		updateTowerRef = firebase.database().ref('/sampleBellTowers/' + newTowerKey);
+
+	var floor = {
+		field1 : '',
+		field2 : ''
+	};
+
+	for (i = 1; i < numLandings + 1; i++) {
+    	updateTowerRef.child('landing' + i).set(floor);
+    }
+
+    updateTowerRef.child('belfry').set(floor);
+
+	updateTowerRef.child('groundFloor').set(floor);
+
 	res.redirect("/");
 });
 

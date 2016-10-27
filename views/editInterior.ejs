@@ -1,0 +1,135 @@
+<% include partials/header %>
+
+	<script language='javascript'>
+		$(document).ready(function () {
+		    $('.ui.accordion').accordion();
+		});
+	</script>
+
+<div id="main" class="ui container text noselect">
+
+
+	<h1>Tower Interior</h1>
+	<form class="ui form noselect" action="/towers" method="POST">
+
+<!-- GROUND FLOOR * * * * * * * * *  -->
+	<div class="ui fluid accordion">
+	<!-- * * * * * * * * * * * * * * * * *  -->
+		<div class="title">
+			<h2>Ground Floor</h2>
+		</div>
+
+		<div class="content">
+		</div>
+
+		<div class="active title">
+			<i class="dropdown icon"></i>
+			Birth_Certificate
+		</div>
+
+		<div class="content">
+
+			<div class="field">
+				<label>birthID</label>
+				<input type="text" name="groundFloor[birthID]" placeholder="birthID" >
+			</div>
+
+		</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Submit
+			</div>
+
+			<div class="content">
+				<p>Please check over all of your inputs</p>
+				<p style="color: #ffffff;">- Oba</p>
+			</div>
+	</div>
+
+<!-- LANDING X * * * * * * * * *  -->
+	<div class="ui fluid accordion">
+	<!-- * * * * * * * * * * * * * * * * *  -->
+		<div class="title">
+			<h2>Landing X</h2>
+		</div>	
+
+		<div class="content">
+		</div>	
+
+
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Birth_Certificate
+		</div>
+
+		<div class="content">
+
+			<div class="field">
+				<label>birthID</label>
+				<input type="text" name="landingx[birthID]" placeholder="birthID" >
+			</div>
+
+		</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Submit
+			</div>
+
+			<div class="content">
+				<p>Please check over all of your inputs</p>
+				<p style="color: #ffffff;">- Oba</p>
+			</div>
+	</div>
+
+<!-- BELFRY * * * * * * * * *  -->
+	<div class="ui fluid accordion">
+		<div class="title">
+			<h2>Belfry</h2>
+		</div>	
+
+		<div class="content">
+		</div>
+
+	<!-- * * * * * * * * * * * * * * * * *  -->
+
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Birth_Certificate
+		</div>
+
+		<div class="content">
+
+			<div class="field">
+				<label>birthID</label>
+				<input type="text" name="belfry[birthID]" placeholder="birthID" >
+			</div>
+
+		</div>
+
+		<!-- * * * * * * * * * * * * * * * * *  -->
+			<div class="title">
+				<i class="dropdown icon"></i>
+				Submit
+			</div>
+
+			<div class="content">
+				<p>Please check over all of your inputs</p>
+				<p style="color: #ffffff;">- Oba</p>
+			</div>
+	</div>
+
+	<!-- * * * * * * * * * * * * * * * * *  -->
+	<div class="field">
+		<input class="ui fluid green button" type="submit"> 
+	</div>
+
+
+
+	</form>
+</div>
+
+<% include partials/footer %>

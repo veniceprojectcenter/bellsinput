@@ -89,6 +89,10 @@ div.ui.fluid.accordion {
 	-webkit-tap-highlight-color: transparent;
 }
 
+.accordion {
+	margin-bottom: 40px
+}
+
 
 #edit {
 	margin-top: 15px;
