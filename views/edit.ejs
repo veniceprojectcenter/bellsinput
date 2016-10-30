@@ -12,12 +12,11 @@
 	<% include partials/editPartials/editButtons %>
 
 	<form class="ui form noselect" action="/towers/<%= tower.key %>?_method=PUT" method="POST">
-		<div class="ui fluid accordion">
+		
 		<% include partials/editPartials/editGeneral %>
 		<% include partials/editPartials/editExterior %>
 		<% include partials/editPartials/editInterior %>
 		<% include partials/editPartials/editBells %>
-		</div>
 
 		<div class="field">
 			<input class="ui fluid green button" type="submit"> 
