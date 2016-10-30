@@ -4,10 +4,7 @@ const bellTowerModel = {
 		numLandings: 0,
 		numBells: 0,
 		bells: {
-			bell: {
-				bell_field1: "",
-				bell_field2: "",
-			}
+
 		},
 		exterior: {
 			exterior_field1: "",
@@ -26,4 +23,10 @@ const bellTowerModel = {
 	}
 };
 
+const bellModel = {
+	bell_field1: "",
+	bell_field2: "",
+}
+
 exports.bellTowerModel = bellTowerModel;
+exports.bellModel = bellModel;
