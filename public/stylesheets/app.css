@@ -110,3 +110,7 @@ div.ui.fluid.accordion {
 input.ui.fluid.green.button, #progress {
 	margin-top: 20px;
 }
+
+tbody {
+	color: gray;
+}

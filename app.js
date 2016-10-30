@@ -69,21 +69,32 @@ app.get("/towers/:id/interior/edit", function(req, res){
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
 	var numLandings = parseInt(req.body.bellTower.data.numLandings),
+		numBells = parseInt(req.body.bellTower.data.numBells),
 		bellTower = req.body.bellTower,
 		newTowerKey = bellTowersRef.push(bellTower).key,
-		updateTowerRef = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings');
+		updateTowerRefLanding = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings'),
+		updateTowerRefBell = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/bells');
 
 	var floor = {
 		field1 : '1',
 		field2 : '2'
 	};
 
+	var bell = {
+		bell_field1: '1',
+		bell_field2: '2'
+	};
+
 	for (i = 1; i < numLandings + 1; i++) {
-    	updateTowerRef.child('landing' + i).set(floor);
+    	updateTowerRefLanding.child('landing' + i).set(floor);
     }
 
-    updateTowerRef.child('belfry').set(floor);
-	updateTowerRef.child('groundFloor').set(floor);
+    for (i = 1; i < numBells + 1; i++) {
+    	updateTowerRefBell.child('bell' + i).set(bell);
+    }
+
+    updateTowerRefLanding.child('belfry').set(floor);
+	updateTowerRefLanding.child('groundFloor').set(floor);
 	res.redirect("/");
 });
 

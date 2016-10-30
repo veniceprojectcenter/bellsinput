@@ -1,3 +1,38 @@
 <div id="bellsData">
 
+<!-- show only 'groundFloor' 'belfry' and 'landing' -->
+	<% for (var key in tower.val().data.bells) { %>
+		<% if (tower.val().data.bells.hasOwnProperty(key)) { %>
+			<% if (key.substring(0, 4) == "bell") { %> 
+				<div class="ui fluid accordion">
+					<div class="title">
+						<h2><%= key %></h2>
+					</div>
+					<div class="content whitePaddedContent">
+					</div>
+
+					<div class="title">
+						<i class="dropdown icon"></i>
+						data
+					</div>
+					<div class="content whitePaddedContent">
+						<% for (var field in tower.val().data.bells[key]) { %>
+							<% if (tower.val().data.bells[key].hasOwnProperty(field)) { %>
+								<label><%= field %></label>
+								<input type="text" name="bellTower[data][bells][<%= key %>][<%= field %>]" placeholder="<%= field %>" value="<%= tower.val().data.bells[key][field] %>"  >
+							<% } %> 
+						<% } %>
+					</div>
+
+					<div class="title">
+						<p>submit</p>
+					</div>
+					<div class="content whitePaddedContent">
+						<p>be safe</p>
+					</div>
+				</div>
+			<% } %> 
+		<% } %>
+	<% } %>
+
 </div>
