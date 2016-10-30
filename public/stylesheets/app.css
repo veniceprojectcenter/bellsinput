@@ -60,7 +60,7 @@ img#panorama {
 	border: 0.4px solid #adadaf;
 }
 
-.content {
+.whitePaddedContent {
 	background: #ffffff;
 	padding: 10px;
 }
@@ -89,6 +89,14 @@ div.ui.fluid.accordion {
 	-webkit-tap-highlight-color: transparent;
 }
 
+.accordion {
+	margin-bottom: 40px;
+}
+
+.ui.animated.button.bottomMargin {
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
 
 #edit {
 	margin-top: 15px;

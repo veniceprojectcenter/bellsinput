@@ -55,10 +55,35 @@ app.get("/towers/new", function(req, res){
 	res.render("new");
 });
 
+// EDIT INTERIOR ROUTE
+app.get("/towers/:id/interior/edit", function(req, res){
+	bellTowersRef.child(req.params.id).once('value', function(towerSnapshot) {
+		// The callback succeeded.
+		res.render("editInterior", {tower: towerSnapshot});
+	}, function(error) {
+  		// The callback failed.
+  		console.error(error);
+	});
+});
+
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
-	var bellTower = req.body.bellTower;
-	bellTowersRef.push(bellTower);
+	var numLandings = parseInt(req.body.bellTower.data.numLandings),
+		bellTower = req.body.bellTower,
+		newTowerKey = bellTowersRef.push(bellTower).key,
+		updateTowerRef = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings');
+
+	var floor = {
+		field1 : '1',
+		field2 : '2'
+	};
+
+	for (i = 1; i < numLandings + 1; i++) {
+    	updateTowerRef.child('landing' + i).set(floor);
+    }
+
+    updateTowerRef.child('belfry').set(floor);
+	updateTowerRef.child('groundFloor').set(floor);
 	res.redirect("/");
 });
 
@@ -87,8 +112,7 @@ app.get("/towers/:id/edit", function(req, res){
 // UPDATE ROUTE
 app.put("/towers/:id", function(req, res){ 
 	var bellTower = req.body.bellTower;
-	// bellTowersRef.push(bellTower);
-	var updateTowerRef = firebase.database().ref('/bellTowers/' + req.params.id);
+	var updateTowerRef = firebase.database().ref('/sampleBellTowers/' + req.params.id);
 	// The callback succeeded.
 	updateTowerRef.update(bellTower)
 	res.redirect("/towers/" + req.params.id);
