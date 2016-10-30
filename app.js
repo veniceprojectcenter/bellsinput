@@ -74,8 +74,6 @@ app.post("/towers", function(req, res) {
 		recievedTowerData = req.body.generalData,
 		numLandings = parseInt(req.body.generalData.numLandings),
 		numBells = parseInt(req.body.generalData.numBells);
-		// updateTowerRefLanding = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings'),
-		// updateTowerRefBell = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/bells');
 
 	newBlankTower.data.common_name = recievedTowerData.common_name;
 	newBlankTower.data.numLandings = numLandings;
@@ -85,9 +83,8 @@ app.post("/towers", function(req, res) {
     	newBlankTower.data.landings['landing' + i] = modelFile.bellTowerModel.data.landings.belfry;
     }
 
-    delete newBlankTower.data.bells['bell'];
 	for (i = 1; i < numBells + 1; i++) {
-    	newBlankTower.data.bells['bell' + i] = modelFile.bellTowerModel.data.bells.bell;
+    	newBlankTower.data.bells['bell' + i] = modelFile.bellModel;
     }
 
 	newTowerKey = bellTowersRef.push(newBlankTower).key
