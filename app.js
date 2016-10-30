@@ -1,7 +1,8 @@
 var methodOverride = require("method-override"), // allows for put() and delete()
 	firebase = require('firebase'),
 	express = require('express'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	modelFile = require('./utils/model/bellTowerModel.js');
 
 // FIREBASE * * * * * * * * * * * * * * * * * * * * * 
 require('firebase/app');
@@ -68,33 +69,27 @@ app.get("/towers/:id/interior/edit", function(req, res){
 
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
-	var numLandings = parseInt(req.body.bellTower.data.numLandings),
-		numBells = parseInt(req.body.bellTower.data.numBells),
-		bellTower = req.body.bellTower,
-		newTowerKey = bellTowersRef.push(bellTower).key,
-		updateTowerRefLanding = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings'),
-		updateTowerRefBell = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/bells');
+	var newBlankTower = modelFile.bellTowerModel,
+		recievedTower = req.body.bellTower,
+		numLandings = parseInt(req.body.bellTower.data.numLandings),
+		numBells = parseInt(req.body.bellTower.data.numBells);
+		// updateTowerRefLanding = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings'),
+		// updateTowerRefBell = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/bells');
 
-	var floor = {
-		field1 : '1',
-		field2 : '2'
-	};
-
-	var bell = {
-		bell_field1: '1',
-		bell_field2: '2'
-	};
+	newBlankTower.data.common_name = recievedTower.data.common_name;
+	newBlankTower.data.numLandings = numLandings;
+	newBlankTower.data.numBells = numBells;
 
 	for (i = 1; i < numLandings + 1; i++) {
-    	updateTowerRefLanding.child('landing' + i).set(floor);
+    	newBlankTower.data.landings['landing' + i] = modelFile.bellTowerModel.data.landings.belfry;
     }
 
-    for (i = 1; i < numBells + 1; i++) {
-    	updateTowerRefBell.child('bell' + i).set(bell);
+	for (i = 1; i < numBells + 1; i++) {
+    	newBlankTower.data.bells['bell' + i] = modelFile.bellTowerModel.data.bells.bell;
     }
 
-    updateTowerRefLanding.child('belfry').set(floor);
-	updateTowerRefLanding.child('groundFloor').set(floor);
+ 	console.log(newBlankTower);
+	newTowerKey = bellTowersRef.push(newBlankTower).key
 	res.redirect("/");
 });
 
