@@ -1,10 +1,12 @@
 var dataCategories = ["general", "exterior", "interior", "bells"];
 
 document.addEventListener('DOMContentLoaded', function() {
-    setUpPage();
+	hideAllData();
+	showCategory(dataCategories[0]);
+    setUpCategoryClicks();
 }, false);
 
-function setUpPage(){
+function setUpCategoryClicks(){
 	dataCategories.forEach(function(category) {
 		// for each categoryButton on top of edit page setup click functions
 		$("#edit" + category.capitalize() + "Button").click(function(){
@@ -15,15 +17,14 @@ function setUpPage(){
 }
 
 function hideAllData(){
-	$("#generalData").hide();
-	$("#exteriorData").hide();
-	$("#interiorData").hide();
-	$("#bellsData").hide();
+	dataCategories.forEach(function(category) {
+		$("#" + category + "Data").hide();
+	});
 }
 
 function showCategory(category){
 	$("#" + category + "Data").show();
-	$("#dataCategorySpan").text(category.capitalize());
+	$("#dataCategorySpan").text( category.capitalize() );
 }
 
 // capitalize first word of string
