@@ -1,8 +1,9 @@
-var methodOverride = require("method-override"), // allows for put() and delete()
-	firebase = require('firebase'),
-	express = require('express'),
+var modelFile = require('./utils/model/bellTowerModel.js'),
+	methodOverride = require("method-override"), // allows for put() and delete()
 	bodyParser = require('body-parser'),
-	modelFile = require('./utils/model/bellTowerModel.js');
+	firebase = require('firebase'),
+	express = require('express');
+	
 
 // FIREBASE * * * * * * * * * * * * * * * * * * * * * 
 require('firebase/app');
@@ -70,13 +71,13 @@ app.get("/towers/:id/interior/edit", function(req, res){
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
 	var newBlankTower = modelFile.bellTowerModel,
-		recievedTower = req.body.bellTower,
-		numLandings = parseInt(req.body.bellTower.data.numLandings),
-		numBells = parseInt(req.body.bellTower.data.numBells);
+		recievedTowerData = req.body.generalData,
+		numLandings = parseInt(req.body.generalData.numLandings),
+		numBells = parseInt(req.body.generalData.numBells);
 		// updateTowerRefLanding = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings'),
 		// updateTowerRefBell = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/bells');
 
-	newBlankTower.data.common_name = recievedTower.data.common_name;
+	newBlankTower.data.common_name = recievedTowerData.common_name;
 	newBlankTower.data.numLandings = numLandings;
 	newBlankTower.data.numBells = numBells;
 
@@ -84,11 +85,11 @@ app.post("/towers", function(req, res) {
     	newBlankTower.data.landings['landing' + i] = modelFile.bellTowerModel.data.landings.belfry;
     }
 
+    delete newBlankTower.data.bells['bell'];
 	for (i = 1; i < numBells + 1; i++) {
     	newBlankTower.data.bells['bell' + i] = modelFile.bellTowerModel.data.bells.bell;
     }
 
- 	console.log(newBlankTower);
 	newTowerKey = bellTowersRef.push(newBlankTower).key
 	res.redirect("/");
 });
@@ -129,5 +130,65 @@ app.delete("/towers/:id", function(req, res){
 	console.log('delete bro', req.params.id);
 	bellTowersRef.child(req.params.id).remove();
 	res.redirect("/towers");
+});
+
+// REFACTOR ROUTE
+app.get("/towers/:id/refactorTower", function(req, res){
+	bellTowersRef.child(req.params.id).once('value', function(towersSnapshot) {
+		// The callback succeeded.
+		res.render("refactorTower", {tower: towersSnapshot});
+	}, function(error) {
+  		// The callback failed.
+  		console.error(error);
+	});
+});
+
+// UPDATE REFACTOR ROUTE
+app.put("/towers/:id/refactorTower", function(req, res){
+	var updateTowerRef = firebase.database().ref('/sampleBellTowers/' + req.params.id),
+		recievedTowerData = req.body.generalData,
+		numLandings = parseInt(recievedTowerData.numLandings),
+		numBells = parseInt(recievedTowerData.numBells);
+
+	bellTowersRef.child(req.params.id).once('value', function(towersSnapshot) {
+		var updateTower = towersSnapshot.val(),
+			previousNumLandings = parseInt(towersSnapshot.val().data.numLandings),
+			previousNumBells = parseInt(towersSnapshot.val().data.numBells);
+
+
+		changedBells = numBells - previousNumBells;
+		changedLandings = numLandings - previousNumLandings;
+
+		if (0 < changedBells) { // possitive
+			for (i = previousNumBells + 1; i < numBells + 1; i++) {
+				updateTower.data.bells['bell' + i] = modelFile.bellTowerModel.data.bells.bell;
+			}
+		} else if (changedBells < 0) { // negative
+			for (i = previousNumBells; i > numBells; i--) {
+				delete updateTower.data.bells['bell' + i];
+				console.log("delete updateTower.data.bells['bell"+ i +"']");
+			}
+		}
+
+		if (0 < changedLandings) { // possitive
+			for (i = previousNumLandings + 1; i < numLandings + 1; i++) {
+				updateTower.data.landings['landing' + i] = modelFile.bellTowerModel.data.landings.belfry;
+			}
+		} else if (changedLandings < 0) { // negative
+			for (i = previousNumLandings; i > numLandings; i--) {
+				delete updateTower.data.landings['landing' + i];
+				console.log("delete updateTower.data.landings['landing"+ i +"']");
+			}
+		}
+
+		updateTower.data.numLandings = numLandings;
+		updateTower.data.numBells = numBells;
+		updateTowerRef.update(updateTower);
+
+		res.redirect("/towers/" +  req.params.id + "/edit");
+	}, function(error) {
+  		// The callback failed.
+  		console.error(error);
+	});
 });
 
