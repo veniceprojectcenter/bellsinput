@@ -1,30 +1,17 @@
-$("#editGeneral").click(function(){
-	var category = "general";
-	hideAllData();
-	showCategory(category);
-});
+var dataCategories = ["general", "exterior", "interior", "bells"];
 
-$("#editExterior").click(function(){
-	var category = "exterior";
-	hideAllData();
-	showCategory(category);
-});
+document.addEventListener('DOMContentLoaded', function() {
+    setUpPage();
+}, false);
 
-$("#editInterior").click(function(){
-	var category = "interior";
-	hideAllData();
-	showCategory(category);
-});
-
-$("#editBells").click(function(){
-	var category = "bells";
-	hideAllData();
-	showCategory(category);
-});
-
-function showCategory(category){
-	$("#" + category + "Data").show();
-	$("#dataCategorySpan").text(category.capitalize());
+function setUpPage(){
+	dataCategories.forEach(function(category) {
+		// for each categoryButton on top of edit page setup click functions
+		$("#edit" + category.capitalize() + "Button").click(function(){
+			hideAllData();
+			showCategory(category);
+		});
+	});
 }
 
 function hideAllData(){
@@ -32,6 +19,11 @@ function hideAllData(){
 	$("#exteriorData").hide();
 	$("#interiorData").hide();
 	$("#bellsData").hide();
+}
+
+function showCategory(category){
+	$("#" + category + "Data").show();
+	$("#dataCategorySpan").text(category.capitalize());
 }
 
 // capitalize first word of string
