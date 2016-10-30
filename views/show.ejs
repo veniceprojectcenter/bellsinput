@@ -1,5 +1,4 @@
 <% include partials/header %>
-
 <div id="main" class="ui container text">
 
 	<div class="ui header">
@@ -25,72 +24,7 @@
 				<p><%= tower.val().description %></p>
 			</div>
 			
-			<table class="ui celled fluid table">
-				<thead>
-					<tr>
-						<th>Field</th>
-						<th>Data</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>tower ID</td>
-						<td><%= tower.val().towerID %></td>
-					</tr>
-					<tr>
-						<td>Sestiere</td>
-						<td><%= tower.val().Sestiere %></td>
-					</tr>
-					<tr>
-						<td>church name</td>
-						<td><%= tower.val().churchName %></td>
-					</tr>
-					<tr>
-						<td>proprietor</td>
-						<td><%= tower.val().proprietor %></td>
-					</tr>
-					<tr>
-						<td>architect</td>
-						<td><%= tower.val().architect %></td>
-					</tr>
-					<tr>
-						<td>architecture</td>
-						<td><%= tower.val().architecture %></td>
-					</tr>
-					<tr>
-						<td>construction year</td>
-						<td><%= tower.val().constructionYear %></td>
-					</tr>
-					<tr>
-						<td>tower height</td>
-						<td><%= tower.val().towerHeight %></td>
-					</tr>
-					<tr>
-						<td>lattitude</td>
-						<td><%= tower.val().lattitude %></td>
-					</tr>
-					<tr>
-						<td>longitude</td>
-						<td><%= tower.val().longitude %></td>
-					</tr>
-					<tr>
-						<td>buildingMaterial</td>
-						<td><%= tower.val().buildingMaterial %></td>
-					</tr>					
-					<tr>
-						<td>inscription count</td>
-						<td><%= tower.val().inscriptCount %></td>
-					</tr>
-					<tr>
-						<td>inscription legibility</td>
-						<td><%= tower.val().inscriptLegibility %></td>
-					</tr>
-					<tr>
-						<td>inscription description</td>
-						<td><%= tower.val().inscriptDescription %></td>
-					</tr>
-				</tbody>
-			</table>
+			<% include partials/showTable %>
 			
 			<img id="panorama" src="<%= tower.val().panorama %>">
 
@@ -100,7 +34,6 @@
 		</div>
 	</div>
 </div>
-
 
 <% include partials/footer %>
 
