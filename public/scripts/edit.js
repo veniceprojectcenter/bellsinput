@@ -1,35 +1,40 @@
-
-
 $("#editGeneral").click(function(){
+	var category = "general";
 	hideAllData();
-	$("#dataCategorySpan").text('General');
-	$("#generalData").show();
+	showCategory(category);
 });
 
 $("#editExterior").click(function(){
+	var category = "exterior";
 	hideAllData();
-	$("#dataCategorySpan").text('Exterior');
-	$("#exteriorData").show();
-
+	showCategory(category);
 });
 
 $("#editInterior").click(function(){
+	var category = "interior";
 	hideAllData();
-	$("#dataCategorySpan").text('Interior');
-	$("#interiorData").show();
-
+	showCategory(category);
 });
 
 $("#editBells").click(function(){
+	var category = "bells";
 	hideAllData();
-	$("#dataCategorySpan").text('Bells');
-	$("#bellsData").show();
-
+	showCategory(category);
 });
+
+function showCategory(category){
+	$("#" + category + "Data").show();
+	$("#dataCategorySpan").text(category.capitalize());
+}
 
 function hideAllData(){
 	$("#generalData").hide();
 	$("#exteriorData").hide();
 	$("#interiorData").hide();
 	$("#bellsData").hide();
+}
+
+// capitalize first word of string
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
 }
