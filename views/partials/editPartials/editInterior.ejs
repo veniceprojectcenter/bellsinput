@@ -1,8 +1,8 @@
 <div id="interiorData">
 
 <!-- show only 'groundFloor' 'belfry' and 'landing' -->
-	<% for (var key in tower.val()) { %>
-		<% if (tower.val().hasOwnProperty(key)) { %>
+	<% for (var key in tower.val().data.landings) { %>
+		<% if (tower.val().data.landings.hasOwnProperty(key)) { %>
 			<% if (key.substring(0, 7) == "landing" || key == "belfry" || key == "groundFloor") { %> 
 				<div class="ui fluid accordion">
 					<div class="title">
@@ -16,9 +16,10 @@
 						data
 					</div>
 					<div class="content whitePaddedContent">
-						<% for (var field in tower.val()[key]) { %>
-							<% if (tower.val()[key].hasOwnProperty(field)) { %>
-								<input type="text" name="<%= key %>[<%= tower.val()[key][field] %>]" placeholder="<%= field %>" value="<%= tower.val()[key][field] %>"  >
+						<% for (var field in tower.val().data.landings[key]) { %>
+							<% if (tower.val().data.landings[key].hasOwnProperty(field)) { %>
+								<label><%= field %></label>
+								<input type="text" name="bellTower[data][landings][<%= key %>][<%= field %>]" placeholder="<%= field %>" value="<%= tower.val().data.landings[key][field] %>"  >
 							<% } %> 
 						<% } %>
 					</div>

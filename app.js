@@ -68,10 +68,10 @@ app.get("/towers/:id/interior/edit", function(req, res){
 
 // CREATE ROUTE
 app.post("/towers", function(req, res) {
-	var numLandings = parseInt(req.body.bellTower.numLandings),
+	var numLandings = parseInt(req.body.bellTower.data.numLandings),
 		bellTower = req.body.bellTower,
 		newTowerKey = bellTowersRef.push(bellTower).key,
-		updateTowerRef = firebase.database().ref('/sampleBellTowers/' + newTowerKey);
+		updateTowerRef = firebase.database().ref('/sampleBellTowers/' + newTowerKey +'/data/landings');
 
 	var floor = {
 		field1 : '1',
