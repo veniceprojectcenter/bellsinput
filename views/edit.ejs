@@ -7,13 +7,17 @@
 	</script>
 
 <div id="main" class="ui container text noselect">
+
+	<h1 class="pageTitle"><span id="dataCategorySpan">General</span> Info</h1>
+	<% include partials/editPartials/editButtons %>
+
 	<form class="ui form noselect" action="/towers/<%= tower.key %>?_method=PUT" method="POST">
-
-		<p>belfry</p>
-
-		<p><%= tower.numLandings %></p>
-
-		<p>landing</p>
+		<div class="ui fluid accordion">
+		<% include partials/editPartials/editGeneral %>
+		<% include partials/editPartials/editExterior %>
+		<% include partials/editPartials/editInterior %>
+		<% include partials/editPartials/editBells %>
+		</div>
 
 		<div class="field">
 			<input class="ui fluid green button" type="submit"> 
@@ -21,4 +25,5 @@
 	</form>
 </div>
 
+<script type="text/javascript" src="/scripts/edit.js"></script>
 <% include partials/footer %>
