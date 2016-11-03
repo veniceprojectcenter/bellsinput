@@ -1,4 +1,4 @@
-const bellTowerModel = {
+const bellTower_model = {
 	data: {
 		common_name: "",
 		numLandings: 0,
@@ -23,10 +23,16 @@ const bellTowerModel = {
 	}
 };
 
-const bellModel = {
+const landingSection_model = {
+	landing_field1: "",
+	landing_field2: "",
+}
+
+const bell_model = {
 	bell_field1: "",
 	bell_field2: "",
 }
 
-exports.bellTowerModel = bellTowerModel;
-exports.bellModel = bellModel;
+exports.bellTowerModel = bellTower_model;
+exports.landingSectionModel = landingSection_model;
+exports.bellModel = bell_model;

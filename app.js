@@ -158,7 +158,7 @@ app.put("/towers/:id/refactorTower", function(req, res){
 
 		if (0 < changedBells) { // possitive
 			for (i = previousNumBells + 1; i < numBells + 1; i++) {
-				updateTower.data.bells['bell' + i] = modelFile.bellTowerModel.data.bells.bell;
+				updateTower.data.bells['bell' + i] = modelFile.bellModel;
 			}
 		} else if (changedBells < 0) { // negative
 			for (i = previousNumBells; i > numBells; i--) {
