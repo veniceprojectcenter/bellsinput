@@ -1,8 +1,8 @@
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-var loginButton = document.getElementById("loginButton");
+var showLoginButton = document.getElementById("showLoginButton"),
+	loginButton = document.getElementById("loginButton");
 
-$('.ui.modal').modal('show');
+// $('.ui.modal').modal('show');
 
 loginButton.onclick = function() {
 	username = $('#username').val();
@@ -12,6 +12,6 @@ loginButton.onclick = function() {
 }
 
 // When the user clicks on the button, open the modal 
-btn1[0].onclick = function() {
+showLoginButton.onclick = function() {
    $('.ui.modal').modal('show');
 }
