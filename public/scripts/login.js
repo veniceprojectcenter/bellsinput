@@ -1,9 +1,3 @@
-$('.sidemenu').click(function() {
-	$('.ui.labeled.icon.sidebar')
-	  .sidebar('toggle')
-	;
-});
-
 // Get the modal
 var modal = document.getElementById('myModal');
 
