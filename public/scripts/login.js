@@ -1,5 +1,5 @@
 // Get the button that opens the modal
-var showLoginButton = document.getElementById("showLoginButton"),
+var buttonToShowLogin = document.getElementById("buttonToShowLogin"),
 	loginButton = document.getElementById("loginButton");
 
 var fb = firebase.initializeApp({
@@ -10,17 +10,20 @@ var fb = firebase.initializeApp({
     messagingSenderId: "875898499054"
  });
 
+window.onload = function() {
+    initApp();
+};
+
 loginButton.onclick = function() {
     toggleSignIn();
 }
 
 // When the user clicks on the button, open the modal 
-showLoginButton.onclick = function() {
+buttonToShowLogin.onclick = function() {
 	$('.ui.modal').modal('show');
 }
 
 /* HELPER FUNCTIONS * HELPER FUNCTIONS * HELPER FUNCTIONS * HELPER FUNCTIONS * */
-
 /**
  * Handles the sign in button press.
  */
@@ -57,11 +60,6 @@ function toggleSignIn() {
         });
         // [END authwithemail]     
     }
-
-    if (firebase.auth().currentUser) {
-        $('.ui.modal').modal('hide');
-        alert("welcome back!");
-    }
 }
 
 /**
@@ -81,14 +79,8 @@ function initApp() {
             var email = user.email;
             var displayName = email.split("@")[0];
             var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            var providerData = user.providerData;
             // [START_EXCLUDE silent]
-            /* document.getElementById('quickstart-sign-in-status').textContent = 'Signed in'; */
             document.getElementById('sign-in-status').textContent = displayName; 
-            /* document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  '); */
             if (!emailVerified) {
                 /* document.getElementById('quickstart-verify-email').disabled = false; */
             }
@@ -97,23 +89,12 @@ function initApp() {
             // User is signed out.
             // [START_EXCLUDE silent]
             $('.ui.modal').modal('show');
-            /* document.getElementById('quickstart-sign-in-status').textContent = 'Signed out'; */
-            document.getElementById('sign-in-status').textContent = 'Sign In'; 
-            /* document.getElementById('quickstart-account-details').textContent = 'null'; */
+            document.getElementById('sign-in-status').textContent = 'Sign In';
             // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
         /* document.getElementById('quickstart-sign-in').disabled = false; */
         // [END_EXCLUDE]
     });
-
     // [END authstatelistener]
-    document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-    document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-    document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-    document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
 }
-
-window.onload = function() {
-    initApp();
-};
