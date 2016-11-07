@@ -4,7 +4,7 @@ RegExp.quote = function(str) {
 
 var text = ""
 
-$("input[type = text]").keyup( function(param) {
+$("#searchTower").keyup( function(param) {
 	var _this = this;
 
 	$(".towerContainer").each(function(div){
