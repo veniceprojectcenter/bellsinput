@@ -8,12 +8,13 @@
 <button id="myBtn">Open Modal</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-	<div class="modal-content">
-		<span class="close">x</span>
-		<h2>Login</h2>
-		<form class="ui tiny form">
+<div class="ui small modal">
+	<i class="close icon"></i>
+	<div class="header">
+		Login
+	</div>
+	<div class="content">
+		<form class="ui form">
 			<div class="field">
 				<label>User Name</label>
 				<input id="username" type="text" placeholder="username">
@@ -22,7 +23,11 @@
 				<label>Password</label>
 				<input id="password" type="password" placeholder="mypassword">
 			</div>
-			<button class="ui button" type="submit">Submit</button>
 		</form>
+	</div>
+	<div class="actions">
+			<div class="ui positive button">
+				Login
+			</div>
 	</div>
 </div>
