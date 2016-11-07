@@ -65,14 +65,17 @@ img#panorama {
 	padding: 10px;
 }
 
-/*complete accordion*/
+/* round border * round border * round border * round border * round border */
 div.ui.fluid.accordion {
 	border-radius: .28571429rem .28571429rem .28571429rem .28571429rem;
 	-moz-border-radius: .28571429rem .28571429rem .28571429rem .28571429rem;
 	-webkit-border-radius: .28571429rem .28571429rem .28571429rem .28571429rem;
 	border: 0px solid #000000;
 	overflow: hidden;
+}
 
+/*complete accordion*/
+div.ui.fluid.accordion {
 	-webkit-box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.04);
 	-moz-box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.04);
 	box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.04);

@@ -2,15 +2,13 @@
 
 var fb_url = 'https://sample-firebase.firebaseio.com';
 var fb = new Firebase(fb_url);
-
 var authData = fb.getAuth();
-
 var logged_in = (authData ? true : false);
-
 vm.logout = function(){
   logged_in = false
   fb.unauth();
 };
+
 vm.login  = function(){
   fb.authWithPassword({
     email    : $('#login_user').val(),
@@ -50,10 +48,10 @@ $('#loginform').on('submit', function(e){
   e.preventDefault();
 });
 
-send to server:
-  fb.getAuth().token
+// send to server:
+fb.getAuth().token
 
-on server side use token to authenticate
+// on server side use token to authenticate
   firebase.auth().signInWithCustomToken(token).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
