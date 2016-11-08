@@ -1,0 +1,5 @@
+
+Towers: {{Object.keys(bc.belltowers).length}}
+<div ng-repeat="(tower_id, tower_name) in bc.belltowers" ng-click="bc.chooseTower(tower_id)">
+	key: {{tower_id}}, Name {{tower_name}}
+</div>

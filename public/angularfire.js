@@ -62,8 +62,8 @@ firebase.initializeApp(config);
 		});
 		
 		bc.chooseTower = function(tower_id){
-			$('#bell_list').hide();
-			$('#bell_info').show();
+			$('#index').hide();
+			$('#edit').show();
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()

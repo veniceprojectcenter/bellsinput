@@ -15,35 +15,10 @@
 		
 		<script type="text/javascript" src="angularfire.js"></script>
 </head>
+
 <body ng-controller="BellsController as bc">	
-	<div id="bell_list">
-		Towers: {{Object.keys(bc.belltowers).length}}
-		<div ng-repeat="(tower_id, tower_name) in bc.belltowers" ng-click="bc.chooseTower(tower_id)">
-			key: {{tower_id}}, Name {{tower_name}}
-		</div>
-	</div>
-	
-	<div style="display: none"  id="bell_info">
-		Name:<br />
-		<input type="text" ng-model="bell['Common name']"/>
-		<br /><br />
-		Actual Name: <b>{{bell['Common name']}}</b>
-		
-		<hr />
-		<a ng-click="bc.bellList()">Back</a>
-		
-		<div ng-repeat="(key, value) in bc.bell_info">
-			<div ng-if="typeof(value) == 'object'">
-				OBJECT:
-				<div ng-repeat="(key1, value1) in value">
-					{{key1}}: <input type="text" ng-model="value[key1]"/>
-				</div>
-			</div>
-			<div ng-if="typeof(value) != 'object'">
-				{{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
-			</div>
-		</div>
-	</div>
+	<div id="index" ng-include="'views/partials/index.htm'"></div>
+	<div id="edit" style="display: none" ng-include="'views/partials/edit.htm'"></div>
 </body>
 </html>
 
