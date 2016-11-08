@@ -22,10 +22,9 @@
 	Actual Name: <b>{{bc.bell_info.common_name}}</b -->
 	
 	<div id="bell_list">
-	Oba: {{Object.keys(bc.belltowers).length}}
 		Towers: {{Object.keys(bc.belltowers).length}}
-		<div ng-repeat="(key, value) in bc.belltowers" ng-click="bc.chooseTower(key)">
-			key: {{key}}, Name {{value}}
+		<div ng-repeat="(tower_id, tower_name) in bc.belltowers" ng-click="bc.chooseTower(tower_id)">
+			key: {{tower_id}}, Name {{tower_name}}
 		</div>
 	</div>
 	
@@ -33,9 +32,10 @@
 		Name:<br />
 		<input type="text" ng-model="bell['Common name']"/>
 		<br /><br />
-		Actual Name: <b>{{bell['Common name']}}</b -->
+		Actual Name: <b>{{bell['Common name']}}</b>
 		
 		<hr />
+		<a ng-click="bc.bellList()">Back</a>
 		
 		<!-- div ng-repeat="(key, value) in bc.bell_info">
 			<div ng-if="typeof(value) == 'object'">

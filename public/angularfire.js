@@ -23,8 +23,8 @@ firebase.initializeApp(config);
 	
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
 		var bc = this;
-		bc.belltowers = {a: 1, b: 2, c: 4};
-
+		bc.belltowers = {};
+		
 		firebase.database().ref()
 			.child("groups")
 			.child("Bell Tower Page Final")
@@ -32,18 +32,33 @@ firebase.initializeApp(config);
 			.on('value', function(towerIDs) {
 				var res = towerIDs.val();
 				console.log("Loaded", res);
-				for (var property in res) {
-					if (res.hasOwnProperty(property)) {
-						console.log("res has ", property);
-						bc.belltowers[property] = property;
-						firebase.database().ref()
-							.child("data")
-							.child(property).on('value', function(val2){ bc.belltowers[property] = val2.val()['Common name']});
-					} else {
-						console.log("res does not have ", property);
-					}
-				}
-				console.log("bc.belltowers", bc.belltowers);
+				Object.keys(res).forEach(function(k){
+					bc.belltowers[k] = k;
+				});
+				$scope.$apply();
+				Object.keys(bc.belltowers).forEach(function(k){
+					firebase.database().ref()
+						.child("data")
+						.child(k)
+						.on('value', function(val2){
+						console.log("Fetch key", k, val2.val()['data']['Common name']);	
+						bc.belltowers[k] = val2.val()['data']['Common name']
+						$scope.$apply();
+					});
+				});
+				// console.log("Loaded", res);
+				// for (var property in res) {
+				// 	if (res.hasOwnProperty(property)) {
+				// 		console.log("res has ", property);
+				// 		bc.belltowers[property] = property;
+				// 		firebase.database().ref()
+				// 			.child("data")
+				// 			.child(property).on('value', function(val2){ bc.belltowers[property] = val2.val()['Common name']});
+				// 	} else {
+				// 		console.log("res does not have ", property);
+				// 	}
+				// }
+				// console.log("bc.belltowers", bc.belltowers);
 		});
 		
 		bc.chooseTower = function(tower_id){
@@ -59,6 +74,11 @@ firebase.initializeApp(config);
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
+		};
+		
+		bc.bellList = function(){
+			$('#bell_list').show();
+			$('#bell_info').hide();
 		};
 	});
 
