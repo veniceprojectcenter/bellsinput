@@ -15,12 +15,7 @@
 		
 		<script type="text/javascript" src="angularfire.js"></script>
 </head>
-<body ng-controller="BellsController as bc">
-	<!-- Name:<br />
-	<input type="text" ng-model="bc.bell_info.common_name"/>
-	<br /><br />
-	Actual Name: <b>{{bc.bell_info.common_name}}</b -->
-	
+<body ng-controller="BellsController as bc">	
 	<div id="bell_list">
 		Towers: {{Object.keys(bc.belltowers).length}}
 		<div ng-repeat="(tower_id, tower_name) in bc.belltowers" ng-click="bc.chooseTower(tower_id)">
@@ -37,7 +32,7 @@
 		<hr />
 		<a ng-click="bc.bellList()">Back</a>
 		
-		<!-- div ng-repeat="(key, value) in bc.bell_info">
+		<div ng-repeat="(key, value) in bc.bell_info">
 			<div ng-if="typeof(value) == 'object'">
 				OBJECT:
 				<div ng-repeat="(key1, value1) in value">
@@ -47,7 +42,7 @@
 			<div ng-if="typeof(value) != 'object'">
 				{{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
 			</div>
-		</div -->
+		</div>
 	</div>
 </body>
 </html>
