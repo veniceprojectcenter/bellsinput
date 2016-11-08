@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
-    <title>AngularFire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <!-- JQuery -->
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- AngularJS -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <!-- Firebase -->
-    <script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-    <!-- AngularFire -->
-    <script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
-    
-    <script type="text/javascript" src="angularfire.js"></script>
+	<head>
+		<title>AngularFire</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<!-- JQuery -->
+		<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- AngularJS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+		
+		<script type="text/javascript" src="angularfire.js"></script>
 </head>
 <body ng-controller="BellsController as bc">
-  <!-- Name:<br />
-  <input type="text" ng-model="bc.bell_info.common_name"/>
-  <br /><br />
-  Actual Name: <b>{{bc.bell_info.common_name}}</b -->
-  
-  <div id="bell_list">
-    Towers: {{Object.keys(bc.belltowers).length}}
-    <div ng-repeat="(key, value) in bc.belltowers" ng-click="bc.chooseTower(key)">
-      key: {{key}}, Name {{value}}
-    </div>
-  </div>
-  
-  <div style="display: none"  id="bell_info">
-    Name:<br />
-    <input type="text" ng-model="bell['Common name']"/>
-    <br /><br />
-    Actual Name: <b>{{bell['Common name']}}</b -->
-    
-    <hr />
-    
-    <!-- div ng-repeat="(key, value) in bc.bell_info">
-      <div ng-if="typeof(value) == 'object'">
-        OBJECT:
-        <div ng-repeat="(key1, value1) in value">
-          {{key1}}: <input type="text" ng-model="value[key1]"/>
-        </div>
-      </div>
-      <div ng-if="typeof(value) != 'object'">
-        {{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
-      </div>
-    </div -->
-  </div>
+	<!-- Name:<br />
+	<input type="text" ng-model="bc.bell_info.common_name"/>
+	<br /><br />
+	Actual Name: <b>{{bc.bell_info.common_name}}</b -->
+	
+	<div id="bell_list">
+	Oba: {{Object.keys(bc.belltowers).length}}
+		Towers: {{Object.keys(bc.belltowers).length}}
+		<div ng-repeat="(key, value) in bc.belltowers" ng-click="bc.chooseTower(key)">
+			key: {{key}}, Name {{value}}
+		</div>
+	</div>
+	
+	<div style="display: none"  id="bell_info">
+		Name:<br />
+		<input type="text" ng-model="bell['Common name']"/>
+		<br /><br />
+		Actual Name: <b>{{bell['Common name']}}</b -->
+		
+		<hr />
+		
+		<!-- div ng-repeat="(key, value) in bc.bell_info">
+			<div ng-if="typeof(value) == 'object'">
+				OBJECT:
+				<div ng-repeat="(key1, value1) in value">
+					{{key1}}: <input type="text" ng-model="value[key1]"/>
+				</div>
+			</div>
+			<div ng-if="typeof(value) != 'object'">
+				{{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
+			</div>
+		</div -->
+	</div>
 </body>
 </html>
 
