@@ -38,7 +38,8 @@ app.listen(port, function(){
 });
 
 app.get("/", function(req, res){
-	res.redirect("/towers");
+	// res.redirect("/towers");
+	res.redirect("/angularfire.html");
 });
 
 // INDEX ROUTE

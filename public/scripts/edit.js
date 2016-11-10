@@ -1,10 +1,11 @@
 var dataCategories = ["general", "exterior", "interior", "bells"];
 
-document.addEventListener('DOMContentLoaded', function() {
-	hideAllData();
-	showCategory(dataCategories[0]);
-    setUpCategoryClicks();
-}, false);
+// document.addEventListener('DOMContentLoaded', function() {
+// 	alert("allo faggot");
+// 	hideAllData();
+// 	showCategory(dataCategories[0]);
+//     setUpCategoryClicks();
+// }, false);
 
 function setUpCategoryClicks(){
 	dataCategories.forEach(function(category) {

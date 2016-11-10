@@ -12,7 +12,7 @@ var config = {
 	storageBucket: "firebase-cityknowledge.appspot.com",
 	messagingSenderId: "445655714967"
 };
-firebase.initializeApp(config);
+var fb = firebase.initializeApp(config);
 
 (function() {
 	'use strict';
@@ -40,30 +40,21 @@ firebase.initializeApp(config);
 					firebase.database().ref()
 						.child("data")
 						.child(k)
-						.on('value', function(val2){
-						console.log("Fetch key", k, val2.val()['data']['Common name']);	
-						bc.belltowers[k] = val2.val()['data']['Common name']
+						.on('value', function(tower){
+						// console.log("Fetch key", k, tower.val()['data']['Common name']);	
+						bc.belltowers[k] = tower.val()['data']['Common name'];
 						$scope.$apply();
 					});
 				});
-				// console.log("Loaded", res);
-				// for (var property in res) {
-				// 	if (res.hasOwnProperty(property)) {
-				// 		console.log("res has ", property);
-				// 		bc.belltowers[property] = property;
-				// 		firebase.database().ref()
-				// 			.child("data")
-				// 			.child(property).on('value', function(val2){ bc.belltowers[property] = val2.val()['Common name']});
-				// 	} else {
-				// 		console.log("res does not have ", property);
-				// 	}
-				// }
-				// console.log("bc.belltowers", bc.belltowers);
 		});
-		
-		bc.chooseTower = function(tower_id){
-			$('#bell_list').hide();
-			$('#bell_info').show();
+
+		$scope.$on('$includeContentLoaded', function () {
+    		initApp();
+		});
+
+		bc.showTower = function(tower_id){
+			bc.hideAll();
+			$('#show').show();
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()
@@ -76,10 +67,28 @@ firebase.initializeApp(config);
 			bc.bell_info.$bindTo($scope, "bell");
 		};
 		
-		bc.bellList = function(){
-			$('#bell_list').show();
-			$('#bell_info').hide();
+		bc.editTower = function(tower_id){
+			bc.hideAll();
+			$('#edit').show();
+			setUpCategoryClicks(); // from edit.js
+			// QUICKSTART
+			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
+			bc.bell_ref = firebase.database().ref()
+				.child("data")
+				.child(tower_id)
+				.child('data');
+			bc.bell_info = $firebaseObject(bc.bell_ref);
+			// synchronize the object with a three-way data binding
+			// click on `index.html` above to see it used in the DOM!
+			bc.bell_info.$bindTo($scope, "bell");
+
+
+		};
+
+		bc.hideAll = function() {
+			$('#index').hide();
+			$('#edit').hide();
+			$('#show').hide();
 		};
 	});
-
 })();
