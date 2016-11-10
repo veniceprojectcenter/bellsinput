@@ -66,6 +66,7 @@ firebase.initializeApp(config);
 		bc.editTower = function(tower_id){
 			bc.hideAll();
 			$('#edit').show();
+			setUpCategoryClicks(); // from edit.js
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()
@@ -76,6 +77,8 @@ firebase.initializeApp(config);
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
+
+
 		};
 
 		bc.hideAll = function() {
@@ -84,5 +87,4 @@ firebase.initializeApp(config);
 			$('#show').hide();
 		};
 	});
-
 })();
