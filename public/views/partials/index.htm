@@ -17,15 +17,14 @@
 	</div>
 
 <div class="ui items segment towerContainer"
-	ng-repeat="(tower_id, tower_name) in bc.belltowers" 
-	ng-click="bc.showTower(tower_id)">
+	ng-repeat="(tower_id, tower_name) in bc.belltowers">
 
 	<div class="ui item">
 		<div class="image towerImageContainer">
 			<img id="towerImage" src="<%= tower.val().image %>">
 		</div>
 		<div class="content whitePaddedContent">
-			<a class="header towerName" href="#"> {{tower_name}} </a>
+			<a class="header towerName" href="#" ng-click="bc.showTower(tower_id)"> {{tower_name}} </a>
 			<div class="meta">
 				<span class="towerID"> <!-- {{Bell Tower ID}} --> -</span>
 				<span class="Sestiere"> <!-- {{Sestiere}} --> -</span>
@@ -36,7 +35,7 @@
 			</div>
 			<div class="extra">
 				<div class="ui fluid buttons">
-					<a href="/towers/<%= tower.key %>" class="ui button positive">View</a>
+					<div class="ui button positive" ng-click="bc.showTower(tower_id)">View</div>
 					<div class="or"></div>
 					<a href="/towers/<%= tower.key %>/edit" class="ui button">Edit</a>
 				</div>
