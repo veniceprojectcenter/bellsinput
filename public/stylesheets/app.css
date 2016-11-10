@@ -65,6 +65,10 @@ img#panorama {
 	padding: 10px;
 }
 
+.whitePaddedContent > input {
+	margin-bottom: 20px;
+}
+
 /* round border * round border * round border * round border * round border */
 div.ui.fluid.accordion {
 	border-radius: .28571429rem .28571429rem .28571429rem .28571429rem;
@@ -85,6 +89,10 @@ div.ui.fluid.accordion {
 .ui.accordion:not(.styled) .title~.content:not(.ui) {
 	background: #f5f5f5;
 	padding: 20px;
+}
+
+.ui.accordion:not(.styled) .title~.content:not(.ui):last-child {
+	padding-bottom: 20px;
 }
 
 .noselect { 

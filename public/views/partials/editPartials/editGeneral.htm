@@ -13,24 +13,28 @@
 <!-- * * * * * * * * * * * * * * * * *  -->
 	<div class="title">
 		<i class="dropdown icon"></i>
-		Data
+		General Data
 	</div>
 
 	<div class="content whitePaddedContent">
-		<div ng-repeat="(key, value) in bc.bell_info">
-			<div ng-if="typeof(value) == 'object'">
-				<!-- object -->
-				<div ng-repeat="(key1, value1) in value">
-					<label>{{key1}}</label>
-					<input type="text" ng-model="value[key1]"/>
-				</div>
-			</div>
+		<div class="field">		
+			<label>Latitude</label>
+			<input type="text" ng-model="bell['Latitude']"/>	
+		</div>
 
-			<div ng-if="typeof(value) != 'object'">
-				<!-- field -->
-				<label>{{key}}</label>
-				<input type="text" ng-model="bc.bell_info[key]"/>
-			</div>
+		<div class="field">	
+			<label>Longitude</label>
+			<input type="text" ng-model="bell['Longitude']"/>		
+		</div>
+
+		<div class="field">
+			<label>Lightning rod</label>
+			<input type="text" ng-model="bell['Lightning rod']"/>		
+		</div>
+
+		<div class="field">
+			<label>Material</label>
+			<input type="text" ng-model="bell['Material']"/>
 		</div>
 	</div>
 </div>

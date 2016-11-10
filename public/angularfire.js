@@ -52,6 +52,11 @@ var fb = firebase.initializeApp(config);
     		initApp();
 		});
 
+		bc.index = function(){
+			bc.hideAll();
+			$('#index').show();
+		};
+
 		bc.showTower = function(tower_id){
 			bc.hideAll();
 			$('#show').show();
