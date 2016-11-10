@@ -1,6 +1,6 @@
 // Get the button that opens the modal
 var buttonToShowLogin = document.getElementById("buttonToShowLogin"),
-	loginButton = document.getElementById("loginButton");
+    loginButton = document.getElementById("loginButton");
 
 var config = {
     apiKey: "AIzaSyC6NAfPU1NV6QJcqL4sg4VJGa9S7nVXP4Q",
@@ -10,27 +10,10 @@ var config = {
     messagingSenderId: "445655714967"
 };
 var fb = firebase.initializeApp(config);
-// var fb = firebase.initializeApp({
-//     apiKey: "AIzaSyAYZ9Nb200nKhcGyHF11ABGshzcAMy5-k8",
-//     authDomain: "sample-firebase-b2d4d.firebaseapp.com",
-//     databaseURL: "https://sample-firebase-b2d4d.firebaseio.com",
-//     storageBucket: "sample-firebase-b2d4d.appspot.com",
-//     messagingSenderId: "875898499054"
-//  });
-
 
 window.onload = function() {
-    initApp();
+    // initApp();
 };
-
-loginButton.onclick = function() {
-    toggleSignIn();
-}
-
-// When the user clicks on the button, open the modal 
-buttonToShowLogin.onclick = function() {
-	$('.ui.modal').modal('show');
-}
 
 /* HELPER FUNCTIONS * HELPER FUNCTIONS * HELPER FUNCTIONS * HELPER FUNCTIONS * */
 /**
@@ -77,6 +60,14 @@ function toggleSignIn() {
  *    out, and that is where we update the UI.
  */
 function initApp() {
+    document.getElementById("loginButton").onclick = function() {
+        toggleSignIn();
+    }
+
+    // When the user clicks on the button, open the modal 
+    document.getElementById("buttonToShowLogin").onclick = function() {
+        $('.ui.modal').modal('show');
+    }
     // Listening for auth state changes.
     // [START authstatelistener]
     firebase.auth().onAuthStateChanged(function(user) {

@@ -12,7 +12,7 @@ var config = {
 	storageBucket: "firebase-cityknowledge.appspot.com",
 	messagingSenderId: "445655714967"
 };
-firebase.initializeApp(config);
+var fb = firebase.initializeApp(config);
 
 (function() {
 	'use strict';
@@ -46,6 +46,10 @@ firebase.initializeApp(config);
 						$scope.$apply();
 					});
 				});
+		});
+
+		$scope.$on('$includeContentLoaded', function () {
+    		initApp();
 		});
 
 		bc.showTower = function(tower_id){

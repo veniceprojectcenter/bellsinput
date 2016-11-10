@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<head>
-	<!-- normalize css -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-    <!-- Meta tags that set up the page as a mobile page   -->
-    <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" href="/m/images/iphone.png" />
-    <meta name="format-detection" content="telephone=no" />
-    <!--  A free Google web font embed because android does not have the browser safe fonts -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Allerta">
-    
-	<title>VeBells</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
-	<!-- <title>AngularFire</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+	<head>
+		<!-- normalize css -->
+	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	    
+	    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	    <!-- Meta tags that set up the page as a mobile page   -->
+	    <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <link rel="apple-touch-icon" href="/m/images/iphone.png" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <!--  A free Google web font embed because android does not have the browser safe fonts -->
+	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Allerta">
+	    
+		<title>VeBells</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+		<!-- <title>AngularFire</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+			
+		<!-- JQuery -->
+		<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- AngularJS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 		
-	<!-- JQuery -->
-	<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-	<!-- AngularJS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<!-- Firebase -->
-	<script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-	<!-- AngularFire -->
-	<script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
-	
-	<script type="text/javascript" src="angularfire.js"></script>
-</head>
+		<script type="text/javascript" src="angularfire.js"></script>
+	</head>
 
-<body ng-controller="BellsController as bc">	
-	<div id="index" ng-include="'views/partials/index.htm'"></div>
-	<div id="show" style="display: none" ng-include="'views/partials/show.htm'"></div>
-	<div id="edit" style="display: none" ng-include="'views/partials/edit.htm'"></div>
+	<body ng-controller="BellsController as bc">	
+		<div ng-include="'views/partials/loginModal.htm'"></div>
+		<div ng-include="'views/partials/navBar.htm'"></div>
 
-	<script type="text/javascript" src="/scripts/show.js"></script>
-</body>
+		<div id="index" ng-include="'views/partials/index.htm'"></div>
+		<div id="show" style="display: none" ng-include="'views/partials/show.htm'"></div>
+		<div id="edit" style="display: none" ng-include="'views/partials/edit.htm'"></div>
 
-<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+	<!-- scripts * scripts * scripts * scripts * -->
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-
-<script src="/scripts/global.js"></script>
-<script src="/scripts/login.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+		<script type="text/javascript" src="/scripts/show.js"></script>
+		<script src="/scripts/global.js"></script>
+		<script src="/scripts/login.js"></script>
+	</body>
 </html>
 
