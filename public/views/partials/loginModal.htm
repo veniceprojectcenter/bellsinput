@@ -1,6 +1,6 @@
 <!-- The Modal -->
-<div class="ui small modal">
-	<i class="close icon"></i>
+<div id="loginModal" class="ui small modal">
+	<!-- <i class="close icon"></i> -->
 	<div class="header">
 		Login
 	</div>
@@ -15,6 +15,10 @@
 				<input id="password" type="password" placeholder="password123">
 			</div>
 		</form>
+		<div id="loginErrorContainer" style="display: none" class="ui error message">
+		    <div class="header">Error:</div>
+		    <p id="loginError"></p>
+		</div>
 	</div>
 	<div class="actions">
 		<div id="loginButton" class="ui positive button">
