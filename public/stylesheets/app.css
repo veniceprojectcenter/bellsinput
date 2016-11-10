@@ -117,3 +117,11 @@ input.ui.fluid.green.button, #progress {
 tbody {
 	color: gray;
 }
+
+
+table { /*avoid table overflow*/
+  table-layout: fixed 
+}
+table td { /*avoid table overflow*/
+  word-wrap: break-word;
+}
