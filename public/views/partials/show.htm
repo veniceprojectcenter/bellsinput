@@ -7,7 +7,7 @@
 	<div class="ui grid stackable">
 		<div class="four wide column">
 			<img class="ui image" src="<%= tower.val().image %>">
-			<a id="edit" class="ui green fluid button" href="#">Edit</a>
+			<div class="ui green fluid button" ng-click="bc.editTower(tower_id)">Edit</div>
 			<div class="ui indicating progress" data-value="5" data-total="20" id="progress">
 				<div class="bar"></div>
   				<div class="label">Complete</div>

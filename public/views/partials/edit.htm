@@ -1,18 +1,28 @@
 
-Name:<br/>
-<input type="text" ng-model="bell['Common name']"/>
-<br /><br />
-Actual Name: <b>{{bell['Common name']}}</b>
-<hr/>
-<a ng-click="bc.bellList()">Back</a>
-<div ng-repeat="(key, value) in bc.bell_info">
-	<div ng-if="typeof(value) == 'object'">
-		OBJECT:
-		<div ng-repeat="(key1, value1) in value">
-			{{key1}}: <input type="text" ng-model="value[key1]"/>
+<script language='javascript'>
+	$(document).ready(function () {
+	    $('.ui.accordion').accordion();
+	});
+</script>
+
+<div id="main" class="ui container text noselect">
+	<h1>{{bell['Common name']}}</h1>
+	<h2 class="pageTitle"><span id="dataCategorySpan">General</span> Info</h2>
+	<div class="ui grid stackable">
+		<div class="four wide column">
+			<div ng-include="'/views/partials/editPartials/editButtons.htm'"></div>
+		</div>
+		<div class="ui twelve wide column">
+			<form class="ui form noselect">
+
+				<div id="generalData" style="display: none" ng-include="'/views/partials/editPartials/editGeneral.htm'"></div>
+				<div id="exteriorData" ng-include="'/views/partials/editPartials/editExterior.htm'"></div>
+				<div id="interiorData" ng-include="'/views/partials/editPartials/editInterior.htm'"></div>
+				<div id="bellsData" ng-include="'/views/partials/editPartials/editBells.htm'"></div>
+
+			</form>
 		</div>
 	</div>
-	<div ng-if="typeof(value) != 'object'">
-		{{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
-	</div>
 </div>
+
+<script type="text/javascript" src="/scripts/edit.js"></script>

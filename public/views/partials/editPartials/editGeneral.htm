@@ -1,0 +1,36 @@
+<div class="ui fluid accordion">
+<!-- * * * * * * * * * * * * * * * * *  -->
+	<div class=" active title">
+		<i class="dropdown icon"></i>
+		Name
+	</div>
+
+	<div class="active content whitePaddedContent">
+		<label>name</label>
+		<input type="text" ng-model="bell['Common name']"/>
+	</div>
+
+<!-- * * * * * * * * * * * * * * * * *  -->
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Data
+	</div>
+
+	<div class="content whitePaddedContent">
+		<div ng-repeat="(key, value) in bc.bell_info">
+			<div ng-if="typeof(value) == 'object'">
+				<!-- object -->
+				<div ng-repeat="(key1, value1) in value">
+					<label>{{key1}}</label>
+					<input type="text" ng-model="value[key1]"/>
+				</div>
+			</div>
+
+			<div ng-if="typeof(value) != 'object'">
+				<!-- field -->
+				<label>{{key}}</label>
+				<input type="text" ng-model="bc.bell_info[key]"/>
+			</div>
+		</div>
+	</div>
+</div>

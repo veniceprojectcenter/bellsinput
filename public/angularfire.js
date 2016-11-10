@@ -49,7 +49,7 @@ firebase.initializeApp(config);
 		});
 
 		bc.showTower = function(tower_id){
-			$('#index').hide();
+			bc.hideAll();
 			$('#show').show();
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
@@ -63,8 +63,8 @@ firebase.initializeApp(config);
 			bc.bell_info.$bindTo($scope, "bell");
 		};
 		
-		bc.chooseTower = function(tower_id){
-			$('#index').hide();
+		bc.editTower = function(tower_id){
+			bc.hideAll();
 			$('#edit').show();
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
@@ -76,6 +76,12 @@ firebase.initializeApp(config);
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
+		};
+
+		bc.hideAll = function() {
+			$('#index').hide();
+			$('#edit').hide();
+			$('#show').hide();
 		};
 	});
 
