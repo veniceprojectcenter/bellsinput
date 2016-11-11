@@ -60,6 +60,7 @@ var fb = firebase.initializeApp(config);
 		bc.showTower = function(tower_id){
 			bc.hideAll();
 			$('#show').show();
+			console.log(tower_id);
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()
@@ -75,6 +76,7 @@ var fb = firebase.initializeApp(config);
 		bc.editTower = function(tower_id){
 			bc.hideAll();
 			$('#edit').show();
+			console.log(tower_id);
 			setUpCategoryClicks(); // from edit.js
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
@@ -86,8 +88,6 @@ var fb = firebase.initializeApp(config);
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
-
-
 		};
 
 		bc.hideAll = function() {

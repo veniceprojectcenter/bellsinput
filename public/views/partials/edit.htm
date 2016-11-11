@@ -1,21 +1,14 @@
 <div id="main" class="ui container text noselect">
 	<h1>{{bell['Common name']}}</h1>
-	<h2 class="pageTitle"><span id="dataCategorySpan">General</span> Info</h2>
-	<div class="ui grid stackable">
-		<div class="four wide column">
-			<div ng-include="'/views/partials/editPartials/editButtons.htm'"></div>
-		</div>
-		<div class="ui twelve wide column">
-			<form class="ui form noselect">
+	<!-- <h2 class="pageTitle"><span id="dataCategorySpan">General</span> Info</h2> -->
+	<div ng-include="'/views/partials/editPartials/editButtons.htm'"></div>
 
-				<div id="generalData" ng-include="'/views/partials/editPartials/editGeneral.htm'"></div>
-				<div id="exteriorData" style="display: none" ng-include="'/views/partials/editPartials/editExterior.htm'"></div>
-				<div id="interiorData" style="display: none" ng-include="'/views/partials/editPartials/editInterior.htm'"></div>
-				<div id="bellsData" style="display: none" ng-include="'/views/partials/editPartials/editBells.htm'"></div>
-
-			</form>
-		</div>
-	</div>
+	<form class="ui form noselect">
+		<div id="generalData" ng-include="'/views/partials/editPartials/editGeneral.htm'"></div>
+		<div id="exteriorData" style="display: none" ng-include="'/views/partials/editPartials/editExterior.htm'"></div>
+		<div id="interiorData" style="display: none" ng-include="'/views/partials/editPartials/editInterior.htm'"></div>
+		<div id="bellsData" style="display: none" ng-include="'/views/partials/editPartials/editBells.htm'"></div>
+	</form>
 </div>
 
 <script type="text/javascript" src="/scripts/edit.js"></script>
