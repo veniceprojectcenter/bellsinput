@@ -1,16 +1,26 @@
-<div id="editGeneralButton" class="ui fluid tiny button bottomMargin">
-	Edit General
-</div>
+<script type="text/javascript">
+	$('.ui.dropdown').dropdown();
+</script>
 
-
-<div id="editExteriorButton" class="ui fluid tiny button bottomMargin">
-	Edit Exterior
-</div>	
-
-<div id="editInteriorButton" class="ui fluid tiny button bottomMargin">
-	Edit Interior
-</div>	
-
-<div id="editBellsButton" class="ui fluid tiny button bottomMargin">
-	Edit Bells
+<div class="ui fluid labeled icon top left pointing dropdown button">
+	<i class="filter icon"></i>
+	<span class="text">Filter Posts</span>
+	<div class="menu">
+		<div id="editGeneralButton" class="item">
+	  		<div class="ui green empty circular label"></div>
+	  		Edit General
+		</div>
+		<div id="editExteriorButton" class="item">
+	  		<div class="ui blue empty circular label"></div>
+	  		Edit Exterior
+		</div>
+		<div id="editInteriorButton" class="item">
+	  		<div class="ui brown empty circular label"></div>
+	  		Edit Interior
+		</div>		
+		<div id="editBellsButton" class="item">
+	  		<div class="ui yellow empty circular label"></div>
+	  		Edit Bells
+		</div>
+	</div>
 </div>

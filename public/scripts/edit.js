@@ -25,7 +25,7 @@ function hideAllData(){
 
 function showCategory(category){
 	$("#" + category + "Data").show();
-	$("#dataCategorySpan").text( category.capitalize() );
+	// $("#dataCategorySpan").text( category.capitalize() );
 }
 
 // capitalize first word of string
