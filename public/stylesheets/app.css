@@ -1,5 +1,10 @@
 body {
-	background: #ecf0f1;
+	background: #2c3e50;
+	/*background-image: url(http://www.todayifoundout.com/wp-content/uploads/2013/07/doritos.jpg);*/
+}
+
+h1 {
+	color: white;
 }
 
 .content {
@@ -115,6 +120,10 @@ div.ui.fluid.accordion {
 	/*margin-right: 20px;*/
 }
 
+.ui.dropdown {
+	margin-bottom: 20px;
+}
+
 #edit {
 	margin-top: 15px;
 }
@@ -131,7 +140,6 @@ input.ui.fluid.green.button, #progress {
 tbody {
 	color: gray;
 }
-
 
 table { /*avoid table overflow*/
   table-layout: fixed 
