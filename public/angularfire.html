@@ -18,7 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 			
 		<!-- JQuery -->
-		<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>	
 		<!-- AngularJS -->
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 		<!-- Firebase -->
@@ -29,6 +29,7 @@
 	</head>
 
 	<body ng-controller="BellsController as bc">
+
 		<div id="navBarDiv" ng-include="'views/partials/navBar.htm'"></div>
 		<div ng-include="'views/partials/loginModal.htm'"></div>
 
@@ -39,9 +40,6 @@
 		</div>
 
 	<!-- scripts * scripts * scripts * scripts * -->
-
-		<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
 		<script type="text/javascript" src="/scripts/show.js"></script>
 		<script src="/scripts/global.js"></script>

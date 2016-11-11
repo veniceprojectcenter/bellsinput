@@ -1,11 +1,3 @@
-
-
-<script language='javascript'>
-	$(document).ready(function () {
-	    $('.ui.accordion').accordion();
-	});
-</script>
-
 <div id="main" class="ui container text">
 	<div class="ui header">
 		<h1>Towers</h1>
@@ -21,7 +13,7 @@
 
 	<div class="ui item">
 		<div class="image towerImageContainer">
-			<img id="towerImage" src="<%= tower.val().image %>">
+			<img id="towerImage" src="">
 		</div>
 		<div class="content whitePaddedContent">
 			<a class="header towerName" href="#" ng-click="bc.showTower(tower_id)"> {{tower_name}} </a>
