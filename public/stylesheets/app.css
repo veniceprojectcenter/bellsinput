@@ -2,9 +2,15 @@ body {
 	background: #ecf0f1;
 }
 
-/*top nav bar*/
-.ui.fixed.menu {
-	/*background: transparent;*/
+.content {
+	z-index: 1;
+	position: relative;
+}
+
+/* top nav bar */
+#navBarDiv {
+	z-index: 10;
+	position: absolute; /* avoid dimmer changing things */
 }
 
 .item.sidemenu {
