@@ -5,42 +5,138 @@
 </script>
 
 <div class="ui fluid accordion">
-<!-- * * * * * * * * * * * * * * * * *  -->
-	<div class=" active title">
-		<i class="dropdown icon"></i>
-		Name
-	</div>
-
-	<div class="active content whitePaddedContent">
-		<label>name</label>
-		<input type="text" ng-model="bell['Common name']"/>
-	</div>
-
-<!-- * * * * * * * * * * * * * * * * *  -->
+<!-- * * * * * * * * * * * * * * * * * * * * * *  -->
 	<div class="title">
 		<i class="dropdown icon"></i>
-		General Data
+		General
 	</div>
+	<div class="active content whitePaddedContent">
 
-	<div class="content whitePaddedContent">
-		<div class="field">		
-			<label>Latitude</label>
-			<input type="text" ng-model="bell['Latitude']"/>	
+		<div class="field">	
+			<label>Church name</label>
+			<input type="text" ng-model="bell['Church name']"/>
 		</div>
 
 		<div class="field">	
+			<label>Common name</label>
+			<input type="text" ng-model="bell['Common name']"/>
+		</div>
+
+		<div class="field">	
+			<label>Tower_Code</label>
+			<input type="text" placeholder="TODO" disabled/>
+		</div>
+
+		<div class="field">	
+			<label>Bell Tower ID</label>
+			<input type="text" ng-model="bell['Bell Tower ID']"/>
+		</div>
+
+		<div class="field">	
+			<label>Last_Visited</label>
+			<input type="text" placeholder="TODO" disabled/>
+		</div>
+
+		<div class="field">	
+			<label>Proprietor</label>
+			<input type="text" ng-model="bell['Proprietor']"/>
+		</div>
+
+		<div class="field">	
+			<label>Pastor Name</label>
+			<input type="text" placeholder="TODO" disabled/>
+		</div>
+
+		<div class="field">	
+			<label>Danger zone</label>
+			<input type="text" ng-model="bell['Danger zone']"/>
+		</div>
+
+		<div class="field">	
+			<label>Number of bells</label>
+			<input type="text" ng-model="bell['Number of bells']"/>
+		</div>
+
+		<div class="field">	
+			<label>Number of landings</label>
+			<input type="text" ng-model="bell['Number of landings']"/>
+		</div>
+
+		<div class="field">	
+			<label>Significant history</label>
+			<input type="text" ng-model="bell['Significant history']"/>
+		</div>
+
+		<div class="field">	
+			<label>Tower style</label>
+			<input type="text" ng-model="bell['Tower style']"/>
+		</div>
+
+		<div class="field">	
+			<label>Construction year</label>
+			<input type="text" ng-model="bell['Construction year']"/>
+		</div>
+
+		<div class="field">	
+			<label>Repair year</label>
+			<input type="text" ng-model="bell['Repair year']"/>
+		</div>
+
+		<div class="field">	
+			<label>Repair description</label>
+			<input type="text" ng-model="bell['Repair description']"/>
+		</div>
+
+		<div class="field">	
+			<label>Renovation and restoration years</label>
+			<input type="text" ng-model="bell['Renovation and restoration years']"/>
+		</div>
+
+		<div class="field">	
+			<label>Renovation and restoration description</label>
+			<input type="text" ng-model="bell['Renovation and restoration description']"/>
+		</div>
+
+		<div class="field">	
+			<label>Architecture</label>
+			<input type="text" ng-model="bell['Architecture']"/>
+		</div>
+
+		<div class="field">	
+			<label>Architect</label>
+			<input type="text" ng-model="bell['Architect']"/>
+		</div>
+	</div>
+
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Location
+	</div>
+
+	<div class="active content whitePaddedContent">
+		<div class="field">	
 			<label>Longitude</label>
-			<input type="text" ng-model="bell['Longitude']"/>		
+			<input type="text" ng-model="bell['Longitude']"/>
 		</div>
 
-		<div class="field">
-			<label>Lightning rod</label>
-			<input type="text" ng-model="bell['Lightning rod']"/>		
-		</div>
+		<div class="field">	
+			<label>Latitude</label>
+			<input type="text" ng-model="bell['Latitude']"/>
+		</div>		
 
-		<div class="field">
-			<label>Material</label>
-			<input type="text" ng-model="bell['Material']"/>
+		<div class="field">	
+			<label>Sestiere</label>
+			<input type="text" ng-model="bell['Sestiere']"/>
+		</div>		
+
+		<div class="field">	
+			<label>Time open 1</label>
+			<input type="text" ng-model="bell['Time open 1']"/>
+		</div>		
+
+		<div class="field">	
+			<label>Time open 2</label>
+			<input type="text" ng-model="bell['Time open 2']"/>
 		</div>
 	</div>
 </div>
