@@ -2,31 +2,37 @@ RegExp.quote = function(str) {
     return (str+'').replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
 };
 
-var text = ""
+var text = "";
 
 $("#searchTower").keyup( function(param) {
 	var _this = this;
+	var searchString = $(_this).val();
 
-	$(".towerContainer").each(function(div){
-		$(this).show();
+	$(".towerContainer").each(function(div) {
+		$(this).hide();
 	});
 
-	console.log("keyup");
 
-	$(".towerContainer").each(function(div){
-		text = $(this).find(".towerName").text();
-		console.log("text:" + text + ".");
+	if (searchString == "" || searchString == " ") {
+		console.log("piss");
+	} else {
+		console.log("yes");
+		$(".towerContainer").each(function(div) {
+			towerNameStr = $(this).find(".towerName").text();
 
-		// filter tower which contains the input text
-		if ($(_this).val().length > 0 && !text.toLowerCase().match( $(_this).val().toLowerCase())) {
-			$(this).hide();
-		}
+			// console.log(this);
+			// console.log(searchString);
+			// console.log(towerNameStr);
 
-		// // filter tower which starts with the input text
-		// if ($(_this).val().length > 0 && !text.toLowerCase().match( new RegExp("^" + RegExp.quote($(_this).val().toLowerCase())))) {
-		// 	$(this).hide();
-		// }
-	});
+			
+			// filter tower which contains the input text
+			if (searchString.length > 0 && !towerNameStr.toLowerCase().match( searchString.toLowerCase()) ) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			}
+		});
+	}
 
 	event.stopImmediatePropagation();
 });
