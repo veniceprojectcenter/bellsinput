@@ -13,7 +13,7 @@ $("#searchTower").keyup( function(param) {
 	});
 
 
-	if (searchString == "" || searchString == " ") {
+	if (searchString == "") {
 		console.log("piss");
 	} else {
 		console.log("yes");
