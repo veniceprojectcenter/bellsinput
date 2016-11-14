@@ -33,10 +33,21 @@ var fb = firebase.initializeApp(config);
 				var res = towerIDs.val();
 				console.log("Loaded", res);
 				Object.keys(res).forEach(function(k){
+					console.log(k);
 					bc.belltowers[k] = k;
 				});
 				$scope.$apply();
-			}
+				Object.keys(bc.belltowers).forEach(function(k){
+					firebase.database().ref()
+						.child("sampleBellTowers")
+						.child(k)
+						.on('value', function(tower){
+						// console.log("Fetch key", k, tower.val()['data']['Common name']);	
+						bc.belltowers[k] = tower.val()['data']['Common name'];
+						$scope.$apply();
+					});
+				});
+			});
 			// .child("groups")
 			// .child("Bell Tower Page Final")
 			// .child('members')
@@ -57,7 +68,7 @@ var fb = firebase.initializeApp(config);
 			// 			$scope.$apply();
 			// 		});
 			// 	});
-		});
+		// });
 
 		$scope.$on('$includeContentLoaded', function () {
     		initApp();
@@ -75,7 +86,7 @@ var fb = firebase.initializeApp(config);
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()
-				.child("data")
+				.child("sampleBellTowers")
 				.child(tower_id)
 				.child('data');
 			bc.bell_info = $firebaseObject(bc.bell_ref);
@@ -92,7 +103,7 @@ var fb = firebase.initializeApp(config);
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
 			bc.bell_ref = firebase.database().ref()
-				.child("data")
+				.child("sampleBellTowers")
 				.child(tower_id)
 				.child('data');
 			bc.bell_info = $firebaseObject(bc.bell_ref);
