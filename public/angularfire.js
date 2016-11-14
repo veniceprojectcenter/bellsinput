@@ -84,14 +84,16 @@ var fb = firebase.initializeApp(config);
 			setUpCategoryClicks(); // from edit.js
 			// QUICKSTART
 			// https://github.com/firebase/angularfire/blob/master/docs/quickstart.md
-			bc.bell_ref = firebase.database().ref()
+			if (tower_id) { // TODO: send tower_id from index to show and from show to bc.editTower(tower_id)
+				bc.bell_ref = firebase.database().ref()
 				.child(tower_id)
 				.child('data');
-			bc.bell_info = $firebaseObject(bc.bell_ref);
-			previousRef = bc.bell_info;
-			// synchronize the object with a three-way data binding
-			// click on `index.html` above to see it used in the DOM!
-			bc.bell_info.$bindTo($scope, "bell");
+				bc.bell_info = $firebaseObject(bc.bell_ref);
+				previousRef = bc.bell_info;
+				// synchronize the object with a three-way data binding
+				// click on `index.html` above to see it used in the DOM!
+				bc.bell_info.$bindTo($scope, "bell");
+			}
 		};
 
 		bc.hideAll = function() {
