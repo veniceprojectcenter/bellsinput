@@ -13,9 +13,9 @@ $("#searchTower").keyup( function(param) {
 	});
 
 
-	if (searchString == "") {
-		console.log("piss");
-	} else {
+	// if (searchString == "") {
+	// 	console.log("piss");
+	// } else {
 		console.log("yes");
 		$(".towerContainer").each(function(div) {
 			towerNameStr = $(this).find(".towerName").text();
@@ -32,7 +32,7 @@ $("#searchTower").keyup( function(param) {
 				$(this).show();
 			}
 		});
-	}
+	// }
 
 	event.stopImmediatePropagation();
 });

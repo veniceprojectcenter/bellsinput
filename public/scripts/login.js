@@ -1,13 +1,3 @@
-var config = {
-    apiKey: "AIzaSyC6NAfPU1NV6QJcqL4sg4VJGa9S7nVXP4Q",
-    authDomain: "cityknowledge.firebaseapp.com",
-    databaseURL: "https://cityknowledge.firebaseio.com",
-    storageBucket: "firebase-cityknowledge.appspot.com",
-    messagingSenderId: "445655714967"
-};
-
-var fb = firebase.initializeApp(config);
-
 /**
  * initApp handles setting up UI event listeners and registering Firebase auth listeners:
  *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
