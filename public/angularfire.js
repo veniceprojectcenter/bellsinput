@@ -26,6 +26,7 @@ var fb = firebase.initializeApp(config);
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
 		var bc = this;
 		bc.belltowers = {};
+		var previousRef;
 		
 		firebase.database().ref()
 			.on('value', function(towerIDs) {
@@ -46,38 +47,20 @@ var fb = firebase.initializeApp(config);
 					});
 				});
 			});
-			// .child("groups")
-			// .child("Bell Tower Page Final")
-			// .child('members')
-			// .on('value', function(towerIDs) {
-			// 	var res = towerIDs.val();
-			// 	console.log("Loaded", res);
-			// 	Object.keys(res).forEach(function(k){
-			// 		bc.belltowers[k] = k;
-			// 	});
-			// 	$scope.$apply();
-			// 	Object.keys(bc.belltowers).forEach(function(k){
-			// 		firebase.database().ref()
-			// 			.child("data")
-			// 			.child(k)
-			// 			.on('value', function(tower){
-			// 			// console.log("Fetch key", k, tower.val()['data']['Common name']);	
-			// 			bc.belltowers[k] = tower.val()['data']['Common name'];
-			// 			$scope.$apply();
-			// 		});
-			// 	});
-		// });
 
 		$scope.$on('$includeContentLoaded', function () {
     		initApp();
 		});
 
 		bc.index = function(){
+			bc.unbind();
 			bc.hideAll();
 			$('#index').show();
 		};
 
 		bc.showTower = function(tower_id){
+			bc.unbind();
+
 			bc.hideAll();
 			$('#show').show();
 			console.log(tower_id);
@@ -87,12 +70,14 @@ var fb = firebase.initializeApp(config);
 				.child(tower_id)
 				.child('data');
 			bc.bell_info = $firebaseObject(bc.bell_ref);
+			previousRef = bc.bell_info;
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
 		};
 		
 		bc.editTower = function(tower_id){
+			bc.unbind();
 			bc.hideAll();
 			$('#edit').show();
 			console.log(tower_id);
@@ -103,6 +88,7 @@ var fb = firebase.initializeApp(config);
 				.child(tower_id)
 				.child('data');
 			bc.bell_info = $firebaseObject(bc.bell_ref);
+			previousRef = bc.bell_info;
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bell");
@@ -113,8 +99,29 @@ var fb = firebase.initializeApp(config);
 			$('#edit').hide();
 			$('#show').hide();
 		};
+
+		bc.unbind = function() {
+			/* 
+			unbind fireAngular and inputs from the previousRef.
+			*/
+
+			if (previousRef) { // undbind
+				previousRef.$destroy();
+			}
+		}
 	});
 })();
+
+
+// function unbind() {
+	/* 
+	unbind fireAngular and inputs from the previousRef.
+	*/
+
+// 	if (previousRef) { // undbind
+// 		previousRef.$destroy();
+// 	}
+// }
 
 
 // (function() {
