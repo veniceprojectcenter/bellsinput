@@ -60,7 +60,6 @@ var fb = firebase.initializeApp(config);
 
 		bc.showTower = function(tower_id){
 			bc.unbind();
-
 			bc.hideAll();
 			$('#show').show();
 			console.log(tower_id);
@@ -73,7 +72,7 @@ var fb = firebase.initializeApp(config);
 			previousRef = bc.bell_info;
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
-			bc.bell_info.$bindTo($scope, "bell");
+			bc.bell_info.$bindTo($scope, "bellTower");
 		};
 		
 		bc.editTower = function(tower_id){
