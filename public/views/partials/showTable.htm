@@ -6,8 +6,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		<!-- <div ng-repeat="(key, value) in bc.bell_info"> -->
-			<tr ng-repeat="(key, value) in bc.bell_info">
+		<!-- <div ng-repeat="(key, value) in bc.bellTower_info"> -->
+			<tr ng-repeat="(key, value) in bc.bellTower_info">
 				<td>{{key}}</td> 
 				<td>{{value}}</td>
 			</tr>
@@ -21,7 +21,7 @@
 Actual Name: <b>{{bell['Common name']}}</b>
 <hr/>
 <a ng-click="bc.bellList()">Back</a>
-<div ng-repeat="(key, value) in bc.bell_info">
+<div ng-repeat="(key, value) in bc.bellTower_info">
 	<div ng-if="typeof(value) == 'object'">
 		OBJECT:
 		<div ng-repeat="(key1, value1) in value">
@@ -29,6 +29,6 @@ Actual Name: <b>{{bell['Common name']}}</b>
 		</div>
 	</div>
 	<div ng-if="typeof(value) != 'object'">
-		{{key}}: <input type="text" ng-model="bc.bell_info[key]"/>
+		{{key}}: <input type="text" ng-model="bc.bellTower_info[key]"/>
 	</div>
 </div> -->

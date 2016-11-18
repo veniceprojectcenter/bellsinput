@@ -35,18 +35,18 @@ var fb = firebase.initializeApp(config);
 			.on('value', function(towerIDs) {
 				var res = towerIDs.val();
 				console.log("Loaded", res);
-				Object.keys(res).forEach(function(k){
-					console.log(k);
-					bc.belltowers[k] = k;
+				Object.keys(res).forEach(function(key){
+					console.log(key);
+					bc.belltowers[key] = key;
 				});
 				$scope.$apply();
-				Object.keys(bc.belltowers).forEach(function(k){
+				Object.keys(bc.belltowers).forEach(function(key){
 					firebase.database().ref()
 						.child("data")
-						.child(k)
+						.child(key)
 						.on('value', function(tower){
 						// console.log("Fetch key", k, tower.val()['data']['Common name']);	
-						bc.belltowers[k] = tower.val()['data']['Common name'];
+						bc.belltowers[key] = tower.val()['data']['Common name'];
 						$scope.$apply();
 					});
 				});
@@ -68,14 +68,14 @@ var fb = firebase.initializeApp(config);
 			$('#show').show();
 			console.log(tower_id);
 			
-			bc.bell_ref = firebase.database().ref()
+			bc.bellTower_ref = firebase.database().ref()
 				.child('data')
 				.child(tower_id)
 				.child('data');
-			bc.bell_info = $firebaseObject(bc.bell_ref);
-			previousRef = bc.bell_info;
+			bc.bellTower_info = $firebaseObject(bc.bellTower_ref);
+			previousRef = bc.bellTower_info;
 			
-			bc.bell_info.child('bells').on('value', function(bells_list){
+			bc.bellTower_info.child('bells').on('value', function(bells_list){
 				bc.bell_keys = Object.keys(bells_list.val());
 				bc.bells = {};
 				bc.bells_ref = {};
@@ -90,7 +90,7 @@ var fb = firebase.initializeApp(config);
 			});
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
-			bc.bell_info.$bindTo($scope, "bellTower");
+			bc.bellTower_info.$bindTo($scope, "bellTower");
 		};
 		
 		bc.editTower = function(tower_id){
@@ -103,15 +103,15 @@ var fb = firebase.initializeApp(config);
 			if (tower_id) { // TODO: send tower_id from index to show and from show to bc.editTower(tower_id)
 			bc.tower_id = tower_id;
 			console.log("TowerId", tower_id);
-			bc.bell_ref = firebase.database().ref()
+			bc.bellTower_ref = firebase.database().ref()
 				.child('data')
 				.child(tower_id)
 				.child('data');
-				bc.bell_info = $firebaseObject(bc.bell_ref);
-				previousRef = bc.bell_info;
+				bc.bellTower_info = $firebaseObject(bc.bellTower_ref);
+				previousRef = bc.bellTower_info;
 				// synchronize the object with a three-way data binding
 				// click on `index.html` above to see it used in the DOM!
-				bc.bell_info.$bindTo($scope, "bellTower");
+				bc.bellTower_info.$bindTo($scope, "bellTower");
 			}
 		};
 		
@@ -122,7 +122,7 @@ var fb = firebase.initializeApp(config);
 			var newBellKey = firebase.database().ref().child('data').push().key;
 			console.log("New Key", newBellKey);
 			
-			// save bith_certificate
+			// save birth_certificate
 			firebase.database().ref().child('data').child(newBellKey).update({
 				birth_certificate: {
 					birthID: newBellKey,
