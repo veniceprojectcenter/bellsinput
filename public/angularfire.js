@@ -89,7 +89,8 @@ var fb = firebase.initializeApp(config);
 						.child(bk)
 						.child('data');
 					bc.bells[bk] = $firebaseObject(bc.bells_ref[bk]);
-					bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
+					// bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
+					bc.bells[bk].$bindTo($scope, "bells['" + bk + "']");
 				});
 			});
 			// synchronize the object with a three-way data binding
