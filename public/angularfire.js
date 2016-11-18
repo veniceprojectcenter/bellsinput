@@ -142,7 +142,8 @@ var fb = firebase.initializeApp(config);
 				},
 				data: {
 					ckID: newBellKey,
-					tower_id: bc.tower_id
+					tower_id: bc.tower_id,
+					name: "newBell"
 				}
 			}).then(function(){
 				// add element to group
@@ -161,7 +162,7 @@ var fb = firebase.initializeApp(config);
 					child('bells').
 					child(newBellKey).
 					update({
-						bellTower_ckId: newBellKey,
+						bell_id: newBellKey,
 						name: "newBell"
 					});
 			});
