@@ -8,6 +8,10 @@
 		<div id="exteriorData" style="display: none" ng-include="'/views/partials/editPartials/editExterior.htm'"></div>
 		<div id="interiorData" style="display: none" ng-include="'/views/partials/editPartials/editInterior.htm'"></div>
 		<div id="bellsData" style="display: none" ng-include="'/views/partials/editPartials/editBells.htm'"></div>
+    <a ng-click="bc.addBell()">Add Bell</a>
+    <div class="ui items segment towerContainer" ng-repeat="(bell_id, bell) in bc.bells">
+      ...
+    </div>
 	</form>
 </div>
 

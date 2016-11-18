@@ -74,6 +74,20 @@ var fb = firebase.initializeApp(config);
 				.child('data');
 			bc.bell_info = $firebaseObject(bc.bell_ref);
 			previousRef = bc.bell_info;
+			
+			bc.bell_info.child('bells').on('value', function(bells_list){
+				bc.bell_keys = Object.keys(bells_list.val());
+				bc.bells = {};
+				bc.bells_ref = {};
+				bc.bell_keys.forEach(function(bk){
+					bc.bells_ref[bk] = firebase.database().ref()
+						.child('data')
+						.child(bk)
+						.child('data');
+					bc.bells[bk] = $firebaseObject(bc.bells_ref[bk]);
+					bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
+				});
+			});
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bell_info.$bindTo($scope, "bellTower");
@@ -87,6 +101,8 @@ var fb = firebase.initializeApp(config);
 			setUpCategoryClicks(); // from edit.js
 			
 			if (tower_id) { // TODO: send tower_id from index to show and from show to bc.editTower(tower_id)
+			bc.tower_id = tower_id;
+			console.log("TowerId", tower_id);
 			bc.bell_ref = firebase.database().ref()
 				.child('data')
 				.child(tower_id)
@@ -97,6 +113,49 @@ var fb = firebase.initializeApp(config);
 				// click on `index.html` above to see it used in the DOM!
 				bc.bell_info.$bindTo($scope, "bellTower");
 			}
+		};
+		
+		bc.addBell = function(){
+			var groupName = 'Bells';
+			
+			// CREATE NEW KEY
+			var newBellKey = firebase.database().ref().child('data').push().key;
+			console.log("New Key", newBellKey);
+			
+			// save bith_certificate
+			firebase.database().ref().child('data').child(newBellKey).update({
+				birth_certificate: {
+					birthID: newBellKey,
+					ckID: newBellKey,
+					// dor: (new Date()),
+					recorder: 'oba',
+					type: groupName
+				},
+				data: {
+					ckID: newBellKey,
+					tower_id: bc.tower_id
+				}
+			}).then(function(){
+				// add element to group
+				firebase.database().ref().
+					child('groups').
+					child(groupName).
+					child('members').
+					child(newBellKey).
+					set(newBellKey);
+				
+				// add bell to belltower
+				firebase.database().ref().
+					child('data').
+					child(bc.tower_id).
+					child('data').
+					child('bells').
+					child(newBellKey).
+					update({
+						ckId: newBellKey,
+						name: "newBell"
+					});
+			});
 		};
 
 		bc.hideAll = function() {
