@@ -68,10 +68,31 @@ var fb = firebase.initializeApp(config);
 		bc.showTower = function(tower_id){
 			bc.unbind();
 			bc.hideAll();
-			$('#show').show();
-			currentTowerID = tower_id;
-			console.log(tower_id);
 			
+			currentTowerID = tower_id;
+			bc.loadTower(tower_id);
+			
+			$('#show').show();
+		};
+		
+		bc.editTower = function(tower_id){
+			bc.unbind();
+			bc.hideAll();
+			
+			if (!tower_id) {
+				tower_id = currentTowerID;
+			}
+			bc.loadTower(tower_id);
+			
+			$('#edit').show();
+			setUpCategoryClicks(); // from edit.js
+		};
+		
+		bc.loadTower = function(tower_id){
+			bc.unbind();
+			bc.hideAll();
+			
+			console.log("TowerId", tower_id);
 			bc.bellTower_ref = firebase.database().ref()
 				.child('data')
 				.child(tower_id)
@@ -96,33 +117,6 @@ var fb = firebase.initializeApp(config);
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
 			bc.bellTower_info.$bindTo($scope, "bellTower");
-		};
-		
-		bc.editTower = function(tower_id){
-			bc.unbind();
-			bc.hideAll();
-			$('#edit').show();
-			setUpCategoryClicks(); // from edit.js
-
-			if (!tower_id) {
-				tower_id = currentTowerID;
-			}
-			
-			if (tower_id) { // TODO: send tower_id from index to show and from show to bc.editTower(tower_id)
-				bc.tower_id = tower_id;
-				currentTowerID = tower_id;
-
-				console.log("TowerId", tower_id);
-				bc.bellTower_ref = firebase.database().ref()
-					.child('data')
-					.child(tower_id)
-					.child('data');
-					bc.bellTower_info = $firebaseObject(bc.bellTower_ref);
-					previousRef = bc.bellTower_info;
-					// synchronize the object with a three-way data binding
-					// click on `index.html` above to see it used in the DOM!
-					bc.bellTower_info.$bindTo($scope, "bellTower");
-			}
 		};
 		
 		bc.addBell = function(){
