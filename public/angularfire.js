@@ -152,7 +152,7 @@ var fb = firebase.initializeApp(config);
 					child('bells').
 					child(newBellKey).
 					update({
-						ckId: newBellKey,
+						bellTower_ckId: newBellKey,
 						name: "newBell"
 					});
 			});
