@@ -58,6 +58,7 @@ var fb = firebase.initializeApp(config);
     		initApp();
 		});
 
+		// INDEX * INDEX * INDEX * INDEX * INDEX * INDEX
 		bc.index = function(){
 			bc.unbind();
 			bc.hideAll();
@@ -65,6 +66,7 @@ var fb = firebase.initializeApp(config);
 			currentTowerID = null;
 		};
 
+		// SHOW * SHOW * SHOW * SHOW * SHOW * SHOW
 		bc.showTower = function(tower_id){
 			bc.unbind();
 			bc.hideAll();
@@ -75,6 +77,7 @@ var fb = firebase.initializeApp(config);
 			$('#show').show();
 		};
 		
+		// EDIT * EDIT * EDIT * EDIT * EDIT * EDIT
 		bc.editTower = function(tower_id){
 			bc.unbind();
 			bc.hideAll();
@@ -88,6 +91,7 @@ var fb = firebase.initializeApp(config);
 			setUpCategoryClicks(); // from edit.js
 		};
 		
+		// LOAD * LOAD * LOAD * LOAD * LOAD * LOAD
 		bc.loadTower = function(tower_id){
 			bc.unbind();
 			bc.hideAll();
@@ -119,11 +123,14 @@ var fb = firebase.initializeApp(config);
 			bc.bellTower_info.$bindTo($scope, "bellTower");
 		};
 		
+		// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
 		bc.addBell = function(){
 			var groupName = 'Bells';
+
+			console.log('adding bell');
 			
 			// CREATE NEW KEY
-			var newBellKey = firebase.database().ref().child('data').push().key;
+			var newBellKey = firebase.database().ref().child('data').push().key();
 			console.log("New Key", newBellKey);
 			
 			// save birth_certificate
