@@ -130,7 +130,7 @@ var fb = firebase.initializeApp(config);
 			console.log('adding bell');
 			
 			// CREATE NEW KEY
-			var newBellKey = firebase.database().ref().child('data').push().key();
+			var newBellKey = firebase.database().ref().child('data').push().key;
 			console.log("New Key", newBellKey);
 			
 			// save birth_certificate
