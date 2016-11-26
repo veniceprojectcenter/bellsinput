@@ -1,10 +1,78 @@
-<div class="ui segment container" ng-repeat="(bell_id, bell) in bc.bells">
-	<h3>{{bell_id}}</h3>
-	<p>{{bell['name']}}</p>
-	<div class="field">	
-		<label>name</label>
-		<input type="text" ng-model="bells[bell_id]['name']"/>
+<div class="ui fluid accordion"  ng-repeat="(bell_id, bell) in bc.bells">
+	<div class="title">
+		<h3>{{bell['name']}}</h3>
 	</div>
+	<div class="content whitePaddedContent">
+		<p>{{bell_id}}</p>
+	</div>	
+
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Bell Name/Number
+	</div>
+	<div class="content whitePaddedContent">
+		<div class="field">	
+			<label>name</label>
+			<input type="text" ng-model="bells[bell_id]['name']"/>
+		</div>
+		<div class="field">	
+			<label>tower_id</label>
+			<input type="text" ng-model="bells[bell_id]['tower_id']" disabled />
+		</div>
+	</div>
+
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Note and Ringing Times
+	</div>
+	<div class="content whitePaddedContent">
+		<div class="field">
+			<label>Musical_Note</label>
+			<input type="text" ng-model="bells[bell_id]['Musical_Note']"/>
+		</div>
+		<div class="field">
+			<label>Frequency_Hz</label>
+			<input type="text" ng-model="bells[bell_id]['Frequency_Hz']"/>
+		</div>
+		<div class="field">
+			<label>Chiming_frequency</label>
+			<input type="text" ng-model="bells[bell_id]['Chiming_frequency']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Monday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Monday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Tuesday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Tuesday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Wednesday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Wednesday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Thursday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Thursday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Friday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Friday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Saturday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Saturday']"/>
+		</div>
+		<div class="field">
+			<label>Ringing_Times_Sunday</label>
+			<input type="text" ng-model="bells[bell_id]['Ringing_Times_Sunday']"/>
+		</div>
+	</div>
+
+	<script language='javascript'>
+		$(document).ready(function () {
+		    $('.ui.accordion').accordion();
+		});
+	</script>
 </div>
 
 <div class="ui inverted green button" ng-click="bc.addBell()">Add Bell</div>
