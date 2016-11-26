@@ -106,7 +106,8 @@ var fb = firebase.initializeApp(config);
 				.child('data');
 			bc.bellTower_info = $firebaseObject(bc.bellTower_ref);
 			previousRef = bc.bellTower_info;
-			
+
+			// load up bells
 			bc.bellTower_ref.child('bells').on('value', function(bells_list){
 				bc.bell_keys = Object.keys(bells_list.val());
 				bc.bells = {};
@@ -119,6 +120,22 @@ var fb = firebase.initializeApp(config);
 					bc.bells[bk] = $firebaseObject(bc.bells_ref[bk]);
 					// bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
 					bc.bells[bk].$bindTo($scope, "bells['" + bk + "']");
+				});
+			});
+
+			// load up landings
+			bc.bellTower_ref.child('landings').on('value', function(landings_list){
+				bc.bell_keys = Object.keys(landings_list.val());
+				bc.landings = {};
+				bc.landings_ref = {};
+				bc.bell_keys.forEach(function(lk){
+					bc.landings_ref[lk] = firebase.database().ref()
+						.child('data')
+						.child(lk)
+						.child('data');
+					bc.landings[lk] = $firebaseObject(bc.landings_ref[lk]);
+					// bc.landings[lk].$bindTo($scope, "landings[" + lk + "]");
+					bc.landings[lk].$bindTo($scope, "landings['" + lk + "']");
 				});
 			});
 			// synchronize the object with a three-way data binding
@@ -145,7 +162,8 @@ var fb = firebase.initializeApp(config);
 				},
 				data: {
 					ckID: newBellKey,
-					tower_id: currentTowerID
+					tower_id: currentTowerID,
+					name: "new Bell x"
 				}
 			})
 			.then(function(){
@@ -166,7 +184,53 @@ var fb = firebase.initializeApp(config);
 					child(newBellKey).
 					update({
 						ckId: newBellKey,
-						name: "newBell"
+						name: "new Bell x"
+					});
+			});
+		};
+
+				// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
+		bc.addLanding = function(){
+			var groupName = 'Landings';
+			
+			// CREATE NEW KEY
+			var newLandingKey = firebase.database().ref().child('data').push().key;
+			console.log("New Key", newLandingKey);
+			
+			// save bith_certificate
+			firebase.database().ref().child('data').child(newLandingKey).update({
+				birth_certificate: {
+					birthID: newLandingKey,
+					ckID: newLandingKey,
+					// dor: (new Date()),
+					recorder: 'oba',
+					type: groupName
+				},
+				data: {
+					ckID: newLandingKey,
+					tower_id: currentTowerID,
+					name: "new Landing x"
+				}
+			})
+			.then(function(){
+				// add element to group
+				firebase.database().ref().
+					child('groups').
+					child(groupName).
+					child('members').
+					child(newLandingKey).
+					set(newLandingKey);
+				
+				// add landing to belltower
+				firebase.database().ref().
+					child('data').
+					child(currentTowerID).
+					child('data').
+					child('landings').
+					child(newLandingKey).
+					update({
+						ckId: newLandingKey,
+						name: "new Landing x"
 					});
 			});
 		};

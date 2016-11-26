@@ -1,1 +1,32 @@
-editInterior.htm
+<div class="ui fluid accordion"  ng-repeat="(landing_id, landing) in bc.landings">
+	<div class="title">
+		<h3>{{landing['name']}}</h3>
+	</div>
+	<div class="content whitePaddedContent">
+		<p>{{landing_id}}</p>
+
+	</div>
+
+	<div class="title">
+		<i class="dropdown icon"></i>
+		landing Name/Number
+	</div>
+	<div class="content whitePaddedContent">
+		<div class="field">	
+			<label>name</label>
+			<input type="text" ng-model="landings[landing_id]['name']"/>
+		</div>
+		<div class="field">	
+			<label>tower_id</label>
+			<input type="text" ng-model="landings[landing_id]['tower_id']" disabled />
+		</div>
+	</div>
+
+	<script language='javascript'>
+		$(document).ready(function () {
+		    $('.ui.accordion').accordion();
+		});
+	</script>
+</div>
+
+<div class="ui inverted green button" ng-click="bc.addLanding()">Add Landing</div>
