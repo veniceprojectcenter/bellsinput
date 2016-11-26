@@ -235,6 +235,18 @@ var fb = firebase.initializeApp(config);
 			});
 		};
 
+		bc.removeLanding = function(tower_id, landing_id){
+			// console.log("trying to remove landing: ", landing_id, " from tower: ", tower_id);
+			console.log("TODO: find way to send landing_id to removeLanding function");
+			firebase.database().ref().child('data').child(tower_id).child('data').child('landings').child(landing_id).remove();
+		}
+
+		bc.removeBell = function(tower_id, bell_id){
+			// console.log("trying to remove landing: ", bell_id, " from tower: ", tower_id);
+			console.log("TODO: find way to send bell_id to removeLanding function");
+			firebase.database().ref().child('data').child(tower_id).child('data').child('bells').child(bell_id).remove();
+		}
+
 		bc.hideAll = function() {
 			$('#index').hide();
 			$('#edit').hide();
