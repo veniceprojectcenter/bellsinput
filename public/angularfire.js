@@ -83,8 +83,11 @@ var fb = firebase.initializeApp(config);
 			bc.hideAll();
 			
 			if (!tower_id) {
+				console.log('no tower id exists ', tower_id)
 				tower_id = currentTowerID;
 			}
+				
+			currentTowerID = tower_id;
 			bc.loadTower(tower_id);
 			
 			$('#edit').show();
@@ -126,14 +129,12 @@ var fb = firebase.initializeApp(config);
 		// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
 		bc.addBell = function(){
 			var groupName = 'Bells';
-
-			console.log('adding bell');
 			
 			// CREATE NEW KEY
 			var newBellKey = firebase.database().ref().child('data').push().key;
 			console.log("New Key", newBellKey);
 			
-			// save birth_certificate
+			// save bith_certificate
 			firebase.database().ref().child('data').child(newBellKey).update({
 				birth_certificate: {
 					birthID: newBellKey,
@@ -144,10 +145,10 @@ var fb = firebase.initializeApp(config);
 				},
 				data: {
 					ckID: newBellKey,
-					tower_id: bc.tower_id,
-					name: "newBell"
+					tower_id: currentTowerID
 				}
-			}).then(function(){
+			})
+			.then(function(){
 				// add element to group
 				firebase.database().ref().
 					child('groups').
@@ -159,12 +160,12 @@ var fb = firebase.initializeApp(config);
 				// add bell to belltower
 				firebase.database().ref().
 					child('data').
-					child(bc.tower_id).
+					child(currentTowerID).
 					child('data').
 					child('bells').
 					child(newBellKey).
 					update({
-						bell_id: newBellKey,
+						ckId: newBellKey,
 						name: "newBell"
 					});
 			});
