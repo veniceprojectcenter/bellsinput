@@ -1,0 +1,66 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Public Access, Accessibility, and Doors
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Public access']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Public access:<span> {{ bellTower['Public access'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Accessibility_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Accessibility Front:<span> {{ bellTower['Accessibility_Front'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Accessibility_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Accessibility Right:<span> {{ bellTower['Accessibility_Right'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Accessibility_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Accessibility Back:<span> {{ bellTower['Accessibility_Back'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Accessibility_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Accessibility Left:<span> {{ bellTower['Accessibility_Left'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>How to Access tower</label>
+				<input type="text"  ng-model="bellTower['How_to_Access_tower']" placeholder="How_to_Access_tower"
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Exterior door_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Exterior door Front:<span> {{ bellTower['Exterior door_Front'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Exterior door_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Exterior door Right:<span> {{ bellTower['Exterior door_Right'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Exterior door_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Exterior door Back:<span> {{ bellTower['Exterior door_Back'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="bellTower['Exterior door_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Exterior door Left:<span> {{ bellTower['Exterior door_Left'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>Exterior door height cm</label>
+				<input type="text"  ng-model="bellTower['Exterior door height_cm']" placeholder="Exterior door height_cm"
+			</div>
+
+			<div class="field">
+				<label>Exterior door width cm</label>
+				<input type="text"  ng-model="bellTower['Exterior door width_cm']" placeholder="Exterior door width_cm"
+			</div>
+
+		</div>
