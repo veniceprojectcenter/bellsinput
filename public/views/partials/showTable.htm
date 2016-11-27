@@ -1,12 +1,36 @@
-<div class="ui items segment towerContainer" ng-repeat="(bell_id, bell) in bc.bells">
-	<p>Bell ID: {{bell_id}}</p>
-	</p>Bell: {{bell['name']}}</p>
-</div>
+<table class="ui celled fluid table" ng-repeat="(bell_id, bell) in bc.bells">
+	<thead>
+		<tr>
+			<th>Bell: {{bell['name']}}</th>
+			<th>Data</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- <div ng-repeat="(key, value) in bc.bellTower_info"> -->
+			<tr ng-repeat="(key, value) in bell">
+				<td>{{key}}</td> 
+				<td>{{value}}</td>
+			</tr>
+		<!-- </div> -->
+	</tbody>
+</table>
 
-<div class="ui items segment towerContainer" ng-repeat="(landing_id, landing) in bc.landings">
-	<p>Landing ID: {{landing_id}}</p>
-	</p>landing: {{landing['name']}}</p>
-</div>
+<table class="ui celled fluid table" ng-repeat="(landing_id, landing) in bc.landings">
+	<thead>
+		<tr>
+			<th>landing: {{landing['name']}}</th>
+			<th>Data</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- <div ng-repeat="(key, value) in bc.bellTower_info"> -->
+			<tr ng-repeat="(key, value) in landing">
+				<td>{{key}}</td> 
+				<td>{{value}}</td>
+			</tr>
+		<!-- </div> -->
+	</tbody>
+</table>
 
 <table class="ui celled fluid table">
 	<thead>
