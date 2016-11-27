@@ -1,0 +1,36 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Restoration
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Restoration sides:<span> {{ landings[landing_id]['Restoration_sides'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Restoration_sides']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Number of ties and bands Front</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of ties and bands_Front']" placeholder="Number of ties and bands_Front" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of ties and bands Right</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of ties and bands_Right']" placeholder="Number of ties and bands_Right" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of ties and bands Back</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of ties and bands_Back']" placeholder="Number of ties and bands_Back" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of ties and bands Left</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of ties and bands_Left']" placeholder="Number of ties and bands_Left" "  >
+			</div>
+
+		</div>

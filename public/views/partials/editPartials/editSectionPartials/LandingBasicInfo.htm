@@ -1,10 +1,68 @@
-	<div class="title">
-		<i class="dropdown icon"></i>
-		Basic Info
-	</div>
-	<div class="content whitePaddedContent">
-		<div class="field">	
-			<label>name</label>
-			<input type="text" ng-model="landings[landing_id]['name']"/>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Basic Info
 		</div>
-	</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>name</label>
+				<input type="text"  ng-model="landings[landing_id]['name']" placeholder="name" "  >
+			</div>
+
+			<div class="field">
+				<label>Landing Material:<span> {{ landings[landing_id]['Landing_Material'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Landing_Material']">
+					<option value="wood"> wood </option>
+					<option value="brick"> brick </option>
+					<option value="stone"> stone </option>
+					<option value="concrete"> concrete </option>
+					<option value="marble"> marble </option>
+					<option value="tile"> tile </option>
+					<option value="other"> other </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Landing Sturdiness:<span> {{ landings[landing_id]['Landing_Sturdiness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Landing_Sturdiness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Landing Cleanliness:<span> {{ landings[landing_id]['Landing_Cleanliness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Landing_Cleanliness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Landing Length F B cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Landing_Length_F_B_cm']" placeholder="Landing_Length_F_B_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Landing Width R L cmLanding height to ceiling cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Landing_Width_R_L_cmLanding height to ceiling_cm']" placeholder="Landing_Width_R_L_cmLanding height to ceiling_cm" "  >
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Clock_mechanism']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Clock mechanism:<span> {{ landings[landing_id]['Clock_mechanism'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Natural_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Natural Lighting:<span> {{ landings[landing_id]['Natural_Lighting'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Artificial_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Artificial Lighting:<span> {{ landings[landing_id]['Artificial_Lighting'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>Lighting raiting:<span> {{ landings[landing_id]['Lighting_raiting'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Lighting_raiting']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Basic Info Notes</label>
+				<textarea ng-model="landings[landing_id]['Basic_Info_Notes']" rows="2"></textarea>
+			</div>
+		</div>

@@ -1,46 +1,75 @@
 <div class="title">
-	<i class="dropdown icon"></i>
-	Stairs Info
-</div>
+			<i class="dropdown icon"></i>
+			Stairs Info
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Ramp']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Ramp:<span> {{ landings[landing_id]['Ramp'] }}</span></label>
+			</div>
 
-<div class="content whitePaddedContent">
-	<div class="inline field">
-		<input type="checkbox" ng-model="landings[landing_id]['Ramp']" ng-true-value="'YES'" ng-false-value="'NO'">
-		<label>Ramp:<span> {{ landings[landing_id]['Ramp'] }}</span></label>
-	</div>
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Stairs']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Stairs:<span> {{ landings[landing_id]['Stairs'] }}</span></label>
+			</div>
 
-	<div class="inline field">
-		<input type="checkbox" ng-model="landings[landing_id]['Stairs']" ng-true-value="'YES'" ng-false-value="'NO'">
-		<label>Stairs:<span> {{ landings[landing_id]['Stairs'] }}</span></label>
-	</div>
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Railing']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Railing:<span> {{ landings[landing_id]['Railing'] }}</span></label>
+			</div>
 
-	<div class="inline field">
-		<input type="checkbox" ng-model="landings[landing_id]['Railing']" ng-true-value="'YES'" ng-false-value="'NO'">
-		<label>Railing:<span> {{ landings[landing_id]['Railing'] }}</span></label>
-	</div>
+			<div class="field">
+				<label>Staircase Side:<span> {{ landings[landing_id]['Staircase_Side'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Staircase_Side']">
+					<option value="around"> around </option>
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
 
-	<div class="field">
-		<label>Number of steps</label>
-		<input type="text"landings[landing_id][Number of steps]" placeholder="Number of steps" "  >
-	</div>
+			<div class="field">
+				<label>Staircase material:<span> {{ landings[landing_id]['Staircase material'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Staircase material']">
+					<option value="wood"> wood </option>
+					<option value="brick"> brick </option>
+					<option value="stone"> stone </option>
+					<option value="concrete"> concrete </option>
+					<option value="tile"> tile </option>
+					<option value="marble"> marble </option>
+					<option value="other"> other </option>
+				</select>
+			</div>
 
-	<div class="field">
-		<label>Number of bad steps</label>
-		<input type="text"landings[landing_id][Number of bad steps]" placeholder="Number of bad steps" "  >
-	</div>
+			<div class="field">
+				<label>Number of steps</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of steps']" placeholder="Number of steps" "  >
+			</div>
 
-	<div class="field">
-		<label>Staircase Cleanliness:<span> {{ landings[landing_id]['Staircase_Cleanliness'] }}</span></label>
-		<input class="rating" type="range" ng-model="landings[landing_id]['Staircase_Cleanliness']" min="0"  max="5">
-	</div>
+			<div class="field">
+				<label>Number of bad steps</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of bad steps']" placeholder="Number of bad steps" "  >
+			</div>
 
-	<div class="field">
-		<label>Staircase Sturdiness:<span> {{ landings[landing_id]['Staircase_Sturdiness'] }}</span></label>
-		<input class="rating" type="range" ng-model="landings[landing_id]['Staircase_Sturdiness']" min="0"  max="5">
-	</div>
+			<div class="field">
+				<label>Staircase Cleanliness:<span> {{ landings[landing_id]['Staircase_Cleanliness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Staircase_Cleanliness']" min="0"  max="5">
+			</div>
 
-	<div class="field">
-		<label>Railing Sturdiness:<span> {{ landings[landing_id]['Railing_Sturdiness'] }}</span></label>
-		<input class="rating" type="range" ng-model="landings[landing_id]['Railing_Sturdiness']" min="0"  max="5">
-	</div>
-</div>
+			<div class="field">
+				<label>Staircase Sturdiness:<span> {{ landings[landing_id]['Staircase_Sturdiness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Staircase_Sturdiness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Railing Sturdiness:<span> {{ landings[landing_id]['Railing_Sturdiness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Railing_Sturdiness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Stairs Info Notes</label>
+				<textarea ng-model="landings[landing_id]['Stairs_Info_Notes']" rows="2"></textarea>
+			</div>
+
+		</div>

@@ -1,0 +1,67 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Wall Thickness and Windows
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Block Height stairs cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Block_Height_stairs_cm']" placeholder="Block_Height_stairs_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Block Width stairs cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Block_Width_stairs_cm']" placeholder="Block_Width_stairs_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Block Depth stairs cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Block_Depth_stairs_cm']" placeholder="Block_Depth_stairs_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Wall Material:<span> {{ landings[landing_id]['Wall_Material'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Wall_Material']">
+					<option value="brick"> brick </option>
+					<option value="stone"> stone </option>
+					<option value="cement"> cement </option>
+					<option value="plaster"> plaster </option>
+					<option value="brick/plaster"> brick/plaster </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Wall thickness</label>
+				<input type="text"  ng-model="landings[landing_id]['Wall thickness']" placeholder="Wall thickness" "  >
+			</div>
+
+			<div class="field">
+				<label>Window Total per landing</label>
+				<input type="text"  ng-model="landings[landing_id]['Window_Total_per_landing']" placeholder="Window_Total_per_landing" "  >
+			</div>
+
+			<div class="field">
+				<label>Window Side:<span> {{ landings[landing_id]['Window_Side'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Window_Side']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Window Height cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Window_Height_cm']" placeholder="Window_Height_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Window Width cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Window_Width_cm']" placeholder="Window_Width_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Window Depth cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Window_Depth_cm']" placeholder="Window_Depth_cm" "  >
+			</div>
+
+		</div>

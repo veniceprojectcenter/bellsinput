@@ -1,0 +1,70 @@
+<div class="ui fluid accordion">
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Test
+	</div>
+	<div class="content whitePaddedContent">
+	<!-- TEXT -->
+		<div class="field">
+			<label>Text</label>
+			<input type="text" ng-model="bellTower['text']">
+		</div>
+
+	<!-- BOOL -->
+		<div class="inline field">
+			<input type="checkbox" ng-model="bellTower['boolean']" ng-true-value="'YES'" ng-false-value="'NO'">
+			<label>boolean:<span> {{ bellTower['boolean'] }}</span></label>
+           <!-- <p> * * * * * * * * {{ bellTower['boolean'] }}</p> -->
+	  	</div>
+
+	<!-- RATING -->
+	  	<div class="field">
+	  		<label>Range:<span> {{ bellTower['range'] }}</span></label>
+			<input style="width: 100%" type="range" name="range" ng-model="bellTower['range']" min="0"  max="5">
+	  	</div>	  	
+
+	<!-- SELECT -->
+	  	<div class="field">
+	  		<label>Select:<span> {{ bellTower['select'] }}</span></label>
+			<select style="width: 100%" name="singleSelect" ng-model="bellTower['select']">
+				<option value="wood"> wood </option>
+				<option value="brick"> brick </option>
+				<option value="stone"> stone </option>
+				<option value="concrete"> concrete </option>
+				<option value="marble"> marble </option>
+				<option value="tile"> tile </option>
+				<option value="other"> other </option>
+			</select>
+	  	</div>	  	
+
+  	<!-- RADIO -->
+	  	<div class="grouped fields">
+	  		<label>Radio:<span> {{ bellTower['radio'] }}</span></label>
+	  		<div class="field">
+		  		<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="red">
+					<label>	Red </label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="green">
+					<label>Green</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="blue">
+					<label>Blue</label>
+				</div>
+			</div>
+	  	</div>
+	  	
+	<!-- TEXT AREA -->
+		<div class="field">
+			<label>Text Area</label>
+			<textarea ng-model="bellTower['textarea']" rows="2"></textarea>
+		</div>
+	</div>
+</div>

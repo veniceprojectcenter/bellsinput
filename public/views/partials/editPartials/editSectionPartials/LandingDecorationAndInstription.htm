@@ -1,0 +1,41 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Decorations and Inscriptions
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Number internal inscriptions</label>
+				<input type="text"  ng-model="landings[landing_id]['Number internal inscriptions']" placeholder="Number internal inscriptions" "  >
+			</div>
+
+			<div class="field">
+				<label>Internal transcription</label>
+				<input type="text"  ng-model="landings[landing_id]['Internal_transcription']" placeholder="Internal_transcription" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of internal decorations</label>
+				<input type="text"  ng-model="landings[landing_id]['Number of internal decorations']" placeholder="Number of internal decorations" "  >
+			</div>
+
+			<div class="field">
+				<label>Internal decoration locations</label>
+				<input type="text"  ng-model="landings[landing_id]['Internal decoration locations']" placeholder="Internal decoration locations" "  >
+			</div>
+
+			<div class="field">
+				<label>Internal decoration description</label>
+				<input type="text"  ng-model="landings[landing_id]['Internal decoration description']" placeholder="Internal decoration description" "  >
+			</div>
+
+			<div class="field">
+				<label>Internal average legability:<span> {{ landings[landing_id]['Internal_average_legability'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Internal_average_legability']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Internal average conservation:<span> {{ landings[landing_id]['Internal_average_conservation'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Internal_average_conservation']" min="0"  max="5">
+			</div>
+
+		</div>

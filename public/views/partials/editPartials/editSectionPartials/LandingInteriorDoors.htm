@@ -1,0 +1,46 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Interior Doors
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Interior door_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Interior door Front:<span> {{ landings[landing_id]['Interior door_Front'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Interior door_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Interior door Right:<span> {{ landings[landing_id]['Interior door_Right'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Interior door_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Interior door Back:<span> {{ landings[landing_id]['Interior door_Back'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Interior door_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Interior door Left:<span> {{ landings[landing_id]['Interior door_Left'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>Interior door height cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Interior door height_cm']" placeholder="Interior door height_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Interior door width cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Interior door width_cm']" placeholder="Interior door width_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Interior door depth cm</label>
+				<input type="text"  ng-model="landings[landing_id]['Interior door depth_cm']" placeholder="Interior door depth_cm" "  >
+			</div>
+
+			<div class="field">
+				<label>Interior door notes</label>
+				<textarea ng-model="landings[landing_id]['Interior door notes']"  rows="2"></textarea>
+			</div>
+
+		</div>

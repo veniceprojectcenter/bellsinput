@@ -1,0 +1,134 @@
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Belfry_Only
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Frame type:<span> {{ landings[landing_id]['Frame type'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Frame type']">
+					<option value="A-frame"> A-frame </option>
+					<option value="H-frame"> H-frame </option>
+					<option value="other"> other </option>
+				</select>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Frame restoration']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Frame restoration:<span> {{ landings[landing_id]['Frame restoration'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>Frame material:<span> {{ landings[landing_id]['Frame material'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Frame material']">
+					<option value="wood"> wood </option>
+					<option value="metal"> metal </option>
+					<option value="other"> other </option>
+				</select>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Frame missing screws or bolts']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Frame missing screws or bolts:<span> {{ landings[landing_id]['Frame missing screws or bolts'] }}</span></label>
+			</div>
+
+			<div class="inline field">
+				<input type="checkbox" ng-model="landings[landing_id]['Frame_rust']" ng-true-value="'YES'" ng-false-value="'NO'">
+				<label>Frame rust:<span> {{ landings[landing_id]['Frame_rust'] }}</span></label>
+			</div>
+
+			<div class="field">
+				<label>Number of Frame cracks</label>
+				<input type="text"  ng-model="landings[landing_id]['Number_of_Frame_cracks']" placeholder="Number_of_Frame_cracks" "  >
+			</div>
+
+			<div class="field">
+				<label>Frame cleanliness:<span> {{ landings[landing_id]['Frame_cleanliness'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Frame_cleanliness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Frame warping:<span> {{ landings[landing_id]['Frame_warping'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Frame_warping']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Number of Frame dents</label>
+				<input type="text"  ng-model="landings[landing_id]['Number_of_Frame_dents']" placeholder="Number_of_Frame_dents" "  >
+			</div>
+
+			<div class="field">
+				<label>Frame Overall condition:<span> {{ landings[landing_id]['Frame_Overall_condition'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Frame_Overall_condition']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Bell locations side view</label>
+				<input type="text"  ng-model="landings[landing_id]['Bell_locations_side_view']" placeholder="Bell_locations_side_view" "  >
+			</div>
+
+			<div class="field">
+				<label>Bell locations top view</label>
+				<input type="text"  ng-model="landings[landing_id]['Bell_locations_top_view']" placeholder="Bell_locations_top_view" "  >
+			</div>
+
+			<div class="field">
+				<label>Frame notes</label>
+				<textarea ng-model="landings[landing_id]['Frame notes']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Belfry Opening side:<span> {{ landings[landing_id]['Belfry_Opening_side'] }}</span></label>
+				<select class="select" ng-model="landings[landing_id]['Belfry_Opening_side']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="left"> left </option>
+					<option value="back"> back </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Belfry Width</label>
+				<input type="text"  ng-model="landings[landing_id]['Belfry_Width']" placeholder="Belfry_Width" "  >
+			</div>
+
+			<div class="field">
+				<label>Belfry Length</label>
+				<input type="text"  ng-model="landings[landing_id]['Belfry_Length']" placeholder="Belfry_Length" "  >
+			</div>
+
+			<div class="field">
+				<label>Condition of inside of roof:<span> {{ landings[landing_id]['Condition_of_inside_of_roof'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Condition_of_inside_of_roof']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Bird net condition front:<span> {{ landings[landing_id]['Bird_net_condition_front'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Bird_net_condition_front']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Bird net condition right:<span> {{ landings[landing_id]['Bird_net_condition_right'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Bird_net_condition_right']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Bird net condition back:<span> {{ landings[landing_id]['Bird_net_condition_back'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Bird_net_condition_back']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Bird net condition left:<span> {{ landings[landing_id]['Bird_net_condition_left'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Bird_net_condition_left']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Drain holes:<span> {{ landings[landing_id]['Drain_holes'] }}</span></label>
+				<input class="rating" type="range" ng-model="landings[landing_id]['Drain_holes']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Closest bell towers</label>
+				<input type="text"  ng-model="landings[landing_id]['Closest_bell_towers']" placeholder="Closest_bell_towers" "  >
+			</div>
+
+		</div>
