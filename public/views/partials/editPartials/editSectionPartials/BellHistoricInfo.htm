@@ -1,0 +1,61 @@
+<div class="title">
+			<i class="dropdown icon"></i>
+			Historic Information
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>First casting</label>
+				<input type="text"  ng-model="bells[bell_id]['First_casting']" placeholder="First_casting" "  >
+			</div>
+
+			<div class="field">
+				<label>Second casting</label>
+				<input type="text"  ng-model="bells[bell_id]['Second_casting']" placeholder="Second_casting" "  >
+			</div>
+
+			<div class="field">
+				<label>Historic info</label>
+				<input type="text"  ng-model="bells[bell_id]['Historic_info']" placeholder="Historic_info" "  >
+			</div>
+
+			<div class="field">
+				<label>Cleanliness:<span> {{ bells[bell_id]['Cleanliness'] }}</span></label>
+				<input class="rating" type="range" ng-model="bells[bell_id]['Cleanliness']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Discoloration:<span> {{ bells[bell_id]['Discoloration'] }}</span></label>
+				<input class="rating" type="range" ng-model="bells[bell_id]['Discoloration']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Number of decorations</label>
+				<input type="text"  ng-model="bells[bell_id]['Number of decorations']" placeholder="Number of decorations" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of Inscriptions</label>
+				<input type="text"  ng-model="bells[bell_id]['Number_of_Inscriptions']" placeholder="Number_of_Inscriptions" "  >
+			</div>
+
+			<div class="field">
+				<label>Belt</label>
+				<input type="text"  ng-model="bells[bell_id]['Belt']" placeholder="Belt" "  >
+			</div>
+
+			<div class="field">
+				<label>Overall condition:<span> {{ bells[bell_id]['Overall_condition'] }}</span></label>
+				<input class="rating" type="range" ng-model="bells[bell_id]['Overall_condition']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Foundry</label>
+				<input type="text"  ng-model="bells[bell_id]['Foundry']" placeholder="Foundry" "  >
+			</div>
+
+			<div class="field">
+				<label>Place of Casting</label>
+				<input type="text"  ng-model="bells[bell_id]['Place_of_Casting']" placeholder="Place_of_Casting" "  >
+			</div>
+
+		</div>
