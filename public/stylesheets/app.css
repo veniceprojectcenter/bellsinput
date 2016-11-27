@@ -147,3 +147,7 @@ table { /*avoid table overflow*/
 table td { /*avoid table overflow*/
   word-wrap: break-word;
 }
+
+.rating {
+	width: 100%;
+}

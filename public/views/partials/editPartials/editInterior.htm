@@ -6,21 +6,9 @@
 		<p>{{landing_id}}</p>
 		<div class="ui inverted red button" ng-click="bc.removeLanding(currentTowerID, landing_id)">Remove Landing</div>
 	</div>
-
-	<div class="title">
-		<i class="dropdown icon"></i>
-		landing Name/Number
-	</div>
-	<div class="content whitePaddedContent">
-		<div class="field">	
-			<label>name</label>
-			<input type="text" ng-model="landings[landing_id]['name']"/>
-		</div>
-		<div class="field">	
-			<label>tower_id</label>
-			<input type="text" ng-model="landings[landing_id]['tower_id']" disabled />
-		</div>
-	</div>
+	
+	<div ng-include="'/views/partials/editPartials/editSectionPartials/LandingBasicInfo.htm'"></div>
+	<div ng-include="'/views/partials/editPartials/editSectionPartials/LandingStairsInfo.htm'"></div>
 
 	<script language='javascript'>
 		$(document).ready(function () {

@@ -1,38 +1,71 @@
-<div class="ui fluid accordion">
-<!-- * * * * * * * * * * * * * * * * *  -->
-	<div class=" active title">
-		<i class="dropdown icon"></i>
-		x
-	</div>
+<div id="Tower_InteriorData">
+	<div class="ui fluid accordion">
+		<div class="title">
+			<h2>Ground_/_Landing_X_/_Belfry</h2>
+		</div>
+		<div class="content whitePaddedContent">
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Stairs Info
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Ramp :bool</label>
+				<input type="text" name="bellTower[data][titties][Ramp :bool]" placeholder="Ramp :bool" "  >
+			</div>
 
-	<div class="active content whitePaddedContent">
-		<div class="field">
-			<label>x</label>
-			<input type="text" placeholder="x" />
+			<div class="field">
+				<label>Stairs :bool</label>
+				<input type="text" name="bellTower[data][titties][Stairs :bool]" placeholder="Stairs :bool" "  >
+			</div>
+
+			<div class="field">
+				<label>Railing :bool</label>
+				<input type="text" name="bellTower[data][titties][Railing :bool]" placeholder="Railing :bool" "  >
+			</div>
+
+			<div class="field">
+				<label>Staircase Side :select(around, front, right, back, left)</label>
+				<input type="text" name="bellTower[data][titties][Staircase_Side :select(around, front, right, back, left)]" placeholder="Staircase_Side :select(around, front, right, back, left)" "  >
+			</div>
+
+			<div class="field">
+				<label>Staircase material :select(wood, brick, stone, concrete, tile, marble, other)</label>
+				<input type="text" name="bellTower[data][titties][Staircase material :select(wood, brick, stone, concrete, tile, marble, other)]" placeholder="Staircase material :select(wood, brick, stone, concrete, tile, marble, other)" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of steps</label>
+				<input type="text" name="bellTower[data][titties][Number of steps]" placeholder="Number of steps" "  >
+			</div>
+
+			<div class="field">
+				<label>Number of bad steps</label>
+				<input type="text" name="bellTower[data][titties][Number of bad steps]" placeholder="Number of bad steps" "  >
+			</div>
+
+			<div class="field">
+				<label>Staircase Cleanliness :rating(1, 2, 3, 4, 5)</label>
+				<input type="text" name="bellTower[data][titties][Staircase_Cleanliness :rating(1, 2, 3, 4, 5)]" placeholder="Staircase_Cleanliness :rating(1, 2, 3, 4, 5)" "  >
+			</div>
+
+			<div class="field">
+				<label>Staircase Sturdiness :rating(1, 2, 3, 4, 5)</label>
+				<input type="text" name="bellTower[data][titties][Staircase_Sturdiness :rating(1, 2, 3, 4, 5)]" placeholder="Staircase_Sturdiness :rating(1, 2, 3, 4, 5)" "  >
+			</div>
+
+			<div class="field">
+				<label>Railing Sturdiness :rating(1 2, 3, 4, 5)</label>
+				<input type="text" name="bellTower[data][titties][Railing_Sturdiness :rating(1 2, 3, 4, 5)]" placeholder="Railing_Sturdiness :rating(1 2, 3, 4, 5)" "  >
+			</div>
+
+			<div class="field">
+				<label>Notes :text-area</label>
+				<input type="text" name="bellTower[data][titties][Notes :text-area]" placeholder="Notes :text-area" "  >
+			</div>
+
 		</div>
 	</div>
 
-<!-- * * * * * * * * * * * * * * * * *  -->
-	<!-- <div class="title"> -->
-		<!-- <i class="dropdown icon"></i> -->
-		<!-- Data 2 -->
-	<!-- </div> -->
-<!--  -->
-	<!-- <div class="content whitePaddedContent"> -->
-		<!-- <div ng-repeat="(key, value) in bc.bellTower_info"> -->
-			<!-- <div ng-if="typeof(value) == 'object'"> -->
-				<!-- // object -->
-				<!-- <div class="field" ng-repeat="(key1, value1) in value"> -->
-					<!-- <label>{{key1}}</label> -->
-					<!-- <input type="text" ng-model="value[key1]"/> -->
-				<!-- </div> -->
-			<!-- </div> -->
-<!--  -->
-			<!-- <div class="field" ng-if="typeof(value) != 'object'"> -->
-				<!-- // field -->
-				<!-- <label>{{key}}</label> -->
-				<!-- <input type="text" ng-model="bc.bellTower_info[key]"/> -->
-			<!-- </div> -->
-		<!-- </div> -->
-	<!-- </div> -->
 </div>
