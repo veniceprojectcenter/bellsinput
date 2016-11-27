@@ -5,44 +5,62 @@
 		Test
 	</div>
 	<div class="content whitePaddedContent">
+
+		<div class="field">
+			<label>Text</label>
+			<input type="text" ng-model="bellTower['text']">
+		</div>
+
 		<div class="inline field">
-			<label>boolean</label>
-			<input type="checkbox" ng-model="bellTower['boolean']"
-           ng-true-value="'YES'" ng-false-value="'NO'"> 
-           <p> * * * * * * * * {{ bellTower['boolean'] }}</p>
+			<input type="checkbox" ng-model="bellTower['boolean']" ng-true-value="'YES'" ng-false-value="'NO'">
+			<label>boolean:<span> {{ bellTower['boolean'] }}</span></label>
+           <!-- <p> * * * * * * * * {{ bellTower['boolean'] }}</p> -->
 	  	</div>
 
-	  	<div class="inline field">
-			<label>range</label>
-			<input type="range" name="range" ng-model="bellTower['range']" min="0"  max="5">
-			<p> * * * * * * * * {{ bellTower['range'] }}</p>	
+	  	<div class="field">
+	  		<label>Range:<span> {{ bellTower['range'] }}</span></label>
+			<input style="width: 100%" type="range" name="range" ng-model="bellTower['range']" min="0"  max="5">
 	  	</div>	  	
 
-	  	<div class="inline field">
-			<select name="singleSelect" ng-model="bellTower['select']">
-				<option value="option-1">Option 1</option>
-				<option value="option-2">Option 2</option>
+	  	<div class="field">
+	  		<label>Select:<span> {{ bellTower['select'] }}</span></label>
+			<select style="width: 100%" name="singleSelect" ng-model="bellTower['select']">
+				<option value="wood"> wood </option>
+				<option value="brick"> brick </option>
+				<option value="stone"> stone </option>
+				<option value="concrete"> concrete </option>
+				<option value="marble"> marble </option>
+				<option value="tile"> tile </option>
+				<option value="other"> other </option>
 			</select>
-			<p> * * * * * * * * {{ bellTower['select'] }}</p>
 	  	</div>	  	
 
-	  	<div class="inline field">
-			<label>
-			    <input type="radio" ng-model="bellTower['radio']" value="red">
-			    Red
-			  </label>
-			  <label>
-			    <input type="radio" ng-model="bellTower['radio']" value="green">
-			    Green
-			  </label>
-			  <label>
-			    <input type="radio" ng-model="bellTower['radio']" value="blue">
-			    Blue
-			  </label>
-			<p> * * * * * * * * {{ bellTower['radio'] }}</p>
+	  	<div class="grouped fields">
+	  		<label>Radio:<span> {{ bellTower['radio'] }}</span></label>
+	  		<div class="field">
+		  		<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="red">
+					<label>	Red </label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="green">
+					<label>Green</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" ng-model="bellTower['radio']" value="blue">
+					<label>Blue</label>
+				</div>
+			</div>
 	  	</div>
 
-
+		<div class="field">
+			<label>Text Area</label>
+			<textarea ng-model="bellTower['textarea']" rows="2"></textarea>
+		</div>
 	</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * *  -->
@@ -185,3 +203,9 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$('.ui.rating')
+	.rating()
+	;
+</script>
