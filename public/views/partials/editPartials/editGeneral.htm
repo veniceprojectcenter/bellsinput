@@ -1,4 +1,50 @@
 <div class="ui fluid accordion">
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		Test
+	</div>
+	<div class="content whitePaddedContent">
+		<div class="inline field">
+			<label>boolean</label>
+			<input type="checkbox" ng-model="bellTower['boolean']"
+           ng-true-value="'YES'" ng-false-value="'NO'"> 
+           <p> * * * * * * * * {{ bellTower['boolean'] }}</p>
+	  	</div>
+
+	  	<div class="inline field">
+			<label>range</label>
+			<input type="range" name="range" ng-model="bellTower['range']" min="0"  max="5">
+			<p> * * * * * * * * {{ bellTower['range'] }}</p>	
+	  	</div>	  	
+
+	  	<div class="inline field">
+			<select name="singleSelect" ng-model="bellTower['select']">
+				<option value="option-1">Option 1</option>
+				<option value="option-2">Option 2</option>
+			</select>
+			<p> * * * * * * * * {{ bellTower['select'] }}</p>
+	  	</div>	  	
+
+	  	<div class="inline field">
+			<label>
+			    <input type="radio" ng-model="bellTower['radio']" value="red">
+			    Red
+			  </label>
+			  <label>
+			    <input type="radio" ng-model="bellTower['radio']" value="green">
+			    Green
+			  </label>
+			  <label>
+			    <input type="radio" ng-model="bellTower['radio']" value="blue">
+			    Blue
+			  </label>
+			<p> * * * * * * * * {{ bellTower['radio'] }}</p>
+	  	</div>
+
+
+	</div>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * *  -->
 	<div class="title">
 		<i class="dropdown icon"></i>
