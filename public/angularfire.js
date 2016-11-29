@@ -21,10 +21,23 @@ var fb = firebase.initializeApp(config);
 (function() {
 	'use strict';
 	var app = angular.module('app', [
-		// 'ngRoute',
+		'ngRoute',
 		'firebase'
 	]);
 	
+	app.config(function($routeProvider) {
+	    $routeProvider
+	    .when("/towers", {
+	        templateUrl : "views/partials/index.htm"
+	    })
+	    .when("/towers/:tower_id", {
+	        templateUrl : "views/partials/show.htm"
+	    })
+	    .when("/towers/:tower_id/edit", {
+	        templateUrl : "views/partials/edit.htm"
+	    }).otherwise('towers');
+	});
+
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
 		var bc = this;
 		bc.belltowers = {};

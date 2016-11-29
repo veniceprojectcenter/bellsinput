@@ -10,6 +10,7 @@ app.listen(port, function(){
 	console.log("server is baby listening");
 });
 
+// index
 app.get("/", function(req, res){
 	res.redirect("/angularfire.html");
 });
