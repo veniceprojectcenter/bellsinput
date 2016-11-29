@@ -109,34 +109,43 @@ var fb = firebase.initializeApp(config);
 
 			// load up bells
 			bc.bellTower_ref.child('bells').on('value', function(bells_list){
-				bc.bell_keys = Object.keys(bells_list.val());
-				bc.bells = {};
-				bc.bells_ref = {};
-				bc.bell_keys.forEach(function(bk){
-					bc.bells_ref[bk] = firebase.database().ref()
-						.child('data')
-						.child(bk)
-						.child('data');
-					bc.bells[bk] = $firebaseObject(bc.bells_ref[bk]);
-					// bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
-					bc.bells[bk].$bindTo($scope, "bells['" + bk + "']");
-				});
+				if (bells_list.val()) {
+					bc.bell_keys = Object.keys(bells_list.val());
+					bc.bells = {};
+					bc.bells_ref = {};
+					bc.bell_keys.forEach(function(bk){
+						bc.bells_ref[bk] = firebase.database().ref()
+							.child('data')
+							.child(bk)
+							.child('data');
+						bc.bells[bk] = $firebaseObject(bc.bells_ref[bk]);
+						// bc.bells[bk].$bindTo($scope, "bells[" + bk + "]");
+						bc.bells[bk].$bindTo($scope, "bells['" + bk + "']");
+					});
+				} else {
+					bc.bells = [];
+				}
 			});
 
 			// load up landings
 			bc.bellTower_ref.child('landings').on('value', function(landings_list){
-				bc.bell_keys = Object.keys(landings_list.val());
-				bc.landings = {};
-				bc.landings_ref = {};
-				bc.bell_keys.forEach(function(lk){
-					bc.landings_ref[lk] = firebase.database().ref()
-						.child('data')
-						.child(lk)
-						.child('data');
-					bc.landings[lk] = $firebaseObject(bc.landings_ref[lk]);
-					// bc.landings[lk].$bindTo($scope, "landings[" + lk + "]");
-					bc.landings[lk].$bindTo($scope, "landings['" + lk + "']");
-				});
+				if (landings_list.val()) {
+					bc.landing_keys = Object.keys(landings_list.val());
+					bc.landings = {};
+					bc.landings_ref = {};
+					bc.landing_keys.forEach(function(lk){
+						bc.landings_ref[lk] = firebase.database().ref()
+							.child('data')
+							.child(lk)
+							.child('data');
+						bc.landings[lk] = $firebaseObject(bc.landings_ref[lk]);
+						// bc.landings[lk].$bindTo($scope, "landings[" + lk + "]");
+						bc.landings[lk].$bindTo($scope, "landings['" + lk + "']");
+					});
+				} else {
+					bc.landings = [];
+				}
+
 			});
 			// synchronize the object with a three-way data binding
 			// click on `index.html` above to see it used in the DOM!
