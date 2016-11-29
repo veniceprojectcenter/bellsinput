@@ -1,12 +1,5 @@
 var dataCategories = ["general", "exterior", "interior", "bells"];
 
-// document.addEventListener('DOMContentLoaded', function() {
-// 	alert("allo faggot");
-// 	hideAllData();
-// 	showCategory(dataCategories[0]);
-//     setUpCategoryClicks();
-// }, false);
-
 function setUpCategoryClicks(){
 	dataCategories.forEach(function(category) {
 		// for each categoryButton on top of edit page setup click functions

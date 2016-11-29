@@ -42,6 +42,15 @@ var fb = firebase.initializeApp(config);
 		var bc = this;
 		bc.belltowers = {};
 		var previousRef;
+
+		// check for route changes
+		$scope.$on( "$routeChangeStart", function(event, to, from) {
+			if (to.originalPath == null) { return; }
+
+			if (to.originalPath.includes("/towers/:tower_id")) { // show or edit
+				bc.loadTower(to.params.tower_id);
+			}
+		});
 		
 		firebase.database().ref()
 			.child("groups")
@@ -74,43 +83,18 @@ var fb = firebase.initializeApp(config);
 		// INDEX * INDEX * INDEX * INDEX * INDEX * INDEX
 		bc.index = function(){
 			bc.unbind();
-			bc.hideAll();
+			// bc.hideAll();
 			$('#index').show();
 			currentTowerID = null;
 		};
 
-		// SHOW * SHOW * SHOW * SHOW * SHOW * SHOW
-		bc.showTower = function(tower_id){
-			bc.unbind();
-			bc.hideAll();
-			
-			currentTowerID = tower_id;
-			bc.loadTower(tower_id);
-			
-			$('#show').show();
-		};
-		
-		// EDIT * EDIT * EDIT * EDIT * EDIT * EDIT
-		bc.editTower = function(tower_id){
-			bc.unbind();
-			bc.hideAll();
-			
-			if (!tower_id) {
-				console.log('no tower id exists ', tower_id)
-				tower_id = currentTowerID;
-			}
-				
-			currentTowerID = tower_id;
-			bc.loadTower(tower_id);
-			
-			$('#edit').show();
-			setUpCategoryClicks(); // from edit.js
-		};
-		
 		// LOAD * LOAD * LOAD * LOAD * LOAD * LOAD
 		bc.loadTower = function(tower_id){
 			bc.unbind();
-			bc.hideAll();
+			// bc.hideAll();
+
+			currentTowerID = tower_id;
+			$scope.current_tower_id = tower_id;
 			
 			console.log("TowerId", tower_id);
 			bc.bellTower_ref = firebase.database().ref()
