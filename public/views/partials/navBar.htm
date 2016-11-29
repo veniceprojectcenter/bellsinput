@@ -1,25 +1,33 @@
+<!-- <div class="ui inverted menu">
+  <a class="active item">
+    Home
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+</div> -->
+
 <!-- navbar -->
 <div class="ui fixed inverted menu">
-	<div class="ui container">
-		<div class="item sidemenu">
-			<i class="sidebar icon"></i>
+		<div class="ui pointing dropdown link item" href="#">
+			<span class="text">VeBells</span>
+			<i class="dropdown icon"></i>
+			<div class="inverted menu">
+		    	<a class="item" data-value="VeBells" href="#towers">Home</a>
+		    	<a class="item" href="#analysis">Analysis</a>
+		  	</div>
 		</div>
-		<a class="header item" href="#">
-			VeBells 
-		</a>
+
 		<a id="buttonToShowLogin" class="item right">
-			<p id="sign-in-status">a</p>
+			<p id="sign-in-status">Log In</p>
 		</a>
-	</div>
 </div>
 
-<div class="ui left demo vertical inverted sidebar labeled icon menu">
-	<a class="item" href="#">
-		<i class="home icon"></i>
-		Home
-	</a>
-	<a href="#" class="item">
-		<i class="add layout icon"></i>
-		New Tower
-	</a>		
-</div>
+<script type="text/javascript">
+	$('.ui.dropdown')
+  		.dropdown()
+	;
+</script>

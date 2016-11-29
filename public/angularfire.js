@@ -27,15 +27,18 @@ var fb = firebase.initializeApp(config);
 	
 	app.config(function($routeProvider) {
 	    $routeProvider
-	    .when("/towers", {
+	    .when("/towers", { 								// index 
 	        templateUrl : "views/partials/index.htm"
 	    })
-	    .when("/towers/:tower_id", {
+	    .when("/towers/:tower_id", { 					// show 
 	        templateUrl : "views/partials/show.htm"
 	    })
-	    .when("/towers/:tower_id/edit", {
+	    .when("/towers/:tower_id/edit", { 				// edit 
 	        templateUrl : "views/partials/edit.htm"
-	    }).otherwise('towers');
+	    })	    
+	    .when("/analysis", { 				// edit 
+	        templateUrl : "views/partials/analysis.htm"
+	    }).otherwise('views/partials/analysis.htm');
 	});
 
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
