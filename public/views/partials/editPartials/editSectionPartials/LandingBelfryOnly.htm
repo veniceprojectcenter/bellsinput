@@ -13,8 +13,10 @@
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Frame restoration']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Frame restoration:<span> {{ landings[landing_id]['Frame restoration'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Frame restoration']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Frame restoration:<span> {{ landings[landing_id]['Frame restoration'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="field">
@@ -27,13 +29,17 @@
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Frame missing screws or bolts']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Frame missing screws or bolts:<span> {{ landings[landing_id]['Frame missing screws or bolts'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Frame missing screws or bolts']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Frame missing screws or bolts:<span> {{ landings[landing_id]['Frame missing screws or bolts'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Frame_rust']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Frame rust:<span> {{ landings[landing_id]['Frame_rust'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Frame_rust']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Frame rust:<span> {{ landings[landing_id]['Frame_rust'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="field">

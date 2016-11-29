@@ -32,13 +32,22 @@
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="bells[bell_id]['Automatic']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Automatic:<span> {{ bells[bell_id]['Automatic'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bells[bell_id]['Automatic']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Automatic:<span> {{ bells[bell_id]['Automatic'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="bells[bell_id]['Manual_working']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Manual working:<span> {{ bells[bell_id]['Manual_working'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bells[bell_id]['Manual_working']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Manual working:<span> {{ bells[bell_id]['Manual_working'] }}</span></label>
+				</div>
 			</div>
-
 		</div>
+
+		<script type="text/javascript">
+			$('.ui.dropdown')
+				.dropdown()
+			;
+		</script>

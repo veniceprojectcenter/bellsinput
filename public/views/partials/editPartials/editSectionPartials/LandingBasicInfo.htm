@@ -42,18 +42,24 @@
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Clock_mechanism']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Clock mechanism:<span> {{ landings[landing_id]['Clock_mechanism'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Clock_mechanism']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Clock mechanism:<span> {{ landings[landing_id]['Clock_mechanism'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Natural_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Natural Lighting:<span> {{ landings[landing_id]['Natural_Lighting'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Natural_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Natural Lighting:<span> {{ landings[landing_id]['Natural_Lighting'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="inline field">
-				<input type="checkbox" ng-model="landings[landing_id]['Artificial_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
-				<label>Artificial Lighting:<span> {{ landings[landing_id]['Artificial_Lighting'] }}</span></label>
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="landings[landing_id]['Artificial_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Artificial Lighting:<span> {{ landings[landing_id]['Artificial_Lighting'] }}</span></label>
+				</div>
 			</div>
 
 			<div class="field">
