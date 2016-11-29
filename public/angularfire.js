@@ -189,7 +189,7 @@ var fb = firebase.initializeApp(config);
 			});
 		};
 
-				// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
+		// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
 		bc.addLanding = function(){
 			var groupName = 'Landings';
 			
