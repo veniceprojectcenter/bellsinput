@@ -26,6 +26,7 @@
 		<!-- AngularFire -->
 		<script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 		<script type="text/javascript" src="angularfire.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 	</head>
 
 	<body ng-controller="BellsController as bc">
@@ -34,14 +35,14 @@
 		<div ng-include="'views/partials/loginModal.htm'"></div>
 
 		<div class="content" id="main">
-			<div id="index" ng-include="'views/partials/index.htm'"></div>
-			<div id="show" style="display: none" ng-include="'views/partials/show.htm'"></div>
-			<div id="edit" style="display: none" ng-include="'views/partials/edit.htm'"></div>
+			<!-- ng-route puts all files inside of ng-view -->
+			<ng-view></ng-view>
 		</div>
 
 	<!-- scripts * scripts * scripts * scripts * -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
 		<script type="text/javascript" src="/scripts/show.js"></script>
+		<script type="text/javascript" src="/scripts/edit.js"></script>
 		<script src="/scripts/global.js"></script>
 		<script src="/scripts/login.js"></script>
 	</body>
