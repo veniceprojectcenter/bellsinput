@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="field">
-				<label>Landing Material:<span> {{ landings[landing_id]['Landing_Material'] }}</span></label>
+				<label>Landing Material:<span class="inputValue"> {{ landings[landing_id]['Landing_Material'] }}</span></label>
 				<select class="select" ng-model="landings[landing_id]['Landing_Material']">
 					<option value="wood"> wood </option>
 					<option value="brick"> brick </option>
@@ -22,12 +22,12 @@
 			</div>
 
 			<div class="field">
-				<label>Landing Sturdiness:<span> {{ landings[landing_id]['Landing_Sturdiness'] }}</span></label>
+				<label>Landing Sturdiness:<span class="inputValue"> {{ landings[landing_id]['Landing_Sturdiness'] }}</span></label>
 				<input class="rating" type="range" ng-model="landings[landing_id]['Landing_Sturdiness']" min="0"  max="5">
 			</div>
 
 			<div class="field">
-				<label>Landing Cleanliness:<span> {{ landings[landing_id]['Landing_Cleanliness'] }}</span></label>
+				<label>Landing Cleanliness:<span class="inputValue"> {{ landings[landing_id]['Landing_Cleanliness'] }}</span></label>
 				<input class="rating" type="range" ng-model="landings[landing_id]['Landing_Cleanliness']" min="0"  max="5">
 			</div>
 
@@ -44,26 +44,26 @@
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="landings[landing_id]['Clock_mechanism']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Clock mechanism:<span> {{ landings[landing_id]['Clock_mechanism'] }}</span></label>
+					<label>Clock mechanism:<span class="inputValue"> {{ landings[landing_id]['Clock_mechanism'] }}</span></label>
 				</div>
 			</div>
 
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="landings[landing_id]['Natural_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Natural Lighting:<span> {{ landings[landing_id]['Natural_Lighting'] }}</span></label>
+					<label>Natural Lighting:<span class="inputValue"> {{ landings[landing_id]['Natural_Lighting'] }}</span></label>
 				</div>
 			</div>
 
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="landings[landing_id]['Artificial_Lighting']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Artificial Lighting:<span> {{ landings[landing_id]['Artificial_Lighting'] }}</span></label>
+					<label>Artificial Lighting:<span class="inputValue"> {{ landings[landing_id]['Artificial_Lighting'] }}</span></label>
 				</div>
 			</div>
 
 			<div class="field">
-				<label>Lighting raiting:<span> {{ landings[landing_id]['Lighting_raiting'] }}</span></label>
+				<label>Lighting raiting:<span class="inputValue"> {{ landings[landing_id]['Lighting_raiting'] }}</span></label>
 				<input class="rating" type="range" ng-model="landings[landing_id]['Lighting_raiting']" min="0"  max="5">
 			</div>
 

@@ -9,14 +9,14 @@
 			</div>
 
 			<div class="field">
-				<label>Clapper condition:<span> {{ bells[bell_id]['Clapper_condition'] }}</span></label>
+				<label>Clapper condition:<span class="inputValue"> {{ bells[bell_id]['Clapper_condition'] }}</span></label>
 				<input class="rating" type="range" ng-model="bells[bell_id]['Clapper_condition']" min="0"  max="5">
 			</div>
 
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="bells[bell_id]['Clapper_Rust']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Clapper Rust:<span> {{ bells[bell_id]['Clapper_Rust'] }}</span></label>
+					<label>Clapper Rust:<span class="inputValue"> {{ bells[bell_id]['Clapper_Rust'] }}</span></label>
 				</div>
 			</div>
 
@@ -31,7 +31,7 @@
 			</div>
 
 			<div class="field">
-				<label>Belt condition:<span> {{ bells[bell_id]['Belt_condition'] }}</span></label>
+				<label>Belt condition:<span class="inputValue"> {{ bells[bell_id]['Belt_condition'] }}</span></label>
 				<input class="rating" type="range" ng-model="bells[bell_id]['Belt_condition']" min="0"  max="5">
 			</div>
 
@@ -41,12 +41,12 @@
 			</div>
 
 			<div class="field">
-				<label>Stock condition:<span> {{ bells[bell_id]['Stock_condition'] }}</span></label>
+				<label>Stock condition:<span class="inputValue"> {{ bells[bell_id]['Stock_condition'] }}</span></label>
 				<input class="rating" type="range" ng-model="bells[bell_id]['Stock_condition']" min="0"  max="5">
 			</div>
 
 			<div class="field">
-				<label>Skidmark 1 Side:<span> {{ bells[bell_id]['Skidmark_1_Side'] }}</span></label>
+				<label>Skidmark 1 Side:<span class="inputValue"> {{ bells[bell_id]['Skidmark_1_Side'] }}</span></label>
 				<select class="select" ng-model="bells[bell_id]['Skidmark_1_Side']">
 					<option value="front"> front </option>
 					<option value="right"> right </option>
@@ -66,7 +66,7 @@
 			</div>
 
 			<div class="field">
-				<label>Skidmark 2 Side:<span> {{ bells[bell_id]['Skidmark_2_Side'] }}</span></label>
+				<label>Skidmark 2 Side:<span class="inputValue"> {{ bells[bell_id]['Skidmark_2_Side'] }}</span></label>
 				<select class="select" ng-model="bells[bell_id]['Skidmark_2_Side']">
 					<option value="front"> front </option>
 					<option value="right"> right </option>
@@ -86,7 +86,7 @@
 			</div>
 
 			<div class="field">
-				<label>Conservation state:<span> {{ bells[bell_id]['Conservation_state'] }}</span></label>
+				<label>Conservation state:<span class="inputValue"> {{ bells[bell_id]['Conservation_state'] }}</span></label>
 				<input class="rating" type="range" ng-model="bells[bell_id]['Conservation_state']" min="0"  max="5">
 			</div>
 
@@ -98,12 +98,12 @@
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="bells[bell_id]['Safety_cable']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Safety cable:<span> {{ bells[bell_id]['Safety_cable'] }}</span></label>
+					<label>Safety cable:<span class="inputValue"> {{ bells[bell_id]['Safety_cable'] }}</span></label>
 				</div>
 			</div>
 
 			<div class="field">
-				<label>Cracked side:<span> {{ bells[bell_id]['Cracked_side'] }}</span></label>
+				<label>Cracked side:<span class="inputValue"> {{ bells[bell_id]['Cracked_side'] }}</span></label>
 				<select class="select" ng-model="bells[bell_id]['Cracked_side']">
 					<option value="front"> front </option>
 					<option value="right"> right </option>

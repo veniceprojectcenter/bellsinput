@@ -4,7 +4,7 @@
 		</div>
 		<div class="content whitePaddedContent">
 			<div class="field">
-				<label>Swing direction:<span> {{ bells[bell_id]['Swing_direction'] }}</span></label>
+				<label>Swing direction:<span class="inputValue"> {{ bells[bell_id]['Swing_direction'] }}</span></label>
 				<select class="select" ng-model="bells[bell_id]['Swing_direction']">
 					<option value="R-L"> R-L </option>
 					<option value="F-B"> F-B </option>
@@ -12,7 +12,7 @@
 			</div>
 
 			<div class="field">
-				<label>Hammer side:<span> {{ bells[bell_id]['Hammer_side'] }}</span></label>
+				<label>Hammer side:<span class="inputValue"> {{ bells[bell_id]['Hammer_side'] }}</span></label>
 				<select class="select" ng-model="bells[bell_id]['Hammer_side']">
 					<option value="front"> front </option>
 					<option value="right"> right </option>
@@ -34,14 +34,14 @@
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="bells[bell_id]['Automatic']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Automatic:<span> {{ bells[bell_id]['Automatic'] }}</span></label>
+					<label>Automatic:<span class="inputValue"> {{ bells[bell_id]['Automatic'] }}</span></label>
 				</div>
 			</div>
 
 			<div class="inline field">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-model="bells[bell_id]['Manual_working']" ng-true-value="'YES'" ng-false-value="'NO'">
-					<label>Manual working:<span> {{ bells[bell_id]['Manual_working'] }}</span></label>
+					<label>Manual working:<span class="inputValue"> {{ bells[bell_id]['Manual_working'] }}</span></label>
 				</div>
 			</div>
 		</div>
