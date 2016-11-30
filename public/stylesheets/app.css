@@ -3,6 +3,10 @@
 	float: right;
 }
 
+#categoryButtons {
+	margin-bottom: 20px;
+}
+
 body {
 	background: #2c3e50;
 	/*background-image: url(http://www.todayifoundout.com/wp-content/uploads/2013/07/doritos.jpg);*/

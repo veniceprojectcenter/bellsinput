@@ -30,15 +30,19 @@ var fb = firebase.initializeApp(config);
 	    .when("/towers", { 								// index 
 	        templateUrl : "views/partials/index.htm"
 	    })
+	     .when("/analysis", { 				// edit 
+	        templateUrl : "views/partials/analysis.htm"
+	    })
+	    .when("/instructions", { 				// edit 
+	        templateUrl : "views/partials/instructions.htm"
+	    })
 	    .when("/towers/:tower_id", { 					// show 
 	        templateUrl : "views/partials/show.htm"
 	    })
 	    .when("/towers/:tower_id/edit", { 				// edit 
 	        templateUrl : "views/partials/edit.htm"
 	    })	    
-	    .when("/analysis", { 				// edit 
-	        templateUrl : "views/partials/analysis.htm"
-	    }).otherwise('views/partials/analysis.htm');
+	   .otherwise('views/partials/index.htm');
 	});
 
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
