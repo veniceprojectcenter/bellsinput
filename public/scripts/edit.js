@@ -1,4 +1,4 @@
-var dataCategories = ["general", "exterior", "interior", "bells"];
+var dataCategories = ["general", "exterior", "interior", "bells", "linkedMedia"];
 
 function setUpCategoryClicks(){
 	dataCategories.forEach(function(category) {
