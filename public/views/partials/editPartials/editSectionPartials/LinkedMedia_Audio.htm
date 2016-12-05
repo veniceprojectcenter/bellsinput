@@ -4,13 +4,21 @@
 	</div>
 	<div class="content whitePaddedContent">
 		<div class="field">
-			<label>Bell Chorus Audio</label>
+			<label>
+				<a target="_blank" ng-href="{{bellTower['Bell_Chorus_Audio']}}">
+					Bell Chorus Audio
+				</a>
+			</label>
 			<input type="text"  ng-model="bellTower['Bell_Chorus_Audio']" placeholder="https://example.com/Bell_Chorus_Audio">
 		</div>
 
 	<!-- BELL DATA Repitition-->
 		<div class="field" ng-repeat="num in [1,2,3,4,5,6,7,8,9,10,11]">
-			<label>Bell {{num}} Audio</label>
+			<label>
+				<a target="_blank" ng-href="{{bellTower['Bell_'+ num +'_Audio']}}">
+					Bell {{num}} Audio
+				</a>
+			</label>
 			<input type="text"  ng-model="bellTower['Bell_'+ num +'_Audio']" placeholder="https://example.com/Bell_{{num}}_Audio">
 		</div>
 	<!-- END BELL DATA Repitition-->

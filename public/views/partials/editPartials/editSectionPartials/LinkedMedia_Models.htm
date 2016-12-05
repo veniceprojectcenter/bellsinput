@@ -4,18 +4,30 @@
 </div>
 <div class="content whitePaddedContent">
 	<div class="field">
-		<label>Matterport Model</label>
+		<label>
+			<a target="_blank" ng-href="{{bellTower['Matterport_Model']}}">
+				Matterport Model
+			</a>
+		</label>
 		<input type="text"  ng-model="bellTower['Matterport_Model']" placeholder="https://example.com/Matterport_Model">
 	</div>
 
 	<div class="field">
-		<label>Belfry Model</label>
+		<label>
+			<a target="_blank" ng-href="{{bellTower['Belfry_Model']}}">
+				Belfry Model
+			</a>
+		</label>
 		<input type="text"  ng-model="bellTower['Belfry_Model']" placeholder="https://example.com/Belfry_Model">
 	</div>
 
 	<!-- BELL DATA Repitition-->
 		<div class="field" ng-repeat="num in [1,2,3,4,5,6,7,8,9,10,11]">
-			<label>Bell {{num}} Model</label>
+			<label>
+				<a target="_blank" ng-href="{{bellTower['Bell_'+ num +'_Model']}}">
+					Bell {{num}} Model
+				</a>
+			</label>
 			<input type="text"  ng-model="bellTower['Bell_'+ num +'_Model']" placeholder="https://example.com/Bell_{{num}}_Model">
 		</div>
 	<!-- END BELL DATA Repitition-->
