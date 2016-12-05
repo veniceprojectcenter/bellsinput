@@ -1,71 +1,22 @@
 <div class="title">
-			<i class="dropdown icon"></i>
-			Models Links
+	<i class="dropdown icon"></i>
+	Models Links
+</div>
+<div class="content whitePaddedContent">
+	<div class="field">
+		<label>Matterport Model</label>
+		<input type="text"  ng-model="bellTower['Matterport_Model']" placeholder="https://example.com/Matterport_Model">
+	</div>
+
+	<div class="field">
+		<label>Belfry Model</label>
+		<input type="text"  ng-model="bellTower['Belfry_Model']" placeholder="https://example.com/Belfry_Model">
+	</div>
+
+	<!-- BELL DATA Repitition-->
+		<div class="field" ng-repeat="num in [1,2,3,4,5,6,7,8,9,10,11]">
+			<label>Bell {{num}} Model</label>
+			<input type="text"  ng-model="bellTower['Bell_'+ num +'_Model']" placeholder="https://example.com/Bell_'+ num +'_Model">
 		</div>
-		<div class="content whitePaddedContent">
-			<div class="field">
-				<label>Matterport Model</label>
-				<input type="text"  ng-model="bellTower['Matterport_Model']" placeholder="https://example.com/Matterport_Model">
-			</div>
-
-			<div class="field">
-				<label>Belfry Model</label>
-				<input type="text"  ng-model="bellTower['Belfry_Model']" placeholder="https://example.com/Belfry_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 1 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_1_Model']" placeholder="https://example.com/Bell_1_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 2 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_2_Model']" placeholder="https://example.com/Bell_2_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 3 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_3_Model']" placeholder="https://example.com/Bell_3_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 4 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_4_Model']" placeholder="https://example.com/Bell_4_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 5 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_5_Model']" placeholder="https://example.com/Bell_5_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 6 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_6_Model']" placeholder="https://example.com/Bell_6_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 7 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_7_Model']" placeholder="https://example.com/Bell_7_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 8 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_8_Model']" placeholder="https://example.com/Bell_8_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 9 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_9_Model']" placeholder="https://example.com/Bell_9_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 10 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_10_Model']" placeholder="https://example.com/Bell_10_Model">
-			</div>
-
-			<div class="field">
-				<label>Bell 11 Model</label>
-				<input type="text"  ng-model="bellTower['Bell_11_Model']" placeholder="https://example.com/Bell_11_Model">
-			</div>
-
-		</div>
+	<!-- END BELL DATA Repitition-->
+</div>
