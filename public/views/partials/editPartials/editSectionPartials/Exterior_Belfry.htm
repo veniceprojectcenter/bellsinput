@@ -1,0 +1,567 @@
+		<div class="title">
+			<h2>Exterior Belfry</h2>
+		</div>
+		<div class="content whitePaddedContent">
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			General
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Exterior Material</label>
+				<input type="text"  ng-model="bellTower['Belfry_Exterior_Material']" placeholder="Belfry_Exterior_Material">
+			</div>
+
+			<div class="field">
+				<label>Belfry Percentage of tower height</label>
+				<input type="text"  ng-model="bellTower['Belfry_Percentage_of_tower_height']" placeholder="Belfry_Percentage_of_tower_height">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Visibility of Tower
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Public visibility:<span class="inputValue"> {{ bellTower['Belfry_Public_visibility'] }}</span></label>
+				<select class="select" ng-model="bellTower['Belfry_Public_visibility']">
+					<option value="on Grand canal"> on Grand canal </option>
+					<option value="near tourist spot"> near tourist spot </option>
+					<option value="along a canal"> along a canal </option>
+					<option value="by a shopping street"> by a shopping street </option>
+					<option value="none"> none </option>
+				</select>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Visibility_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Visibility Front:<span class="inputValue"> {{ bellTower['Belfry_Visibility_Front'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Visibility_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Visibility Right:<span class="inputValue"> {{ bellTower['Belfry_Visibility_Right'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Visibility_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Visibility Back:<span class="inputValue"> {{ bellTower['Belfry_Visibility_Back'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Visibility_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Visibility Left:<span class="inputValue"> {{ bellTower['Belfry_Visibility_Left'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="field">
+				<label>Belfry Visibility Distance Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Visibility_Distance_Front']" placeholder="Belfry_Visibility_Distance_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Visibility Distance Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Visibility_Distance_Right']" placeholder="Belfry_Visibility_Distance_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Visibility Distance Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Visibility_Distance_Back']" placeholder="Belfry_Visibility_Distance_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Visibility Distance Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Visibility_Distance_Left']" placeholder="Belfry_Visibility_Distance_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Notes
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Exterior tower notes Front</label>
+				<textarea ng-model="bellTower['Belfry_Exterior tower notes_Front']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Belfry Exterior tower notes Right</label>
+				<textarea ng-model="bellTower['Belfry_Exterior tower notes_Right']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Belfry Exterior tower notes Back</label>
+				<textarea ng-model="bellTower['Belfry_Exterior tower notes_Back']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Belfry Exterior tower notes Left</label>
+				<textarea ng-model="bellTower['Belfry_Exterior tower notes_Left']"  rows="2"></textarea>
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			How it is connected to Church
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Connected to Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_to_Front']" placeholder="Belfry_Connected_to_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Connected to Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_to_Right']" placeholder="Belfry_Connected_to_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Connected to Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_to_Back']" placeholder="Belfry_Connected_to_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Connected to Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_to_Left']" placeholder="Belfry_Connected_to_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Length attached percentage Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Length_attached_percentage_Front']" placeholder="Belfry_Length_attached_percentage_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Length attached percentage Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Length_attached_percentage_Right']" placeholder="Belfry_Length_attached_percentage_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Length attached percentage Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Length_attached_percentage_Back']" placeholder="Belfry_Length_attached_percentage_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Length attached percentage Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Length_attached_percentage_Left']" placeholder="Belfry_Length_attached_percentage_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Decorations Outside
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Num Plants Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_Plants_Front']" placeholder="Belfry_Num_Plants_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num Plants Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_Plants_Right']" placeholder="Belfry_Num_Plants_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num Plants Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_Plants_Back']" placeholder="Belfry_Num_Plants_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num Plants Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_Plants_Left']" placeholder="Belfry_Num_Plants_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of art pieces Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of art pieces_Front']" placeholder="Belfry_Number of art pieces_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of art pieces Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of art pieces_Right']" placeholder="Belfry_Number of art pieces_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of art pieces Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of art pieces_Back']" placeholder="Belfry_Number of art pieces_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of art pieces Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of art pieces_Left']" placeholder="Belfry_Number of art pieces_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number Exterior inscriptions</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number Exterior inscriptions']" placeholder="Belfry_Number Exterior inscriptions">
+			</div>
+
+			<div class="field">
+				<label>Belfry Inscription</label>
+				<input type="text"  ng-model="bellTower['Belfry_Inscription']" placeholder="Belfry_Inscription">
+			</div>
+
+			<div class="field">
+				<label>Belfry Inscription description</label>
+				<input type="text"  ng-model="bellTower['Belfry_Inscription description']" placeholder="Belfry_Inscription description">
+			</div>
+
+			<div class="field">
+				<label>Belfry Avg inscription legability:<span class="inputValue"> {{ bellTower['Belfry_Avg_inscription_legability'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Belfry_Avg_inscription_legability']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of decorations</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of decorations']" placeholder="Belfry_Number of decorations">
+			</div>
+
+			<div class="field">
+				<label>Belfry Decoration description</label>
+				<input type="text"  ng-model="bellTower['Belfry_Decoration description']" placeholder="Belfry_Decoration description">
+			</div>
+
+			<div class="field">
+				<label>Belfry Decoration condition:<span class="inputValue"> {{ bellTower['Belfry_Decoration_condition'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Belfry_Decoration_condition']" min="0"  max="5">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Tower Defects
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Num cracks holes Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_cracks_holes_Front']" placeholder="Belfry_Num_cracks_holes_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num cracks holes Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_cracks_holes_Right']" placeholder="Belfry_Num_cracks_holes_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num cracks holes Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_cracks_holes_Back']" placeholder="Belfry_Num_cracks_holes_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num cracks holes Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_cracks_holes_Left']" placeholder="Belfry_Num_cracks_holes_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num brick colors Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_brick_colors_Front']" placeholder="Belfry_Num_brick_colors_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num brick colors Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_brick_colors_Right']" placeholder="Belfry_Num_brick_colors_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num brick colors Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_brick_colors_Back']" placeholder="Belfry_Num_brick_colors_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Num brick colors Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Num_brick_colors_Left']" placeholder="Belfry_Num_brick_colors_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of ties and bands Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of ties and bands_Front']" placeholder="Belfry_Number of ties and bands_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of ties and bands Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of ties and bands_Right']" placeholder="Belfry_Number of ties and bands_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of ties and bands Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of ties and bands_Back']" placeholder="Belfry_Number of ties and bands_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of ties and bands Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of ties and bands_Left']" placeholder="Belfry_Number of ties and bands_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Windows
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Number of windows Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of windows_Front']" placeholder="Belfry_Number of windows_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of windows Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of windows_Right']" placeholder="Belfry_Number of windows_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of windows Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of windows_Back']" placeholder="Belfry_Number of windows_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of windows Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of windows_Left']" placeholder="Belfry_Number of windows_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Blocked window number Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Blocked window number_Front']" placeholder="Belfry_Blocked window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Blocked window number Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Blocked window number_Right']" placeholder="Belfry_Blocked window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Blocked window number Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Blocked window number_Back']" placeholder="Belfry_Blocked window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Blocked window number Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Blocked window number_Left']" placeholder="Belfry_Blocked window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Barred window number Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Barred window number_Front']" placeholder="Belfry_Barred window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Barred window number Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Barred window number_Right']" placeholder="Belfry_Barred window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Barred window number Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Barred window number_Back']" placeholder="Belfry_Barred window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Barred window number Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Barred window number_Left']" placeholder="Belfry_Barred window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Meshed window number Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Meshed window number_Front']" placeholder="Belfry_Meshed window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Meshed window number Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Meshed window number_Right']" placeholder="Belfry_Meshed window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Meshed window number Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Meshed window number_Back']" placeholder="Belfry_Meshed window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Meshed window number Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Meshed window number_Left']" placeholder="Belfry_Meshed window number_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Restoration
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Restoration visible Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Restoration visible_Front']" placeholder="Belfry_Restoration visible_Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Restoration visible Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Restoration visible_Right']" placeholder="Belfry_Restoration visible_Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Restoration visible Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Restoration visible_Back']" placeholder="Belfry_Restoration visible_Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Restoration visible Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Restoration visible_Left']" placeholder="Belfry_Restoration visible_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Clock
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Clock</label>
+				<input type="text"  ng-model="bellTower['Belfry_Clock']" placeholder="Belfry_Clock">
+			</div>
+
+			<div class="field">
+				<label>Belfry Clock side:<span class="inputValue"> {{ bellTower['Belfry_Clock side'] }}</span></label>
+				<select class="select" ng-model="bellTower['Belfry_Clock side']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Belfry Clock working</label>
+				<input type="text"  ng-model="bellTower['Belfry_Clock working']" placeholder="Belfry_Clock working">
+			</div>
+
+			<div class="field">
+				<label>Belfry Clock mechanism landing</label>
+				<input type="text"  ng-model="bellTower['Belfry_Clock mechanism landing']" placeholder="Belfry_Clock mechanism landing">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Belfry
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Belfry Number lesene</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number_lesene']" placeholder="Belfry_Number_lesene">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number sections</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number_sections']" placeholder="Belfry_Number_sections">
+			</div>
+
+			<div class="field">
+				<label>Belfry Arches Front</label>
+				<input type="text"  ng-model="bellTower['Belfry_Arches Front']" placeholder="Belfry_Arches Front">
+			</div>
+
+			<div class="field">
+				<label>Belfry Arches Right</label>
+				<input type="text"  ng-model="bellTower['Belfry_Arches Right']" placeholder="Belfry_Arches Right">
+			</div>
+
+			<div class="field">
+				<label>Belfry Arches Back</label>
+				<input type="text"  ng-model="bellTower['Belfry_Arches Back']" placeholder="Belfry_Arches Back">
+			</div>
+
+			<div class="field">
+				<label>Belfry Arches Left</label>
+				<input type="text"  ng-model="bellTower['Belfry_Arches Left']" placeholder="Belfry_Arches Left">
+			</div>
+
+			<div class="field">
+				<label>Belfry Belfry style</label>
+				<input type="text"  ng-model="bellTower['Belfry_Belfry_style']" placeholder="Belfry_Belfry_style">
+			</div>
+
+			<div class="field">
+				<label>Belfry Drum type</label>
+				<input type="text"  ng-model="bellTower['Belfry_Drum_type']" placeholder="Belfry_Drum_type">
+			</div>
+
+			<div class="field">
+				<label>Belfry Number of lessene</label>
+				<input type="text"  ng-model="bellTower['Belfry_Number of lessene']" placeholder="Belfry_Number of lessene">
+			</div>
+
+			<div class="field">
+				<label>Belfry Balustrade</label>
+				<input type="text"  ng-model="bellTower['Belfry_Balustrade']" placeholder="Belfry_Balustrade">
+			</div>
+
+			<div class="field">
+				<label>Belfry Attic</label>
+				<input type="text"  ng-model="bellTower['Belfry_Attic']" placeholder="Belfry_Attic">
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Cross']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Cross:<span class="inputValue"> {{ bellTower['Belfry_Cross'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Weathervane']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Weathervane:<span class="inputValue"> {{ bellTower['Belfry_Weathervane'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Lightning rod']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Lightning rod:<span class="inputValue"> {{ bellTower['Belfry_Lightning rod'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Belfry_Finial']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Belfry Finial:<span class="inputValue"> {{ bellTower['Belfry_Finial'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="field">
+				<label>Belfry Finial type</label>
+				<input type="text"  ng-model="bellTower['Belfry_Finial type']" placeholder="Belfry_Finial type">
+			</div>
+
+			<div class="field">
+				<label>Belfry Finial description</label>
+				<input type="text"  ng-model="bellTower['Belfry_Finial description']" placeholder="Belfry_Finial description">
+			</div>
+
+			<div class="field">
+				<label>Belfry Spire Description</label>
+				<input type="text"  ng-model="bellTower['Belfry_Spire Description']" placeholder="Belfry_Spire Description">
+			</div>
+
+			<div class="field">
+				<label>Belfry Connected wire</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_wire']" placeholder="Belfry_Connected_wire">
+			</div>
+
+			<div class="field">
+				<label>Belfry Connected unclear</label>
+				<input type="text"  ng-model="bellTower['Belfry_Connected_unclear']" placeholder="Belfry_Connected_unclear">
+			</div>
+
+			<div class="field">
+				<label>Belfry Import notes</label>
+				<input type="text"  ng-model="bellTower['Belfry_Import_notes']" placeholder="Belfry_Import_notes">
+			</div>
+
+		</div>

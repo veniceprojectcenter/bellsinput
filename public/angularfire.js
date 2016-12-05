@@ -42,7 +42,7 @@ var fb = firebase.initializeApp(config);
 	    .when("/towers/:tower_id/edit", { 				// edit 
 	        templateUrl : "views/partials/edit.htm"
 	    })	    
-	   .otherwise('views/partials/index.htm');
+	   .otherwise('/towers');
 	});
 
 	angular.module('app').controller('BellsController', function($scope, $firebaseObject) {
