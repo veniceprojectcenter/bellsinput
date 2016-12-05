@@ -1,0 +1,448 @@
+		<div class="title">
+			<h2>Exterior Shaft</h2>
+		</div>
+		<div class="content whitePaddedContent">
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			General
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Exterior Material</label>
+				<input type="text"  ng-model="bellTower['Shaft_Exterior_Material']" placeholder="Shaft_Exterior_Material">
+			</div>
+
+			<div class="field">
+				<label>Shaft Percentage of tower height</label>
+				<input type="text"  ng-model="bellTower['Shaft_Percentage_of_tower_height']" placeholder="Shaft_Percentage_of_tower_height">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Visibility of Tower
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Public visibility:<span class="inputValue"> {{ bellTower['Shaft_Public_visibility'] }}</span></label>
+				<select class="select" ng-model="bellTower['Shaft_Public_visibility']">
+					<option value="on Grand canal"> on Grand canal </option>
+					<option value="near tourist spot"> near tourist spot </option>
+					<option value="along a canal"> along a canal </option>
+					<option value="by a shopping street"> by a shopping street </option>
+					<option value="none"> none </option>
+				</select>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Shaft_Visibility_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Shaft Visibility Front:<span class="inputValue"> {{ bellTower['Shaft_Visibility_Front'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Shaft_Visibility_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Shaft Visibility Right:<span class="inputValue"> {{ bellTower['Shaft_Visibility_Right'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Shaft_Visibility_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Shaft Visibility Back:<span class="inputValue"> {{ bellTower['Shaft_Visibility_Back'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Shaft_Visibility_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Shaft Visibility Left:<span class="inputValue"> {{ bellTower['Shaft_Visibility_Left'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="field">
+				<label>Shaft Visibility Distance Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Visibility_Distance_Front']" placeholder="Shaft_Visibility_Distance_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Visibility Distance Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Visibility_Distance_Right']" placeholder="Shaft_Visibility_Distance_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Visibility Distance Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Visibility_Distance_Back']" placeholder="Shaft_Visibility_Distance_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Visibility Distance Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Visibility_Distance_Left']" placeholder="Shaft_Visibility_Distance_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Notes
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Exterior tower notes Front</label>
+				<textarea ng-model="bellTower['Shaft_Exterior tower notes_Front']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Shaft Exterior tower notes Right</label>
+				<textarea ng-model="bellTower['Shaft_Exterior tower notes_Right']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Shaft Exterior tower notes Back</label>
+				<textarea ng-model="bellTower['Shaft_Exterior tower notes_Back']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Shaft Exterior tower notes Left</label>
+				<textarea ng-model="bellTower['Shaft_Exterior tower notes_Left']"  rows="2"></textarea>
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			How it is connected to Church
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Connected to Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Connected_to_Front']" placeholder="Shaft_Connected_to_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Connected to Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Connected_to_Right']" placeholder="Shaft_Connected_to_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Connected to Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Connected_to_Back']" placeholder="Shaft_Connected_to_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Connected to Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Connected_to_Left']" placeholder="Shaft_Connected_to_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Length attached percentage Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Length_attached_percentage_Front']" placeholder="Shaft_Length_attached_percentage_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Length attached percentage Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Length_attached_percentage_Right']" placeholder="Shaft_Length_attached_percentage_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Length attached percentage Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Length_attached_percentage_Back']" placeholder="Shaft_Length_attached_percentage_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Length attached percentage Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Length_attached_percentage_Left']" placeholder="Shaft_Length_attached_percentage_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Decorations Outside
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Num Plants Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_Plants_Front']" placeholder="Shaft_Num_Plants_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num Plants Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_Plants_Right']" placeholder="Shaft_Num_Plants_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num Plants Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_Plants_Back']" placeholder="Shaft_Num_Plants_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num Plants Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_Plants_Left']" placeholder="Shaft_Num_Plants_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of art pieces Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of art pieces_Front']" placeholder="Shaft_Number of art pieces_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of art pieces Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of art pieces_Right']" placeholder="Shaft_Number of art pieces_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of art pieces Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of art pieces_Back']" placeholder="Shaft_Number of art pieces_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of art pieces Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of art pieces_Left']" placeholder="Shaft_Number of art pieces_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number Exterior inscriptions</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number Exterior inscriptions']" placeholder="Shaft_Number Exterior inscriptions">
+			</div>
+
+			<div class="field">
+				<label>Shaft Inscription</label>
+				<input type="text"  ng-model="bellTower['Shaft_Inscription']" placeholder="Shaft_Inscription">
+			</div>
+
+			<div class="field">
+				<label>Shaft Inscription description</label>
+				<input type="text"  ng-model="bellTower['Shaft_Inscription description']" placeholder="Shaft_Inscription description">
+			</div>
+
+			<div class="field">
+				<label>Shaft Avg inscription legability:<span class="inputValue"> {{ bellTower['Shaft_Avg_inscription_legability'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Shaft_Avg_inscription_legability']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of decorations</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of decorations']" placeholder="Shaft_Number of decorations">
+			</div>
+
+			<div class="field">
+				<label>Shaft Decoration description</label>
+				<input type="text"  ng-model="bellTower['Shaft_Decoration description']" placeholder="Shaft_Decoration description">
+			</div>
+
+			<div class="field">
+				<label>Shaft Decoration condition:<span class="inputValue"> {{ bellTower['Shaft_Decoration_condition'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Shaft_Decoration_condition']" min="0"  max="5">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Tower Defects
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Num cracks holes Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_cracks_holes_Front']" placeholder="Shaft_Num_cracks_holes_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num cracks holes Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_cracks_holes_Right']" placeholder="Shaft_Num_cracks_holes_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num cracks holes Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_cracks_holes_Back']" placeholder="Shaft_Num_cracks_holes_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num cracks holes Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_cracks_holes_Left']" placeholder="Shaft_Num_cracks_holes_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num brick colors Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_brick_colors_Front']" placeholder="Shaft_Num_brick_colors_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num brick colors Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_brick_colors_Right']" placeholder="Shaft_Num_brick_colors_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num brick colors Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_brick_colors_Back']" placeholder="Shaft_Num_brick_colors_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Num brick colors Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Num_brick_colors_Left']" placeholder="Shaft_Num_brick_colors_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of ties and bands Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of ties and bands_Front']" placeholder="Shaft_Number of ties and bands_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of ties and bands Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of ties and bands_Right']" placeholder="Shaft_Number of ties and bands_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of ties and bands Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of ties and bands_Back']" placeholder="Shaft_Number of ties and bands_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of ties and bands Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of ties and bands_Left']" placeholder="Shaft_Number of ties and bands_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Windows
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Number of windows Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of windows_Front']" placeholder="Shaft_Number of windows_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of windows Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of windows_Right']" placeholder="Shaft_Number of windows_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of windows Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of windows_Back']" placeholder="Shaft_Number of windows_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Number of windows Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Number of windows_Left']" placeholder="Shaft_Number of windows_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Blocked window number Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Blocked window number_Front']" placeholder="Shaft_Blocked window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Blocked window number Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Blocked window number_Right']" placeholder="Shaft_Blocked window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Blocked window number Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Blocked window number_Back']" placeholder="Shaft_Blocked window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Blocked window number Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Blocked window number_Left']" placeholder="Shaft_Blocked window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Barred window number Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Barred window number_Front']" placeholder="Shaft_Barred window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Barred window number Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Barred window number_Right']" placeholder="Shaft_Barred window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Barred window number Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Barred window number_Back']" placeholder="Shaft_Barred window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Barred window number Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Barred window number_Left']" placeholder="Shaft_Barred window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Shaft Meshed window number Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Meshed window number_Front']" placeholder="Shaft_Meshed window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Meshed window number Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Meshed window number_Right']" placeholder="Shaft_Meshed window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Meshed window number Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Meshed window number_Back']" placeholder="Shaft_Meshed window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Meshed window number Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Meshed window number_Left']" placeholder="Shaft_Meshed window number_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Restoration
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Restoration visible Front</label>
+				<input type="text"  ng-model="bellTower['Shaft_Restoration visible_Front']" placeholder="Shaft_Restoration visible_Front">
+			</div>
+
+			<div class="field">
+				<label>Shaft Restoration visible Right</label>
+				<input type="text"  ng-model="bellTower['Shaft_Restoration visible_Right']" placeholder="Shaft_Restoration visible_Right">
+			</div>
+
+			<div class="field">
+				<label>Shaft Restoration visible Back</label>
+				<input type="text"  ng-model="bellTower['Shaft_Restoration visible_Back']" placeholder="Shaft_Restoration visible_Back">
+			</div>
+
+			<div class="field">
+				<label>Shaft Restoration visible Left</label>
+				<input type="text"  ng-model="bellTower['Shaft_Restoration visible_Left']" placeholder="Shaft_Restoration visible_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Clock
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Shaft Clock</label>
+				<input type="text"  ng-model="bellTower['Shaft_Clock']" placeholder="Shaft_Clock">
+			</div>
+
+			<div class="field">
+				<label>Shaft Clock side:<span class="inputValue"> {{ bellTower['Shaft_Clock side'] }}</span></label>
+				<select class="select" ng-model="bellTower['Shaft_Clock side']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Shaft Clock working</label>
+				<input type="text"  ng-model="bellTower['Shaft_Clock working']" placeholder="Shaft_Clock working">
+			</div>
+
+			<div class="field">
+				<label>Shaft Clock mechanism landing</label>
+				<input type="text"  ng-model="bellTower['Shaft_Clock mechanism landing']" placeholder="Shaft_Clock mechanism landing">
+			</div>
+
+		</div>

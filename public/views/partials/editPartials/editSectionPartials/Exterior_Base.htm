@@ -1,0 +1,448 @@
+		<div class="title">
+			<h2>Exterior Base</h2>
+		</div>
+		<div class="content whitePaddedContent">
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			General
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Exterior Material</label>
+				<input type="text"  ng-model="bellTower['Base_Exterior_Material']" placeholder="Base_Exterior_Material">
+			</div>
+
+			<div class="field">
+				<label>Base Percentage of tower height</label>
+				<input type="text"  ng-model="bellTower['Base_Percentage_of_tower_height']" placeholder="Base_Percentage_of_tower_height">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Visibility of Tower
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Public visibility:<span class="inputValue"> {{ bellTower['Base_Public_visibility'] }}</span></label>
+				<select class="select" ng-model="bellTower['Base_Public_visibility']">
+					<option value="on Grand canal"> on Grand canal </option>
+					<option value="near tourist spot"> near tourist spot </option>
+					<option value="along a canal"> along a canal </option>
+					<option value="by a shopping street"> by a shopping street </option>
+					<option value="none"> none </option>
+				</select>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Base_Visibility_Front']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Base Visibility Front:<span class="inputValue"> {{ bellTower['Base_Visibility_Front'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Base_Visibility_Right']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Base Visibility Right:<span class="inputValue"> {{ bellTower['Base_Visibility_Right'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Base_Visibility_Back']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Base Visibility Back:<span class="inputValue"> {{ bellTower['Base_Visibility_Back'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-model="bellTower['Base_Visibility_Left']" ng-true-value="'YES'" ng-false-value="'NO'">
+					<label>Base Visibility Left:<span class="inputValue"> {{ bellTower['Base_Visibility_Left'] }}</span></label>
+				</div>
+			</div>
+
+			<div class="field">
+				<label>Base Visibility Distance Front</label>
+				<input type="text"  ng-model="bellTower['Base_Visibility_Distance_Front']" placeholder="Base_Visibility_Distance_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Visibility Distance Right</label>
+				<input type="text"  ng-model="bellTower['Base_Visibility_Distance_Right']" placeholder="Base_Visibility_Distance_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Visibility Distance Back</label>
+				<input type="text"  ng-model="bellTower['Base_Visibility_Distance_Back']" placeholder="Base_Visibility_Distance_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Visibility Distance Left</label>
+				<input type="text"  ng-model="bellTower['Base_Visibility_Distance_Left']" placeholder="Base_Visibility_Distance_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Notes
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Exterior tower notes Front</label>
+				<textarea ng-model="bellTower['Base_Exterior tower notes_Front']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Base Exterior tower notes Right</label>
+				<textarea ng-model="bellTower['Base_Exterior tower notes_Right']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Base Exterior tower notes Back</label>
+				<textarea ng-model="bellTower['Base_Exterior tower notes_Back']"  rows="2"></textarea>
+			</div>
+
+			<div class="field">
+				<label>Base Exterior tower notes Left</label>
+				<textarea ng-model="bellTower['Base_Exterior tower notes_Left']"  rows="2"></textarea>
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			How it is connected to Church
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Connected to Front</label>
+				<input type="text"  ng-model="bellTower['Base_Connected_to_Front']" placeholder="Base_Connected_to_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Connected to Right</label>
+				<input type="text"  ng-model="bellTower['Base_Connected_to_Right']" placeholder="Base_Connected_to_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Connected to Back</label>
+				<input type="text"  ng-model="bellTower['Base_Connected_to_Back']" placeholder="Base_Connected_to_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Connected to Left</label>
+				<input type="text"  ng-model="bellTower['Base_Connected_to_Left']" placeholder="Base_Connected_to_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Length attached percentage Front</label>
+				<input type="text"  ng-model="bellTower['Base_Length_attached_percentage_Front']" placeholder="Base_Length_attached_percentage_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Length attached percentage Right</label>
+				<input type="text"  ng-model="bellTower['Base_Length_attached_percentage_Right']" placeholder="Base_Length_attached_percentage_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Length attached percentage Back</label>
+				<input type="text"  ng-model="bellTower['Base_Length_attached_percentage_Back']" placeholder="Base_Length_attached_percentage_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Length attached percentage Left</label>
+				<input type="text"  ng-model="bellTower['Base_Length_attached_percentage_Left']" placeholder="Base_Length_attached_percentage_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Decorations Outside
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Num Plants Front</label>
+				<input type="text"  ng-model="bellTower['Base_Num_Plants_Front']" placeholder="Base_Num_Plants_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Num Plants Right</label>
+				<input type="text"  ng-model="bellTower['Base_Num_Plants_Right']" placeholder="Base_Num_Plants_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Num Plants Back</label>
+				<input type="text"  ng-model="bellTower['Base_Num_Plants_Back']" placeholder="Base_Num_Plants_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Num Plants Left</label>
+				<input type="text"  ng-model="bellTower['Base_Num_Plants_Left']" placeholder="Base_Num_Plants_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Number of art pieces Front</label>
+				<input type="text"  ng-model="bellTower['Base_Number of art pieces_Front']" placeholder="Base_Number of art pieces_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Number of art pieces Right</label>
+				<input type="text"  ng-model="bellTower['Base_Number of art pieces_Right']" placeholder="Base_Number of art pieces_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Number of art pieces Back</label>
+				<input type="text"  ng-model="bellTower['Base_Number of art pieces_Back']" placeholder="Base_Number of art pieces_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Number of art pieces Left</label>
+				<input type="text"  ng-model="bellTower['Base_Number of art pieces_Left']" placeholder="Base_Number of art pieces_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Number Exterior inscriptions</label>
+				<input type="text"  ng-model="bellTower['Base_Number Exterior inscriptions']" placeholder="Base_Number Exterior inscriptions">
+			</div>
+
+			<div class="field">
+				<label>Base Inscription</label>
+				<input type="text"  ng-model="bellTower['Base_Inscription']" placeholder="Base_Inscription">
+			</div>
+
+			<div class="field">
+				<label>Base Inscription description</label>
+				<input type="text"  ng-model="bellTower['Base_Inscription description']" placeholder="Base_Inscription description">
+			</div>
+
+			<div class="field">
+				<label>Base Avg inscription legability:<span class="inputValue"> {{ bellTower['Base_Avg_inscription_legability'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Base_Avg_inscription_legability']" min="0"  max="5">
+			</div>
+
+			<div class="field">
+				<label>Base Number of decorations</label>
+				<input type="text"  ng-model="bellTower['Base_Number of decorations']" placeholder="Base_Number of decorations">
+			</div>
+
+			<div class="field">
+				<label>Base Decoration description</label>
+				<input type="text"  ng-model="bellTower['Base_Decoration description']" placeholder="Base_Decoration description">
+			</div>
+
+			<div class="field">
+				<label>Base Decoration condition:<span class="inputValue"> {{ bellTower['Base_Decoration_condition'] }}</span></label>
+				<input class="rating" type="range" ng-model="bellTower['Base_Decoration_condition']" min="0"  max="5">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Tower Defects
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Num cracks holes Front</label>
+				<input type="text"  ng-model="bellTower['Base_Num_cracks_holes_Front']" placeholder="Base_Num_cracks_holes_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Num cracks holes Right</label>
+				<input type="text"  ng-model="bellTower['Base_Num_cracks_holes_Right']" placeholder="Base_Num_cracks_holes_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Num cracks holes Back</label>
+				<input type="text"  ng-model="bellTower['Base_Num_cracks_holes_Back']" placeholder="Base_Num_cracks_holes_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Num cracks holes Left</label>
+				<input type="text"  ng-model="bellTower['Base_Num_cracks_holes_Left']" placeholder="Base_Num_cracks_holes_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Num brick colors Front</label>
+				<input type="text"  ng-model="bellTower['Base_Num_brick_colors_Front']" placeholder="Base_Num_brick_colors_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Num brick colors Right</label>
+				<input type="text"  ng-model="bellTower['Base_Num_brick_colors_Right']" placeholder="Base_Num_brick_colors_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Num brick colors Back</label>
+				<input type="text"  ng-model="bellTower['Base_Num_brick_colors_Back']" placeholder="Base_Num_brick_colors_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Num brick colors Left</label>
+				<input type="text"  ng-model="bellTower['Base_Num_brick_colors_Left']" placeholder="Base_Num_brick_colors_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Number of ties and bands Front</label>
+				<input type="text"  ng-model="bellTower['Base_Number of ties and bands_Front']" placeholder="Base_Number of ties and bands_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Number of ties and bands Right</label>
+				<input type="text"  ng-model="bellTower['Base_Number of ties and bands_Right']" placeholder="Base_Number of ties and bands_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Number of ties and bands Back</label>
+				<input type="text"  ng-model="bellTower['Base_Number of ties and bands_Back']" placeholder="Base_Number of ties and bands_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Number of ties and bands Left</label>
+				<input type="text"  ng-model="bellTower['Base_Number of ties and bands_Left']" placeholder="Base_Number of ties and bands_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Windows
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Number of windows Front</label>
+				<input type="text"  ng-model="bellTower['Base_Number of windows_Front']" placeholder="Base_Number of windows_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Number of windows Right</label>
+				<input type="text"  ng-model="bellTower['Base_Number of windows_Right']" placeholder="Base_Number of windows_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Number of windows Back</label>
+				<input type="text"  ng-model="bellTower['Base_Number of windows_Back']" placeholder="Base_Number of windows_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Number of windows Left</label>
+				<input type="text"  ng-model="bellTower['Base_Number of windows_Left']" placeholder="Base_Number of windows_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Blocked window number Front</label>
+				<input type="text"  ng-model="bellTower['Base_Blocked window number_Front']" placeholder="Base_Blocked window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Blocked window number Right</label>
+				<input type="text"  ng-model="bellTower['Base_Blocked window number_Right']" placeholder="Base_Blocked window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Blocked window number Back</label>
+				<input type="text"  ng-model="bellTower['Base_Blocked window number_Back']" placeholder="Base_Blocked window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Blocked window number Left</label>
+				<input type="text"  ng-model="bellTower['Base_Blocked window number_Left']" placeholder="Base_Blocked window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Barred window number Front</label>
+				<input type="text"  ng-model="bellTower['Base_Barred window number_Front']" placeholder="Base_Barred window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Barred window number Right</label>
+				<input type="text"  ng-model="bellTower['Base_Barred window number_Right']" placeholder="Base_Barred window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Barred window number Back</label>
+				<input type="text"  ng-model="bellTower['Base_Barred window number_Back']" placeholder="Base_Barred window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Barred window number Left</label>
+				<input type="text"  ng-model="bellTower['Base_Barred window number_Left']" placeholder="Base_Barred window number_Left">
+			</div>
+
+			<div class="field">
+				<label>Base Meshed window number Front</label>
+				<input type="text"  ng-model="bellTower['Base_Meshed window number_Front']" placeholder="Base_Meshed window number_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Meshed window number Right</label>
+				<input type="text"  ng-model="bellTower['Base_Meshed window number_Right']" placeholder="Base_Meshed window number_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Meshed window number Back</label>
+				<input type="text"  ng-model="bellTower['Base_Meshed window number_Back']" placeholder="Base_Meshed window number_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Meshed window number Left</label>
+				<input type="text"  ng-model="bellTower['Base_Meshed window number_Left']" placeholder="Base_Meshed window number_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Restoration
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Restoration visible Front</label>
+				<input type="text"  ng-model="bellTower['Base_Restoration visible_Front']" placeholder="Base_Restoration visible_Front">
+			</div>
+
+			<div class="field">
+				<label>Base Restoration visible Right</label>
+				<input type="text"  ng-model="bellTower['Base_Restoration visible_Right']" placeholder="Base_Restoration visible_Right">
+			</div>
+
+			<div class="field">
+				<label>Base Restoration visible Back</label>
+				<input type="text"  ng-model="bellTower['Base_Restoration visible_Back']" placeholder="Base_Restoration visible_Back">
+			</div>
+
+			<div class="field">
+				<label>Base Restoration visible Left</label>
+				<input type="text"  ng-model="bellTower['Base_Restoration visible_Left']" placeholder="Base_Restoration visible_Left">
+			</div>
+
+		</div>
+		<div class="title">
+			<i class="dropdown icon"></i>
+			Clock
+		</div>
+		<div class="content whitePaddedContent">
+			<div class="field">
+				<label>Base Clock</label>
+				<input type="text"  ng-model="bellTower['Base_Clock']" placeholder="Base_Clock">
+			</div>
+
+			<div class="field">
+				<label>Base Clock side:<span class="inputValue"> {{ bellTower['Base_Clock side'] }}</span></label>
+				<select class="select" ng-model="bellTower['Base_Clock side']">
+					<option value="front"> front </option>
+					<option value="right"> right </option>
+					<option value="back"> back </option>
+					<option value="left"> left </option>
+				</select>
+			</div>
+
+			<div class="field">
+				<label>Base Clock working</label>
+				<input type="text"  ng-model="bellTower['Base_Clock working']" placeholder="Base_Clock working">
+			</div>
+
+			<div class="field">
+				<label>Base Clock mechanism landing</label>
+				<input type="text"  ng-model="bellTower['Base_Clock mechanism landing']" placeholder="Base_Clock mechanism landing">
+			</div>
+
+		</div>
