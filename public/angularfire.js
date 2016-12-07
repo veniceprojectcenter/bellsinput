@@ -202,13 +202,13 @@ var fb = firebase.initializeApp(config);
 			});
 		};
 
-		bc.upload = function() {
-			console.log('calling upload')
-			upload();
+		bc.showUpload = function() {
+			console.log('calling upload from', currentTowerID);
+			showUpload(currentTowerID);
 		}
 
 		bc.hello = function() {
-			console.log('hello!')
+			console.log('hello')
 		}
 
 

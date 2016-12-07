@@ -6,7 +6,7 @@
 function initApp() {
     // When the user clicks on the button, open the modal 
     document.getElementById("buttonToShowLogin").onclick = function() {
-        showModal();
+        showLoginModal();
         firebase.auth().signOut();
     }
     // Listening for auth state changes.
@@ -30,7 +30,7 @@ function initApp() {
         } else {
             // User is signed out.
             // [START_EXCLUDE silent]
-            showModal();
+            showLoginModal();
             document.getElementById('sign-in-status').textContent = 'Sign In';
             // [END_EXCLUDE]
         }
@@ -78,7 +78,7 @@ function toggleSignIn() {
                 setErrorMessage(errorMessage);
             }
             console.log(error);
-            showModal(); // show the login screen again
+            showLoginModal(); // show the login screen again
             // [END_EXCLUDE]
         });
         // does not mean successful login due to asynchronous login:
@@ -97,8 +97,9 @@ function hideErrorMessage() {
     $("#loginError").text("");
 }
 
-function showModal() {
-    $('.ui.modal')
+function showLoginModal() {
+    console.log('showing modal')
+    $('#loginModal')
       .modal({
         blurring: true,
         closable  : false,

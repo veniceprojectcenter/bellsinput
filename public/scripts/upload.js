@@ -1,7 +1,25 @@
-function upload() {
+function showUpload(tower_id) {
+    $('#uploadModal')
+      .modal({
+        blurring: true,
+        closable  : true,
+        onDeny    : function(){
+          return false; // do not close.
+        },
+        onApprove : function() {
+        	upload(tower_id);
+            return false; // do not close.
+        }
+    }).modal('show');
+}
+
+function upload(tower_id) {
 	console.log('upload');
 
-	// bc.hello();
+    // var scope = angular.element($("#body-scope")).scope();
+    // scope.$apply(function(){
+    //     scope.hello();
+    // })
 
 	// Get elements
 	var uploader = document.getElementById('uploader');
@@ -10,8 +28,11 @@ function upload() {
 	// Get file
 	var file = fileButton.files[0];
 
+	var refString = 'Bell_Tower_Media/'+ tower_id + '/' + file.name;
+	console.log(refString);
+
 	// Create a storage ref
-	storageRef = firebase.storage().ref('folder_name/' + file.name);
+	storageRef = firebase.storage().ref( refString );
 
 	// Upload file
 	var uploadTask = storageRef.put(file);
@@ -29,7 +50,9 @@ function upload() {
 
 		function complete() {
 			var downloadURL = uploadTask.snapshot.downloadURL;
-			// $('#Bell Chorus Audio').val(downloadURL);
+			$('#fileDownloadLink').attr("href", downloadURL);
+			$('#fileDownloadLink').text(downloadURL);
+			$('#successfulUploadText').show();
 			console.log(downloadURL)
 		}
 	);

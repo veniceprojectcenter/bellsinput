@@ -25,16 +25,17 @@
 		<script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 		<!-- AngularFire -->
 		<script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
-		
+
 		<script src="/scripts/upload.js"></script>
 		<script type="text/javascript" src="angularfire.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 	</head>
 
-	<body ng-controller="BellsController as bc">
+	<body id="body-scope" ng-controller="BellsController as bc">
 
 		<div id="navBarDiv" ng-include="'views/partials/navBar.htm'"></div>
 		<div ng-include="'views/partials/loginModal.htm'"></div>
+		<div ng-include="'views/partials/uploadModal.htm'"></div>
 
 		<div class="content" id="main">
 			<!-- ng-route puts all files inside of ng-view -->
