@@ -14,11 +14,11 @@
 			code that connects editButtons.htm to edit sections is found in edit.js.
 			to create a new category bellow make sure to add the id="xxx" content to the dataCategories[] array in edit.js
 		-->
-		<div id="generalData" ng-include="'/views/partials/editPartials/editGeneral.htm'"></div>
+		<div id="generalData" style="display: none" ng-include="'/views/partials/editPartials/editGeneral.htm'"></div>
 		<div id="exteriorData" style="display: none" ng-include="'/views/partials/editPartials/editExterior.htm'"></div>
 		<div id="interiorData" style="display: none" ng-include="'/views/partials/editPartials/editInterior.htm'"></div>
 		<div id="bellsData" style="display: none" ng-include="'/views/partials/editPartials/editBells.htm'"></div>
-		<div id="linkedMediaData" style="display: none" ng-include="'/views/partials/editPartials/editLinkedMedia.htm'"></div>
+		<div id="linkedMediaData" ng-include="'/views/partials/editPartials/editLinkedMedia.htm'"></div>
 	</form>
 </div>
 

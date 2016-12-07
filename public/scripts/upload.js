@@ -40,6 +40,7 @@ function upload(tower_id) {
 	// Update progress bar
 	uploadTask.on('state_changed',
 		function progress(snapshot) {
+			$('#uploader').show();
 			var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 			uploader.value = percentage;
 		}, 
