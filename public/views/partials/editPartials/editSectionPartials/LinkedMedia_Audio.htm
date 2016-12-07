@@ -10,6 +10,9 @@
 				</a>
 			</label>
 			<input type="text"  ng-model="bellTower['Bell_Chorus_Audio']" placeholder="https://example.com/Bell_Chorus_Audio">
+			<progress value="0" max="100" id="uploader">0%</progress>
+			<input type="file" accept="image/*" value="upload" id="fileButton">
+			<button id='upload' ng-click="bc.upload()">upload</button>
 		</div>
 
 	<!-- BELL DATA Repitition-->

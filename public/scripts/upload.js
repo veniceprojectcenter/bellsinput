@@ -1,9 +1,11 @@
-// Get elements
-var uploader = document.getElementById('uploader');
-var fileButton = document.getElementById('fileButton');
-
 function upload() {
-	console.log('upload')
+	console.log('upload');
+
+	// bc.hello();
+
+	// Get elements
+	var uploader = document.getElementById('uploader');
+	var fileButton = document.getElementById('fileButton');
 
 	// Get file
 	var file = fileButton.files[0];
@@ -27,6 +29,7 @@ function upload() {
 
 		function complete() {
 			var downloadURL = uploadTask.snapshot.downloadURL;
+			// $('#Bell Chorus Audio').val(downloadURL);
 			console.log(downloadURL)
 		}
 	);

@@ -202,6 +202,16 @@ var fb = firebase.initializeApp(config);
 			});
 		};
 
+		bc.upload = function() {
+			console.log('calling upload')
+			upload();
+		}
+
+		bc.hello = function() {
+			console.log('hello!')
+		}
+
+
 		// ADD BELL * ADD BELL * ADD BELL * ADD BELL * ADD BELL
 		bc.addLanding = function(){
 			var groupName = 'Landings';
