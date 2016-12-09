@@ -28,7 +28,10 @@ function upload(tower_id) {
 	// Get file
 	var file = fileButton.files[0];
 
-	var refString = 'Bell_Tower_Media/'+ tower_id + '/' + file.name;
+	console.log(file)
+
+	// added file.lastModified so that files with the same file name don't overwrite
+	var refString = 'Bell_Tower_Media/'+ tower_id + '/' + file.lastModified + '_' + file.name;
 	console.log(refString);
 
 	// Create a storage ref
