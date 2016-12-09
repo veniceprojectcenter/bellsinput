@@ -7,7 +7,7 @@ app.use(express.static("public"));
 // ROUTES * * * * * * * * * * * * * * * * * * * * * 
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
-	console.log("server is baby listening");
+	console.log("server is baby listening to port", port);
 });
 
 // index
