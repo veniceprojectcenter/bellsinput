@@ -1,20 +1,20 @@
-var config = {
+/*var config = {
   apiKey: "AIzaSyAYZ9Nb200nKhcGyHF11ABGshzcAMy5-k8",
   authDomain: "sample-firebase-b2d4d.firebaseapp.com",
   databaseURL: "https://sample-firebase-b2d4d.firebaseio.com",
   storageBucket: "sample-firebase-b2d4d.appspot.com",
   messagingSenderId: "875898499054"
-};
+};*/
 
 var currentTowerID;
 
-// var config = {
-// 	apiKey: "AIzaSyC6NAfPU1NV6QJcqL4sg4VJGa9S7nVXP4Q",
-// 	authDomain: "cityknowledge.firebaseapp.com",
-// 	databaseURL: "https://cityknowledge.firebaseio.com",
-// 	storageBucket: "firebase-cityknowledge.appspot.com",
-// 	messagingSenderId: "445655714967"
-// };
+var config = {
+ 	apiKey: "AIzaSyC6NAfPU1NV6QJcqL4sg4VJGa9S7nVXP4Q",
+ 	authDomain: "cityknowledge.firebaseapp.com",
+ 	databaseURL: "https://cityknowledge.firebaseio.com",
+ 	storageBucket: "firebase-cityknowledge.appspot.com",
+ 	messagingSenderId: "445655714967"
+ };
 
 var fb = firebase.initializeApp(config);
 
